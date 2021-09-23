@@ -57,7 +57,16 @@ export const Logo = styled(Image).attrs({
 })``
 
 export const MenuCollapsedContainer = styled.div`
-  background: ${props => props.theme.colors.primary};
-
+  background: ${props => props.theme.colors.secondary};
+  border-radius: 0px 0px 8px 8px;
   margin-top: 51px;
+  padding-bottom: 30px;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: space-around;
+
+  box-shadow: 0px 1px 5px #444;
 `

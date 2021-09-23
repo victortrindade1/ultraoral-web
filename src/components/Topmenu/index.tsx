@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
 
 import LogoBranca from '../../assets/logo_branca_horizontal_200x45.svg'
+import IconClinica from '../../assets/icon_hospital.svg'
+import IconWhatsapp from '../../assets/icon_whatsapp.svg'
+import IconContact from '../../assets/icon_contact.svg'
+import IconDentist from '../../assets/icon_dentist.svg'
+import IconMaps from '../../assets/icon_maps.svg'
+import IconEspecialidades from '../../assets/icon_toothshield.svg'
 
 import { SimpleDropDown } from '../SimpleDropDown'
+import MenuItem from './MenuItem'
 
 import {
   Container,
@@ -33,10 +40,12 @@ const Topmenu: React.FC = () => {
       {/* Menu expandido */}
       <SimpleDropDown open={visible}>
         <MenuCollapsedContainer>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
-          sit numquam possimus veritatis ut asperiores dolorum, perspiciatis id
-          tempora enim debitis et, quae pariatur, praesentium explicabo
-          blanditiis laborum culpa expedita!
+          <MenuItem icon={IconClinica} title="CONHEÇA A CLÍNICA" />
+          <MenuItem icon={IconWhatsapp} title="QUERO AGENDAR" />
+          <MenuItem icon={IconMaps} title="COMO CHEGAR" />
+          <MenuItem icon={IconEspecialidades} title="ESPECIALIDADES" />
+          <MenuItem icon={IconDentist} title="CORPO CLÍNICO" />
+          <MenuItem icon={IconContact} title="CONTATO" />
         </MenuCollapsedContainer>
       </SimpleDropDown>
     </>
