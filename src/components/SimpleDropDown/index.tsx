@@ -1,7 +1,9 @@
 import React from 'react'
 
-import { SlideDown } from 'react-slidedown'
+// import { SlideDown } from 'react-slidedown'
 import 'react-slidedown/lib/slidedown.css'
+
+import { Container } from './styles'
 
 interface DropdownProps {
   open: boolean
@@ -10,8 +12,8 @@ interface DropdownProps {
 
 export function SimpleDropDown(props: DropdownProps) {
   return (
-    <SlideDown className={'my-dropdown-slidedown'}>
+    <Container className={'my-dropdown-slidedown'}>
       {props.open ? props.children : null}
-    </SlideDown>
+    </Container>
   )
 }

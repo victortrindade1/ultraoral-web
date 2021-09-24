@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 import LogoBranca from '../../assets/logo_branca_horizontal_200x45.svg'
 import IconClinica from '../../assets/icon_hospital.svg'
@@ -17,10 +17,35 @@ import {
   BtnMenu,
   Logo,
   MenuCollapsedContainer
+  // DarkBackground
 } from './styles'
 
 const Topmenu: React.FC = () => {
   const [visible, setVisible] = useState(false)
+
+  const menuCollapsedRef = useRef(null)
+
+  function useOutsideAlerter(ref) {
+    useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setVisible(!visible)
+          alert(visible)
+        }
+      }
+      // Bind the event listener
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener('mousedown', handleClickOutside)
+      }
+    }, [ref])
+  }
+
+  useEffect(() => useOutsideAlerter(menuCollapsedRef), [menuCollapsedRef])
 
   function handleToggleVisible() {
     setVisible(!visible)
@@ -39,7 +64,7 @@ const Topmenu: React.FC = () => {
 
       {/* Menu expandido */}
       <SimpleDropDown open={visible}>
-        <MenuCollapsedContainer>
+        <MenuCollapsedContainer ref={menuCollapsedRef}>
           <MenuItem icon={IconClinica} title="CONHEÇA A CLÍNICA" />
           <MenuItem icon={IconWhatsapp} title="QUERO AGENDAR" />
           <MenuItem icon={IconMaps} title="COMO CHEGAR" />
@@ -48,6 +73,8 @@ const Topmenu: React.FC = () => {
           <MenuItem icon={IconContact} title="CONTATO" />
         </MenuCollapsedContainer>
       </SimpleDropDown>
+      {/* Fundo escuro com menu expandido */}
+      <DarkBackground visible={visible} />
     </>
   )
 }

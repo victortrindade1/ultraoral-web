@@ -69,4 +69,69 @@ export const MenuCollapsedContainer = styled.div`
   justify-content: space-around;
 
   box-shadow: 0px 1px 5px #444;
+
+  /* z-index: 0; */
 `
+
+// export const DarkBackground = styled.div`
+//   display: ${props => (props.visible ? 'block' : 'none')};
+
+//   background: rgba(0, 0, 0, 0.75);
+
+//   position: absolute;
+//   height: 100%;
+//   width: 100%;
+
+//   z-index: -1;
+
+//   /* Animation fade in */
+//   -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+//   -moz-animation: fadein 0.5s; /* Firefox < 16 */
+//   -ms-animation: fadein 0.5s; /* Internet Explorer */
+//   -o-animation: fadein 0.5s; /* Opera < 12.1 */
+//   animation: fadein 0.5s;
+//   @keyframes fadein {
+//     from {
+//       background: rgba(0, 0, 0, 0);
+//     }
+//     to {
+//       background: rgba(0, 0, 0, 0.75);
+//     }
+//   }
+//   /* Firefox < 16 */
+//   @-moz-keyframes fadein {
+//     from {
+//       background: rgba(0, 0, 0, 0);
+//     }
+//     to {
+//       background: rgba(0, 0, 0, 0.75);
+//     }
+//   }
+//   /* Safari, Chrome and Opera > 12.1 */
+//   @-webkit-keyframes fadein {
+//     from {
+//       background: rgba(0, 0, 0, 0);
+//     }
+//     to {
+//       background: rgba(0, 0, 0, 0.75);
+//     }
+//   }
+//   /* Internet Explorer */
+//   @-ms-keyframes fadein {
+//     from {
+//       background: rgba(0, 0, 0, 0);
+//     }
+//     to {
+//       background: rgba(0, 0, 0, 0.75);
+//     }
+//   }
+//   /* Opera < 12.1 */
+//   @-o-keyframes fadein {
+//     from {
+//       background: rgba(0, 0, 0, 0);
+//     }
+//     to {
+//       background: rgba(0, 0, 0, 0.75);
+//     }
+//   }
+// `

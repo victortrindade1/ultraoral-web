@@ -1,8 +1,14 @@
 import React from 'react'
-
+import StaticImport from 'styled-components'
 import { Container, IconContainer, Icon, Title } from './styles'
 
-const MenuItem: React.FC = ({ icon, title }) => {
+export type Svg = typeof StaticImport
+interface IMenuItem {
+  icon: string | undefined
+  title: string
+}
+
+const MenuItem: React.FC<IMenuItem> = ({ icon, title }) => {
   return (
     <Container>
       <IconContainer>
