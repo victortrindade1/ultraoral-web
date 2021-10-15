@@ -11,6 +11,7 @@ export default createGlobalStyle<{ theme: Theme }>`
 
   html, body {
     min-height: 100%;
+    padding-top: 20px;
   }
 
   body {

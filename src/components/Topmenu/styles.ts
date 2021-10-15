@@ -1,137 +1,66 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import Box from '@material-ui/core/Box'
+import IconButton from '@material-ui/core/IconButton'
 import Image from 'next/image'
-import { FaBars } from 'react-icons/fa'
-import { darken } from 'polished'
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 
-export const Container = styled.div`
-  /* Exemplo de media querie */
-  /* @media (max-width: 800px) {
-    button {
-      margin-left: 0px;
-    }
-  } */
+// export const StyledPaper = styled.div`
+//   height: 'auto';
+//   overflow: 'visible';
+// `
 
-  background-color: ${props => props.theme.colors.primary};
+export const MenuContainer = styled(SwipeableDrawer)``
 
+// export const Puller = styled(Box)`
+//   width: 30;
+//   height: 6;
+//   border-radius: 3;
+//   background-color: ${props => props.theme.colors.gold};
+//   position: absolute;
+//   top: 8;
+//   left: calc(50% - 15px);
+// `
+export const Puller = styled(Box)(({ theme }) => ({
+  width: 30,
+  height: 6,
+  backgroundColor: theme.colors.gold,
+  borderRadius: 3,
+  position: 'absolute'
+  // top: 15,
+  // left: 'calc(50% - 15px)'
+}))
+
+export const VisibleMenu = styled.div`
+  background: ${props => props.theme.colors.black};
+  border-radius: 0px 0px 8px 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
-  height: 51px;
-
-  position: fixed;
-  top: 0;
-
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0px 1px 5px #444;
-`
-
-export const BtnMenuContainer = styled.button`
-  margin: 3px;
-  margin-left: 10px;
-  padding: 10px;
-  border-radius: 4px;
-
   position: absolute;
-  left: 0px;
-
-  border: none;
-
-  background-color: ${props => props.theme.colors.primary};
-
-  &:hover,
-  &:focus {
-    background-color: ${props =>
-      props.theme.colors.primary && darken(0.05, props.theme.colors.primary)};
-  }
-`
-
-export const BtnMenu = styled(FaBars).attrs({
-  size: '28'
-})`
-  fill: #fff;
+  top: 100px;
+  visibility: visible;
+  right: 0;
+  left: 0;
 `
 
 export const Logo = styled(Image).attrs({
   width: '137px'
 })``
 
-export const MenuCollapsedContainer = styled.div`
-  background: ${props => props.theme.colors.secondary};
-  border-radius: 0px 0px 8px 8px;
-  margin-top: 51px;
-  padding-bottom: 30px;
-  width: 100%;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  justify-content: space-around;
-
-  box-shadow: 0px 1px 5px #444;
-
-  /* z-index: 0; */
+export const MenuButton = styled(IconButton).attrs({
+  size: 'large'
+})`
+  color: ${props => props.theme.colors.background};
+  position: absolute;
+  left: 0;
 `
 
-// export const DarkBackground = styled.div`
-//   display: ${props => (props.visible ? 'block' : 'none')};
-
-//   background: rgba(0, 0, 0, 0.75);
-
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-
-//   z-index: -1;
-
-//   /* Animation fade in */
-//   -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
-//   -moz-animation: fadein 0.5s; /* Firefox < 16 */
-//   -ms-animation: fadein 0.5s; /* Internet Explorer */
-//   -o-animation: fadein 0.5s; /* Opera < 12.1 */
-//   animation: fadein 0.5s;
-//   @keyframes fadein {
-//     from {
-//       background: rgba(0, 0, 0, 0);
-//     }
-//     to {
-//       background: rgba(0, 0, 0, 0.75);
-//     }
-//   }
-//   /* Firefox < 16 */
-//   @-moz-keyframes fadein {
-//     from {
-//       background: rgba(0, 0, 0, 0);
-//     }
-//     to {
-//       background: rgba(0, 0, 0, 0.75);
-//     }
-//   }
-//   /* Safari, Chrome and Opera > 12.1 */
-//   @-webkit-keyframes fadein {
-//     from {
-//       background: rgba(0, 0, 0, 0);
-//     }
-//     to {
-//       background: rgba(0, 0, 0, 0.75);
-//     }
-//   }
-//   /* Internet Explorer */
-//   @-ms-keyframes fadein {
-//     from {
-//       background: rgba(0, 0, 0, 0);
-//     }
-//     to {
-//       background: rgba(0, 0, 0, 0.75);
-//     }
-//   }
-//   /* Opera < 12.1 */
-//   @-o-keyframes fadein {
-//     from {
-//       background: rgba(0, 0, 0, 0);
-//     }
-//     to {
-//       background: rgba(0, 0, 0, 0.75);
-//     }
-//   }
-// `
+export const HiddenMenu = styled.div`
+  height: 100px;
+  overflow: auto;
+  background: ${props => props.theme.colors.black};
+`

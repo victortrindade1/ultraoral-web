@@ -1,82 +1,50 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
+import { Global } from '@emotion/react'
 
-import LogoBranca from '../../assets/logo_branca_horizontal_200x45.svg'
-import IconClinica from '../../assets/icon_hospital.svg'
-import IconWhatsapp from '../../assets/icon_whatsapp.svg'
-import IconContact from '../../assets/icon_contact.svg'
-import IconDentist from '../../assets/icon_dentist.svg'
-import IconMaps from '../../assets/icon_maps.svg'
-import IconEspecialidades from '../../assets/icon_toothshield.svg'
+import { MenuContainer, VisibleMenu, HiddenMenu, Puller } from './styles'
 
-import { SimpleDropDown } from '../SimpleDropDown'
-import MenuItem from './MenuItem'
+const TopMenu: React.FC = () => {
+  const [open, setOpen] = useState(false)
 
-import {
-  Container,
-  BtnMenuContainer,
-  BtnMenu,
-  Logo,
-  MenuCollapsedContainer
-  // DarkBackground
-} from './styles'
+  const drawerBleeding = 50 // Altura arrastável
 
-const Topmenu: React.FC = () => {
-  const [visible, setVisible] = useState(false)
-
-  const menuCollapsedRef = useRef(null)
-
-  function useOutsideAlerter(ref) {
-    useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
-      function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          setVisible(!visible)
-          alert(visible)
-        }
-      }
-      // Bind the event listener
-      document.addEventListener('mousedown', handleClickOutside)
-      return () => {
-        // Unbind the event listener on clean up
-        document.removeEventListener('mousedown', handleClickOutside)
-      }
-    }, [ref])
-  }
-
-  useEffect(() => useOutsideAlerter(menuCollapsedRef), [menuCollapsedRef])
-
-  function handleToggleVisible() {
-    setVisible(!visible)
+  const toggleDrawer = (newOpen: boolean) => () => {
+    setOpen(newOpen)
   }
 
   return (
-    <>
-      {/* Navbar */}
-      <Container>
-        <BtnMenuContainer onClick={handleToggleVisible}>
-          <BtnMenu />
-        </BtnMenuContainer>
-
-        <Logo src={LogoBranca} alt="logo" />
-      </Container>
-
-      {/* Menu expandido */}
-      <SimpleDropDown open={visible}>
-        <MenuCollapsedContainer ref={menuCollapsedRef}>
-          <MenuItem icon={IconClinica} title="CONHEÇA A CLÍNICA" />
-          <MenuItem icon={IconWhatsapp} title="QUERO AGENDAR" />
-          <MenuItem icon={IconMaps} title="COMO CHEGAR" />
-          <MenuItem icon={IconEspecialidades} title="ESPECIALIDADES" />
-          <MenuItem icon={IconDentist} title="CORPO CLÍNICO" />
-          <MenuItem icon={IconContact} title="CONTATO" />
-        </MenuCollapsedContainer>
-      </SimpleDropDown>
-      {/* Fundo escuro com menu expandido */}
-      <DarkBackground visible={visible} />
-    </>
+    <MenuContainer
+      anchor="top"
+      open={open}
+      onClose={toggleDrawer(false)}
+      onOpen={toggleDrawer(true)}
+      swipeAreaWidth={drawerBleeding}
+      disableSwipeToOpen={false}
+      ModalProps={{
+        keepMounted: true
+      }}
+    >
+      <Global
+        styles={{
+          '.MuiDrawer-root > .MuiPaper-root': {
+            height: 'auto',
+            overflow: 'visible'
+          }
+        }}
+      />
+      <VisibleMenu onClick={toggleDrawer(true)}>
+        <Puller />
+      </VisibleMenu>
+      <HiddenMenu>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+          perspiciatis blanditiis nisi consequatur et veniam, maiores sint iusto
+          eum numquam tempore alias voluptate, architecto molestias minima
+          dolore, natus odio aliquid!
+        </p>
+      </HiddenMenu>
+    </MenuContainer>
   )
 }
 
-export default Topmenu
+export default TopMenu
