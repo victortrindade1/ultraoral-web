@@ -5,5 +5,9 @@ interface IContainer {
 }
 
 export const Container = styled.div<IContainer>`
-  margin-bottom: ${props => (props.isBreakingpoint ? '50px' : '0px')};
+  margin-bottom: ${props => (props.isBreakingpoint ? '50px' : '20px')};
+  background: ${props => props.theme.colors.dark};
+  width: 100%;
+  display: flex;
+  align-items: center;
 `
