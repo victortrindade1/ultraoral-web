@@ -2,6 +2,7 @@ import React from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import TopMenu from '../components/TopMenu'
+// import Device from '../components/Device/Device'
 
 import {
   Container,
@@ -21,6 +22,13 @@ const Home: NextPage = () => {
       <Head>
         <title>Gente Odontologia</title>
       </Head>
+
+      {/* <Device>
+        {({ isMobile }) => {
+          if (isMobile) return <div>My Mobile View</div>
+          return <div>My Desktop View</div>
+        }}
+      </Device> */}
 
       <TopMenu />
 

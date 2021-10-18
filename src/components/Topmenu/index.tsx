@@ -1,49 +1,47 @@
-import React, { useState } from 'react'
-import { Global } from '@emotion/react'
+import React, { useState, useCallback, useEffect } from 'react'
 
-import { MenuContainer, VisibleMenu, HiddenMenu, Puller } from './styles'
+import TopMenuMobile from '../TopMenuMobile'
+import TopMenuDesktop from '../TopMenuDesktop'
+
+import { Container } from './styles'
+
+const useMediaQuery = width => {
+  const [targetReached, setTargetReached] = useState(false)
+
+  const updateTarget = useCallback(e => {
+    if (e.matches) {
+      setTargetReached(true)
+    } else {
+      setTargetReached(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`)
+    media.addEventListener('change', updateTarget)
+
+    //   mql.addEventListener("change", () => {
+    //     this.checkNative();
+    // });
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true)
+    }
+
+    return () => media.removeEventListener('change', updateTarget)
+  }, [updateTarget, width])
+
+  return targetReached
+}
 
 const TopMenu: React.FC = () => {
-  const [open, setOpen] = useState(false)
-
-  const drawerBleeding = 50 // Altura arrastável
-
-  const toggleDrawer = (newOpen: boolean) => () => {
-    setOpen(newOpen)
-  }
+  const isBreakpoint = useMediaQuery(768)
 
   return (
-    <MenuContainer
-      anchor="top"
-      open={open}
-      onClose={toggleDrawer(false)}
-      onOpen={toggleDrawer(true)}
-      swipeAreaWidth={drawerBleeding}
-      disableSwipeToOpen={false}
-      ModalProps={{
-        keepMounted: true
-      }}
-    >
-      <Global
-        styles={{
-          '.MuiDrawer-root > .MuiPaper-root': {
-            height: 'auto',
-            overflow: 'visible'
-          }
-        }}
-      />
-      <VisibleMenu onClick={toggleDrawer(true)}>
-        <Puller />
-      </VisibleMenu>
-      <HiddenMenu>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
-          perspiciatis blanditiis nisi consequatur et veniam, maiores sint iusto
-          eum numquam tempore alias voluptate, architecto molestias minima
-          dolore, natus odio aliquid!
-        </p>
-      </HiddenMenu>
-    </MenuContainer>
+    <Container isBreakingpoint={isBreakpoint}>
+      {isBreakpoint ? <TopMenuMobile /> : <TopMenuDesktop />}
+    </Container>
   )
 }
 

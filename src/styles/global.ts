@@ -11,11 +11,12 @@ export default createGlobalStyle<{ theme: Theme }>`
 
   html, body {
     min-height: 100%;
-    padding-top: 20px;
+    /* padding-top: 20px; */
   }
 
   body {
-    background: ${props => props.theme.colors.background};
+    /* background: ${props => props.theme.colors.background}; */
+    background: #432;
     color: ${props => props.theme.colors.text};
     font: 400 16px Roboto, sans-serif;
     -webkit-font-smoothing: antialiased !important;
