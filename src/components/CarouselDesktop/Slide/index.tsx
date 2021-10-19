@@ -14,7 +14,7 @@ interface ISlide {
 const Slide: React.FC<ISlide> = ({ url, alt }: ISlide) => {
   return (
     <Paper>
-      <Image src={url} alt={alt} layout={'fill'} />
+      <Image src={url} alt={alt} layout={'responsive'} />
     </Paper>
   )
 }
