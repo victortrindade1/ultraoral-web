@@ -1,11 +1,26 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Container = styled.div`
-  background: ${props => props.theme.colors.dark};
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+type IContainer = {
+  isOnTop: boolean
+}
+export const Container = styled.div<IContainer>`
+  ${({ isOnTop }) =>
+    isOnTop
+      ? css`
+          /* background: ${props => props.theme.colors.dark}; */
+          background: rgba(51, 51, 51, 0);
+        `
+      : css`
+          /* background: ${props => props.theme.colors.dark}; */
+          background: rgba(51, 51, 51, 1);
+
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        `}
+
+  /* background: ${props => props.theme.colors.dark}; */
 
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   min-height: 150px;
 
   display: flex;
@@ -14,6 +29,11 @@ export const Container = styled.div`
   nav {
     width: 100%;
   }
+
+  transition: all 0.5s;
+
+  position: fixed;
+  top: 0px;
 `
 
 export const Navigation = styled.div`

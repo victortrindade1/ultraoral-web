@@ -1,11 +1,18 @@
 import React from 'react'
 import type { NextPage } from 'next'
+// import Image from 'next/image'
 import Head from 'next/head'
+
 import TopMenu from '../components/TopMenu'
+import CarouselDesktop from '../components/CarouselDesktop'
+
+// import img1 from '../assets/slides/img1.jpeg'
+
 // import Device from '../components/Device/Device'
 
 import {
   Container,
+  CarouselDesktopContainer,
   Body,
   Column,
   ClinicBox,
@@ -31,6 +38,19 @@ const Home: NextPage = () => {
       </Device> */}
 
       <TopMenu />
+      <CarouselDesktopContainer>
+        <CarouselDesktop />
+      </CarouselDesktopContainer>
+
+      {/* <ImageContainer>
+        <Image
+          src={img1}
+          alt="img1"
+          width={900}
+          height={500}
+          // layout="responsive"
+        />
+      </ImageContainer> */}
 
       <Body>
         <Column>
@@ -44,22 +64,6 @@ const Home: NextPage = () => {
           <ContactBox />
         </Column>
       </Body>
-      <p style={{ color: '#f4f4f4' }}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
-        nostrum ratione ut. Temporibus quod at, mollitia odit pariatur itaque
-        fuga fugiat quas necessitatibus impedit nostrum! Vitae doloremque nam
-        magnam a? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Mollitia, amet. Sapiente, eveniet provident ea aspernatur accusantium
-        possimus corporis? Ullam repellendus dolor iure consectetur pariatur
-        sequi cum labore a architecto accusantium. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. At molestias eos esse. Laudantium corporis
-        blanditiis iusto. Iste minima, exercitationem autem odio, quibusdam
-        reprehenderit, neque vitae deserunt libero optio sed! Quidem. Lorem
-        ipsum, dolor sit amet consectetur adipisicing elit. Minima consectetur
-        nemo est quis impedit iste praesentium dolorum. Delectus, facere ullam
-        expedita asperiores eum vero eligendi provident non? Soluta, commodi
-        sit?
-      </p>
     </Container>
   )
 }

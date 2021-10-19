@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '../../assets/logo_ultraoral_gold.svg'
@@ -6,8 +6,37 @@ import Logo from '../../assets/logo_ultraoral_gold.svg'
 import { Container, Navigation, LogoContainer } from './styles'
 
 const TopMenuDesktop: React.FC = () => {
+  const [isOnTop, setIsOnTop] = useState(true)
+  // window.onscroll = function () {
+  //   scrollFunction()
+  // }
+
+  // function scrollFunction() {
+  //   if (
+  //     document.body.scrollTop > 20 ||
+  //     document.documentElement.scrollTop > 20
+  //   ) {
+  //     document.getElementById('navbar').style.background = '#999'
+  //   } else {
+  //     document.getElementById('navbar').style.background = '#333'
+  //   }
+  // }
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 20) {
+      setIsOnTop(false)
+    } else {
+      setIsOnTop(true)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <Container>
+    <Container isOnTop={isOnTop}>
       <nav>
         <Navigation>
           <Link href={'/'}>

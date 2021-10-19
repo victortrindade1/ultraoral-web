@@ -4,12 +4,10 @@ Projeto criado com NextJS e Typescript.
 
 ## O q estou fazendo agora
 
-Tornar o TopMenu responsivo.
+Vou colocar o useMediaQuery em um utils.
 
-No mui, o responsivo renderiza 2 drawers, mas falou q se evitar com js, nao duplica no SEO do google.
-No mobile, usa variant=temporary e display: { xs: 'block', sm: 'none' }
-No web, usa variant=permanent e ddisplay: { xs: 'none', sm: 'block' }
+Aplicar o mediaquery pros slides pra mostrar apenas web.
 
-Vou tentar criar 2 menus na page Home, e fazer lá um condicional
+To achando o menu muito alto. diminuir altura do menu desktop
 
-A resposta: https://github.com/vercel/next.js/discussions/14810
+Eaí? O body vai ou nao vai ser comum aos dois? tenho receio de ficar feio desktop. Talvez eu faça todo o body do desktop separado.

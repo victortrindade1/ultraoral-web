@@ -21,6 +21,11 @@ export const Container = styled.div`
   }
 `
 
+export const CarouselDesktopContainer = styled.div`
+  /* height: 600px; */
+  width: 100%;
+`
+
 export const Body = styled.div`
   display: flex;
   width: 100%;
