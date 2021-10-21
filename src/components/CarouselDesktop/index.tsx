@@ -11,13 +11,11 @@ const CarouselDesktop: React.FC = () => {
   const slides = [
     {
       description: 'Descubra a experiência no melhor atendimento',
-      buttonDescription: null,
       url: img1,
       alt: 'img1'
     },
     {
       description: 'Agende agora mesmo uma consulta',
-      buttonDescription: 'AGENDAR',
       url: img2,
       alt: 'img2'
     }
@@ -25,6 +23,8 @@ const CarouselDesktop: React.FC = () => {
 
   return (
     <CarouselStyled
+      // navButtonsAlwaysInvisible={true}
+      timeout={1000}
       interval={5000}
       indicatorContainerProps={{
         style: {
