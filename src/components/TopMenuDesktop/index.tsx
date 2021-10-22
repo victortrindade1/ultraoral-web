@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '../../assets/logo_ultraoral_gold.svg'
 
-import { Container, Navigation, LogoContainer } from './styles'
+import { Container, Navigation, LogoContainer, Image } from './styles'
 
 const TopMenuDesktop: React.FC = () => {
   const [isOnTop, setIsOnTop] = useState(true)

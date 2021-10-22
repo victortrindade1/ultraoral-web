@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Box from '@material-ui/core/Box'
-import Image from 'next/image'
+// import Image from 'next/image'
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 
 export const MenuContainer = styled(SwipeableDrawer)``
@@ -31,9 +31,13 @@ export const VisibleMenu = styled.div`
   left: 0;
 `
 
-export const Logo = styled(Image).attrs({
-  width: '137px'
-})``
+export const Logo = styled.img`
+  width: 137px;
+`
+
+// export const Logo = styled(Image).attrs({
+//   width: '137px'
+// })``
 
 export const HiddenMenu = styled.div`
   height: 100px;

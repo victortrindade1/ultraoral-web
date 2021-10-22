@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+// import StaticImageData from 'styled-components'
+// import img1 from '../../assets/slides/img1.jpeg'
 
 interface IBox {
   isBoxClicked: boolean
@@ -45,11 +47,15 @@ export const Column = styled.div`
   height: inherit;
 `
 
-export const ClinicBox = styled.div`
+interface IClinicBox {
+  image: any
+}
+// export const ClinicBox = styled.div`
+export const ClinicBox = styled.div<IClinicBox>`
   flex-grow: 0.4;
   margin-bottom: 10px;
   background-color: purple;
-
+  background: white url('${props => props.image}') no-repeat center/90%;
   &:hover {
     /* opacity: 0.5; */
   }

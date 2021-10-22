@@ -4,6 +4,8 @@ import styled from 'styled-components'
 
 export const Container = styled.div``
 
+export const Image = styled.img``
+
 export const DescriptionContainer = styled.div`
   display: flex;
   justify-content: center;

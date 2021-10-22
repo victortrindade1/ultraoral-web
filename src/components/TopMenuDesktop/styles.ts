@@ -65,3 +65,5 @@ export const Navigation = styled.div`
 `
 
 export const LogoContainer = styled.div``
+
+export const Image = styled.img``
