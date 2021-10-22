@@ -7,8 +7,6 @@ import TopMenu from '../components/TopMenu'
 import CarouselDesktop from '../components/CarouselDesktop'
 
 import img1 from '../assets/slides/img1.jpeg'
-// import img1 from '../../public/slides/img2.png'
-// const img1 = require('../assets/slides/img1.jpeg')
 
 import {
   Container,
