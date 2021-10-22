@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface IBox {
+  isBoxClicked: boolean
+}
+
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
@@ -45,6 +49,22 @@ export const ClinicBox = styled.div`
   flex-grow: 0.4;
   margin-bottom: 10px;
   background-color: purple;
+
+  &:hover {
+    /* opacity: 0.5; */
+  }
+
+  transition: all 0.5s;
+`
+export const OverlayClinicBox = styled.div<IBox>`
+  width: 100%;
+  height: 100%;
+  /* position: relative; */
+
+  background-color: green;
+
+  /* visibility: hidden; */
+  opacity: ${props => (props.isBoxClicked ? 1 : 0)};
 `
 
 export const MapsBox = styled.div`
@@ -76,3 +96,5 @@ export const ContactBox = styled.div`
   margin-bottom: 10px;
   background-color: firebrick;
 `
+
+export const Text = styled.div``
