@@ -34,7 +34,7 @@ export const Container = styled.div<IContainer>`
 export const Navigation = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-right: 30px;
 
   a:first-child {

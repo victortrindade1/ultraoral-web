@@ -90,7 +90,7 @@ const Home: NextPage = () => {
             <CarouselDesktop />
           </CarouselDesktopContainer>
 
-          <div
+          {/* <div
             style={{
               height: '800px',
               width: '100%',
@@ -99,7 +99,7 @@ const Home: NextPage = () => {
             }}
           >
             Hey
-          </div>
+          </div> */}
         </>
       )}
     </Container>
