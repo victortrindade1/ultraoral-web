@@ -54,6 +54,7 @@ export const Navigation = styled.div`
     text-decoration: none;
     transition: color 0.8s;
     text-align: center;
+    text-shadow: 1px 1px 2px black;
 
     &:hover {
       color: ${props => props.theme.colors.gold};
