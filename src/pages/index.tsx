@@ -84,10 +84,23 @@ const Home: NextPage = () => {
           </Column>
         </Body>
       ) : (
-        // Layout Desktop
-        <CarouselDesktopContainer>
-          <CarouselDesktop />
-        </CarouselDesktopContainer>
+        <>
+          {/* // Layout Desktop */}
+          <CarouselDesktopContainer>
+            <CarouselDesktop />
+          </CarouselDesktopContainer>
+
+          <div
+            style={{
+              height: '800px',
+              width: '100%',
+              background: '#fff',
+              display: 'block'
+            }}
+          >
+            Hey
+          </div>
+        </>
       )}
     </Container>
   )

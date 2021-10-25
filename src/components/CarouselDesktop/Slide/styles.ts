@@ -2,9 +2,19 @@ import styled from 'styled-components'
 // import Button from '@mui/material/Button'
 // import { Button } from '@material-ui/core'
 
-export const Container = styled.div``
+interface IContainer {
+  image: any
+}
 
-export const Image = styled.img``
+export const Container = styled.div<IContainer>`
+  background: ${props => props.theme.colors.dark} url('${props => props.image}')
+    no-repeat center;
+  background-size: cover;
+  max-height: 800px;
+  height: 70vw;
+`
+
+// export const Image = styled.img``
 
 export const DescriptionContainer = styled.div`
   display: flex;

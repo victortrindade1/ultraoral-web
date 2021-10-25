@@ -55,8 +55,10 @@ export const Column = styled.div`
 export const ClinicBox = styled.div<IClinicBox>`
   flex-grow: 0.4;
   margin-bottom: 10px;
-  background-color: purple;
-  background: white url('${props => props.image}') no-repeat center/90%;
+
+  background: ${props => props.theme.colors.dark} url('${props => props.image}')
+    no-repeat center;
+  background-size: cover;
   &:hover {
     /* opacity: 0.5; */
   }

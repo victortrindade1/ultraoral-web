@@ -3,7 +3,7 @@ import React from 'react'
 // import Button from '@mui/material/Button';
 // import Image from 'next/image'
 
-import { Container, DescriptionContainer, Description, Image } from './styles'
+import { Container, DescriptionContainer, Description } from './styles'
 
 interface ISlide {
   description?: string
@@ -13,12 +13,12 @@ interface ISlide {
 
 const Slide: React.FC<ISlide> = ({ url, alt, description }: ISlide) => {
   return (
-    <Container>
+    <Container image={url} title={alt}>
       <DescriptionContainer>
         <Description>{description}</Description>
       </DescriptionContainer>
       {/* <Image src={url} alt={alt} layout={'responsive'} /> */}
-      <Image src={url} alt={alt} />
+      {/* <Image src={url} alt={alt} /> */}
     </Container>
   )
 }

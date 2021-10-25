@@ -6,8 +6,10 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 export const MenuContainer = styled(SwipeableDrawer)``
 
 export const Puller = styled(Box)(({ theme }) => ({
-  width: 30,
-  height: 6,
+  // width: 30,
+  // height: 6,
+  width: '10vw',
+  height: '4px',
   backgroundColor: theme.colors.gold,
   borderRadius: 3,
   position: 'absolute',
