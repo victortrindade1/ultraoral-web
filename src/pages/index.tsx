@@ -7,6 +7,8 @@ import TopMenu from '../components/TopMenu'
 import CarouselDesktop from '../components/CarouselDesktop'
 
 import img1 from '../assets/slides/img1.jpeg'
+import whatsapp from '../assets/icon_whatsapp_colored.svg'
+// import { WhatsApp } from '@material-ui/icons'
 
 import {
   Container,
@@ -22,7 +24,8 @@ import {
   ContactBox,
   Text,
   ButtonContainer,
-  ButtonStyled
+  ButtonStyled,
+  Icon
 } from '../styles/pages/Home'
 
 const Home: NextPage = () => {
@@ -76,7 +79,9 @@ const Home: NextPage = () => {
                   <div>clínica</div>
                 </Text>
                 <ButtonContainer>
-                  <ButtonStyled variant="outlined">Ver mais</ButtonStyled>
+                  <ButtonStyled variant="outlined" color={'warning'}>
+                    Ver mais
+                  </ButtonStyled>
                 </ButtonContainer>
               </OverlayClinicBox>
             </ClinicBox>
@@ -84,7 +89,9 @@ const Home: NextPage = () => {
             <DentistsBox />
           </Column>
           <Column>
-            <WhatsAppBox />
+            <WhatsAppBox>
+              <Icon src={whatsapp} alt={'whatsapp'} />
+            </WhatsAppBox>
             <SpecialitiesBox />
             <ContactBox />
           </Column>

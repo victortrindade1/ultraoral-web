@@ -7,8 +7,8 @@ interface IContainer {
 }
 
 export const Container = styled.div<IContainer>`
-  background: ${props => props.theme.colors.dark} url('${props => props.image}')
-    no-repeat center;
+  background: ${props => props.theme.palette.primary.dark}
+    url('${props => props.image}') no-repeat center;
   background-size: cover;
   max-height: 800px;
   height: 70vw;
@@ -30,7 +30,7 @@ export const Description = styled.div`
   height: 100%;
   z-index: 1;
 
-  color: ${props => props.theme.colors.text};
+  color: ${props => props.theme.palette.primary.contrastText};
 
   font: 300 4vw 'Roboto', sans-serif;
   text-align: center;

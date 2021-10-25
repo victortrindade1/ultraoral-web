@@ -1,13 +1,23 @@
-const theme = {
-  colors: {
-    text: '#f4f4f4',
-    dark: '#333333',
-    primary: '#00739f',
-    gold: '#d4af37',
-    background: '#222222',
-    white: '#ffffff',
-    secondary: '#67cbf1'
+import { createTheme } from '@material-ui/core/styles'
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: '#757ce8',
+      main: '#d4af37',
+      dark: '#333333',
+      contrastText: '#f4f4f4'
+    },
+    secondary: {
+      light: '#d4a',
+      main: '#f44336',
+      dark: '#222222',
+      contrastText: '#000'
+    },
+    warning: {
+      main: '#d4af37'
+    }
   }
-}
+})
 
 export default theme

@@ -8,14 +8,14 @@ export const MenuContainer = styled(SwipeableDrawer)``
 export const Puller = styled(Box)(({ theme }) => ({
   width: '10vw',
   height: '4px',
-  backgroundColor: theme.colors.gold,
+  backgroundColor: theme.palette.primary.main,
   borderRadius: 3,
   position: 'absolute',
   top: 25
 }))
 
 export const VisibleMenu = styled.div`
-  background: ${props => props.theme.colors.dark};
+  background: ${props => props.theme.palette.primary.dark};
   border-radius: 0px 0px 8px 8px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
@@ -38,5 +38,5 @@ export const Logo = styled.img`
 export const HiddenMenu = styled.div`
   height: 100px;
   overflow: auto;
-  background: ${props => props.theme.colors.dark};
+  background: ${props => props.theme.palette.primary.dark};
 `

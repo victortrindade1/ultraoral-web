@@ -43,13 +43,13 @@ export const Navigation = styled.div`
     display: block;
     text-align: center;
     img {
-      height: 40px;
-      width: auto;
+      /* height: 40px;
+      width: auto; */
     }
   }
   a {
     font-size: 14px;
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.palette.primary.contrastText};
     padding: 0px 10px 0px 10px;
     text-decoration: none;
     transition: color 0.8s;
@@ -57,14 +57,17 @@ export const Navigation = styled.div`
     text-shadow: 1px 1px 2px black;
 
     &:hover {
-      color: ${props => props.theme.colors.gold};
+      color: ${props => props.theme.palette.primary.main};
     }
     &.active {
-      color: ${props => props.theme.colors.gold};
+      color: ${props => props.theme.palette.primary.main};
     }
   }
 `
 
 export const LogoContainer = styled.div``
 
-export const Image = styled.img``
+export const Image = styled.img`
+  height: 40px;
+  width: auto;
+`

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Button from '@material-ui/core/Button'
+import Button, { ButtonProps } from '@material-ui/core/Button'
 
 interface IBox {
   isBoxClicked: boolean
@@ -19,7 +19,7 @@ export const Container = styled.div`
 
   h1 {
     font-size: 54px;
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.palette.primary.contrastText};
     margin-top: 40px;
   }
 
@@ -50,8 +50,8 @@ export const Column = styled.div`
 `
 
 export const ClinicBox = styled.div<IClinicBox>`
-  background: ${props => props.theme.colors.dark} url('${props => props.image}')
-    no-repeat center;
+  background: ${props => props.theme.palette.primary.dark}
+    url('${props => props.image}') no-repeat center;
   background-size: cover;
 
   flex-grow: 0.4;
@@ -105,7 +105,7 @@ export const ContactBox = styled.div`
 export const Text = styled.div`
   font: 500 6vw 'Roboto', sans-serif;
 
-  color: ${props => props.theme.colors.text};
+  color: ${props => props.theme.palette.primary.contrastText};
   text-transform: uppercase;
   padding-left: 5vw;
   text-shadow: 1px 1px 2px black;
@@ -125,14 +125,16 @@ export const ButtonContainer = styled.div`
   justify-content: center;
 `
 
-export const ButtonStyled = styled(Button)(({ theme }) => ({
-  color: theme.colors.gold,
-  borderColor: theme.colors.gold,
+export const ButtonStyled = styled(Button)<ButtonProps>(({ theme }) => ({
+  color: theme.palette.primary.main,
+  borderColor: theme.palette.primary.main,
 
   '&:active': {
-    borderColor: theme.colors.gold
+    borderColor: theme.palette.primary.main
   },
   '&:focus': {
-    borderColor: theme.colors.gold
+    borderColor: theme.palette.primary.main
   }
 }))
+
+export const Icon = styled.img``
