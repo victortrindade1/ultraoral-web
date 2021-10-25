@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-
-// import img1 from '../../assets/slides/img1.jpeg'
+import Button from '@material-ui/core/Button'
 
 interface IBox {
   isBoxClicked: boolean
@@ -32,7 +31,6 @@ export const Container = styled.div`
 `
 
 export const CarouselDesktopContainer = styled.div`
-  /* height: 600px; */
   width: 100%;
 `
 
@@ -51,29 +49,27 @@ export const Column = styled.div`
   height: inherit;
 `
 
-// export const ClinicBox = styled.div`
 export const ClinicBox = styled.div<IClinicBox>`
-  flex-grow: 0.4;
-  margin-bottom: 10px;
-
   background: ${props => props.theme.colors.dark} url('${props => props.image}')
     no-repeat center;
   background-size: cover;
-  &:hover {
-    /* opacity: 0.5; */
-  }
 
-  transition: all 0.5s;
+  flex-grow: 0.4;
+  margin-bottom: 10px;
 `
 export const OverlayClinicBox = styled.div<IBox>`
   width: 100%;
   height: 100%;
-  /* position: relative; */
 
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  /* visibility: hidden; */
+  backdrop-filter: blur(6px);
+
   opacity: ${props => (props.isBoxClicked ? 1 : 0)};
+
+  transition: all 0.5s;
 `
 
 export const MapsBox = styled.div`
@@ -106,4 +102,37 @@ export const ContactBox = styled.div`
   background-color: firebrick;
 `
 
-export const Text = styled.div``
+export const Text = styled.div`
+  font: 500 6vw 'Roboto', sans-serif;
+
+  color: ${props => props.theme.colors.text};
+  text-transform: uppercase;
+  padding-left: 5vw;
+  text-shadow: 1px 1px 2px black;
+
+  > div:nth-of-type(1) {
+    font-size: 2.5vw;
+    padding-bottom: 5px;
+  }
+`
+
+export const ButtonContainer = styled.div`
+  position: absolute;
+  bottom: 10px;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`
+
+export const ButtonStyled = styled(Button)(({ theme }) => ({
+  color: theme.colors.gold,
+  borderColor: theme.colors.gold,
+
+  '&:active': {
+    borderColor: theme.colors.gold
+  },
+  '&:focus': {
+    borderColor: theme.colors.gold
+  }
+}))

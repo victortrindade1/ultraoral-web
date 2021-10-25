@@ -20,9 +20,10 @@ import {
   WhatsAppBox,
   SpecialitiesBox,
   ContactBox,
-  Text
+  Text,
+  ButtonContainer,
+  ButtonStyled
 } from '../styles/pages/Home'
-import { Button } from '@material-ui/core'
 
 const Home: NextPage = () => {
   const [isBoxClicked, setIsBoxClicked] = useState(false)
@@ -70,8 +71,13 @@ const Home: NextPage = () => {
           <Column>
             <ClinicBox ref={wrapperRef} onClick={handleClickBox} image={img1}>
               <OverlayClinicBox isBoxClicked={isBoxClicked}>
-                <Text>Conheça a clínica</Text>
-                <Button>Ver mais</Button>
+                <Text>
+                  <div>Conheça a</div>
+                  <div>clínica</div>
+                </Text>
+                <ButtonContainer>
+                  <ButtonStyled variant="outlined">Ver mais</ButtonStyled>
+                </ButtonContainer>
               </OverlayClinicBox>
             </ClinicBox>
             <MapsBox />
