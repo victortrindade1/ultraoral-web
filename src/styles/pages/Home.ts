@@ -73,9 +73,14 @@ export const OverlayClinicBox = styled.div<IBox>`
 `
 
 export const MapsBox = styled.div`
-  flex-grow: 0.3;
+  /* flex-grow: 0.3; */
   margin-bottom: 10px;
-  background-color: brown;
+
+  display: flex;
+  flex: 0.3;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props => props.theme.palette.primary.dark};
 `
 
 export const DentistsBox = styled.div`
@@ -85,9 +90,14 @@ export const DentistsBox = styled.div`
 `
 
 export const WhatsAppBox = styled.div`
-  flex-grow: 0.3;
+  /* flex-grow: 0.3; */
   margin-bottom: 10px;
-  background-color: blanchedalmond;
+
+  display: flex;
+  flex: 0.3;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props => props.theme.palette.primary.dark};
 `
 
 export const SpecialitiesBox = styled.div`
@@ -137,4 +147,26 @@ export const ButtonStyled = styled(Button)<ButtonProps>(({ theme }) => ({
   }
 }))
 
-export const Icon = styled.img``
+export const Icon = styled.img`
+  width: 20vw;
+  height: fit-content;
+`
+
+export const IconButtonStyled = styled(Button)`
+  width: 100%;
+  height: 100%;
+`
+
+export const BackgroundRounded = styled.div`
+  background-color: #fff;
+  border-radius: 8px;
+
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > img {
+    height: 15vw;
+  }
+`

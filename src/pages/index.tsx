@@ -7,7 +7,8 @@ import TopMenu from '../components/TopMenu'
 import CarouselDesktop from '../components/CarouselDesktop'
 
 import img1 from '../assets/slides/img1.jpeg'
-import whatsapp from '../assets/icon_whatsapp_colored.svg'
+import whatsapp from '../assets/icons/whatsapp-square-color.svg'
+import maps from '../assets/icons/icon_maps.svg'
 // import { WhatsApp } from '@material-ui/icons'
 
 import {
@@ -25,7 +26,9 @@ import {
   Text,
   ButtonContainer,
   ButtonStyled,
-  Icon
+  Icon,
+  IconButtonStyled,
+  BackgroundRounded
 } from '../styles/pages/Home'
 
 const Home: NextPage = () => {
@@ -85,12 +88,20 @@ const Home: NextPage = () => {
                 </ButtonContainer>
               </OverlayClinicBox>
             </ClinicBox>
-            <MapsBox />
+            <MapsBox>
+              <IconButtonStyled>
+                <BackgroundRounded>
+                  <Icon src={maps} alt={'maps'} />
+                </BackgroundRounded>
+              </IconButtonStyled>
+            </MapsBox>
             <DentistsBox />
           </Column>
           <Column>
             <WhatsAppBox>
-              <Icon src={whatsapp} alt={'whatsapp'} />
+              <IconButtonStyled>
+                <Icon src={whatsapp} alt={'whatsapp'} />
+              </IconButtonStyled>
             </WhatsAppBox>
             <SpecialitiesBox />
             <ContactBox />
