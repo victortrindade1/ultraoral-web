@@ -7,21 +7,25 @@ import TopMenu from '../components/TopMenu'
 import CarouselDesktop from '../components/CarouselDesktop'
 
 import img1 from '../assets/slides/img1.jpeg'
+import img3 from '../assets/slides/img3.jpeg'
+import img4 from '../assets/slides/img4.png'
+
 import whatsapp from '../assets/icons/whatsapp-square-color.svg'
 import maps from '../assets/icons/icon_maps.svg'
-// import { WhatsApp } from '@material-ui/icons'
 
 import {
   Container,
   CarouselDesktopContainer,
   Body,
   Column,
-  ClinicBox,
   OverlayClinicBox,
+  ClinicBox,
   MapsBox,
   DentistsBox,
   WhatsAppBox,
   SpecialitiesBox,
+  OverlaySpecialitiesBox,
+  OverlayDentistsBox,
   ContactBox,
   Text,
   ButtonContainer,
@@ -32,32 +36,65 @@ import {
 } from '../styles/pages/Home'
 
 const Home: NextPage = () => {
-  const [isBoxClicked, setIsBoxClicked] = useState(false)
+  const [isClinicBoxClicked, setIsClinicBoxClicked] = useState(false)
+  const [isSpecialitiesBoxClicked, setIsSpecialitiesBoxClicked] =
+    useState(false)
+  const [isDentistsBoxClicked, setIsDentistsBoxClicked] = useState(false)
 
-  const wrapperRef = useRef(null)
-  useOutsideAlerter(wrapperRef)
+  const clinicBoxRef = useRef(null)
+  const specialitiesBoxRef = useRef(null)
+  const dentistsBoxRef = useRef(null)
 
   const isBreakpoint = useMediaQuery('(max-width:768px)')
 
-  const handleClickBox = () => {
-    setIsBoxClicked(true)
-  }
+  useOutsideAlerterClinic(clinicBoxRef)
+  useOutsideAlerterSpecialitites(specialitiesBoxRef)
+  useOutsideAlerterDentists(dentistsBoxRef)
 
-  function useOutsideAlerter(ref) {
+  const handleClickClinicBox = () => setIsClinicBoxClicked(true)
+  const handleClickSpecialitiesBox = () => setIsSpecialitiesBoxClicked(true)
+  const handleClickDentistsBox = () => setIsDentistsBoxClicked(true)
+
+  function useOutsideAlerterClinic(ref) {
     useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
       function handleClickOutside(event) {
         if (ref.current && !ref.current.contains(event.target)) {
-          setIsBoxClicked(false)
+          setIsClinicBoxClicked(false)
         }
       }
 
-      // Bind the event listener
       document.addEventListener('click', handleClickOutside)
       return () => {
-        // Unbind the event listener on clean up
+        document.removeEventListener('click', handleClickOutside)
+      }
+    }, [ref])
+  }
+
+  function useOutsideAlerterSpecialitites(ref) {
+    useEffect(() => {
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setIsSpecialitiesBoxClicked(false)
+        }
+      }
+
+      document.addEventListener('click', handleClickOutside)
+      return () => {
+        document.removeEventListener('click', handleClickOutside)
+      }
+    }, [ref])
+  }
+
+  function useOutsideAlerterDentists(ref) {
+    useEffect(() => {
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setIsDentistsBoxClicked(false)
+        }
+      }
+
+      document.addEventListener('click', handleClickOutside)
+      return () => {
         document.removeEventListener('click', handleClickOutside)
       }
     }, [ref])
@@ -75,8 +112,12 @@ const Home: NextPage = () => {
         // Layout Mobile
         <Body>
           <Column>
-            <ClinicBox ref={wrapperRef} onClick={handleClickBox} image={img1}>
-              <OverlayClinicBox isBoxClicked={isBoxClicked}>
+            <ClinicBox
+              ref={clinicBoxRef}
+              onClick={handleClickClinicBox}
+              image={img1}
+            >
+              <OverlayClinicBox isBoxClicked={isClinicBoxClicked}>
                 <Text>
                   <div>Conheça a</div>
                   <div>clínica</div>
@@ -95,7 +136,23 @@ const Home: NextPage = () => {
                 </BackgroundRounded>
               </IconButtonStyled>
             </MapsBox>
-            <DentistsBox />
+            <DentistsBox
+              ref={dentistsBoxRef}
+              onClick={handleClickDentistsBox}
+              image={img4}
+            >
+              <OverlayDentistsBox isBoxClicked={isDentistsBoxClicked}>
+                <Text>
+                  <div>Corpo</div>
+                  <div>clínico</div>
+                </Text>
+                <ButtonContainer>
+                  <ButtonStyled variant="outlined" color={'warning'}>
+                    Ver mais
+                  </ButtonStyled>
+                </ButtonContainer>
+              </OverlayDentistsBox>
+            </DentistsBox>
           </Column>
           <Column>
             <WhatsAppBox>
@@ -103,7 +160,22 @@ const Home: NextPage = () => {
                 <Icon src={whatsapp} alt={'whatsapp'} />
               </IconButtonStyled>
             </WhatsAppBox>
-            <SpecialitiesBox />
+            <SpecialitiesBox
+              ref={specialitiesBoxRef}
+              onClick={handleClickSpecialitiesBox}
+              image={img3}
+            >
+              <OverlaySpecialitiesBox isBoxClicked={isSpecialitiesBoxClicked}>
+                <Text>
+                  <span>Especialidades</span>
+                </Text>
+                <ButtonContainer>
+                  <ButtonStyled variant="outlined" color={'warning'}>
+                    Ver mais
+                  </ButtonStyled>
+                </ButtonContainer>
+              </OverlaySpecialitiesBox>
+            </SpecialitiesBox>
             <ContactBox />
           </Column>
         </Body>

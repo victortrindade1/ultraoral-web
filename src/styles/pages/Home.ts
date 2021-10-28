@@ -2,10 +2,11 @@ import styled from 'styled-components'
 import Button, { ButtonProps } from '@material-ui/core/Button'
 
 interface IBox {
+  // isBoxClicked: boolean
   isBoxClicked: boolean
 }
 
-interface IClinicBox {
+interface IBackgroundBox {
   image: any
 }
 
@@ -35,10 +36,16 @@ export const CarouselDesktopContainer = styled.div`
 `
 
 export const Body = styled.div`
-  display: flex;
+  /* display: flex; */
   width: 100%;
-  padding: 0px 10px 10px 10px;
-  height: inherit;
+  padding: 0px 10px 0px 10px;
+  min-height: 600px;
+  /* height: inherit; */
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: hidden;
 `
 
 export const Column = styled.div`
@@ -49,7 +56,7 @@ export const Column = styled.div`
   height: inherit;
 `
 
-export const ClinicBox = styled.div<IClinicBox>`
+export const ClinicBox = styled.div<IBackgroundBox>`
   background: ${props => props.theme.palette.primary.dark}
     url('${props => props.image}') no-repeat center;
   background-size: cover;
@@ -57,6 +64,25 @@ export const ClinicBox = styled.div<IClinicBox>`
   flex-grow: 0.4;
   margin-bottom: 10px;
 `
+
+export const SpecialitiesBox = styled.div<IBackgroundBox>`
+  background: ${props => props.theme.palette.primary.dark}
+    url('${props => props.image}') no-repeat center;
+  background-size: cover;
+
+  flex-grow: 0.4;
+  margin-bottom: 10px;
+`
+
+export const DentistsBox = styled.div<IBackgroundBox>`
+  background: ${props => props.theme.palette.primary.dark}
+    url('${props => props.image}') no-repeat center;
+  background-size: cover;
+
+  flex-grow: 0.4;
+  margin-bottom: 10px;
+`
+
 export const OverlayClinicBox = styled.div<IBox>`
   width: 100%;
   height: 100%;
@@ -68,6 +94,38 @@ export const OverlayClinicBox = styled.div<IBox>`
   backdrop-filter: blur(6px);
 
   opacity: ${props => (props.isBoxClicked ? 1 : 0)};
+  background-color: ${props => props.isBoxClicked && 'rgba(0, 0, 0, 0.5)'};
+
+  transition: all 0.5s;
+`
+export const OverlaySpecialitiesBox = styled.div<IBox>`
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  backdrop-filter: blur(6px);
+
+  opacity: ${props => (props.isBoxClicked ? 1 : 0)};
+  background-color: ${props => props.isBoxClicked && 'rgba(0, 0, 0, 0.5)'};
+
+  transition: all 0.5s;
+`
+
+export const OverlayDentistsBox = styled.div<IBox>`
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  backdrop-filter: blur(6px);
+
+  opacity: ${props => (props.isBoxClicked ? 1 : 0)};
+  background-color: ${props => props.isBoxClicked && 'rgba(0, 0, 0, 0.5)'};
 
   transition: all 0.5s;
 `
@@ -83,12 +141,6 @@ export const MapsBox = styled.div`
   background-color: ${props => props.theme.palette.primary.dark};
 `
 
-export const DentistsBox = styled.div`
-  flex-grow: 0.4;
-  margin-bottom: 10px;
-  background-color: yellow;
-`
-
 export const WhatsAppBox = styled.div`
   /* flex-grow: 0.3; */
   margin-bottom: 10px;
@@ -100,14 +152,9 @@ export const WhatsAppBox = styled.div`
   background-color: ${props => props.theme.palette.primary.dark};
 `
 
-export const SpecialitiesBox = styled.div`
-  flex-grow: 0.4;
-  margin-bottom: 10px;
-  background-color: teal;
-`
-
 export const ContactBox = styled.div`
-  flex-grow: 0.3;
+  display: flex;
+  flex: 0.3;
   margin-bottom: 10px;
   background-color: firebrick;
 `
@@ -123,6 +170,10 @@ export const Text = styled.div`
   > div:nth-of-type(1) {
     font-size: 2.5vw;
     padding-bottom: 5px;
+  }
+
+  > span {
+    font-size: 4.5vw;
   }
 `
 
@@ -159,7 +210,7 @@ export const IconButtonStyled = styled(Button)`
 
 export const BackgroundRounded = styled.div`
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 4vw;
 
   height: 20vw;
   display: flex;
