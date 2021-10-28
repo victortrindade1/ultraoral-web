@@ -12,6 +12,7 @@ import img4 from '../assets/slides/img4.png'
 
 import whatsapp from '../assets/icons/whatsapp-square-color.svg'
 import maps from '../assets/icons/icon_maps.svg'
+import logo from '../assets/icons/logo_ultraoral_gold.svg'
 
 import {
   Container,
@@ -32,6 +33,7 @@ import {
   ButtonStyled,
   Icon,
   IconButtonStyled,
+  Logo,
   BackgroundRounded
 } from '../styles/pages/Home'
 
@@ -176,7 +178,11 @@ const Home: NextPage = () => {
                 </ButtonContainer>
               </OverlaySpecialitiesBox>
             </SpecialitiesBox>
-            <ContactBox />
+            <ContactBox>
+              <IconButtonStyled>
+                <Logo src={logo} alt={'logo'} />
+              </IconButtonStyled>
+            </ContactBox>
           </Column>
         </Body>
       ) : (

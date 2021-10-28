@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
-import Logo from '../../assets/logo_ultraoral_gold.svg'
+import Logo from '../../assets/icons/logo_ultraoral_gold.svg'
 
 import { Container, Navigation, LogoContainer, Image } from './styles'
 

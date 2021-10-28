@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Button, { ButtonProps } from '@material-ui/core/Button'
+import { lighten } from 'polished'
 
 interface IBox {
   // isBoxClicked: boolean
@@ -135,7 +136,7 @@ export const MapsBox = styled.div`
   margin-bottom: 10px;
 
   display: flex;
-  flex: 0.3;
+  flex: 0.4;
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.palette.primary.dark};
@@ -156,7 +157,9 @@ export const ContactBox = styled.div`
   display: flex;
   flex: 0.3;
   margin-bottom: 10px;
-  background-color: firebrick;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props => lighten(0.05, props.theme.palette.primary.dark)};
 `
 
 export const Text = styled.div`
@@ -200,6 +203,13 @@ export const ButtonStyled = styled(Button)<ButtonProps>(({ theme }) => ({
 
 export const Icon = styled.img`
   width: 20vw;
+  height: fit-content;
+`
+
+export const Logo = styled.img`
+  /* width: 20vw; */
+  max-width: 90%;
+  min-width: 80%;
   height: fit-content;
 `
 
