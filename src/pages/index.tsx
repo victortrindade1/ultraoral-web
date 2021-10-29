@@ -4,7 +4,6 @@ import { useMediaQuery } from '@mui/material'
 
 import Link from '../components/NoScrollLink'
 import Layout from '../components/Layout'
-import TopMenu from '../components/TopMenu'
 import CarouselDesktop from '../components/CarouselDesktop'
 
 import img1 from '../assets/slides/img1.jpeg'
@@ -111,7 +110,7 @@ const Home: NextPage = () => {
   return (
     <Layout title="Gente Odontologia" description={`${title} - ${subtitle}`}>
       <Container>
-        <TopMenu />
+        {/* <TopMenu /> */}
 
         {isBreakpoint ? (
           // Layout Mobile
@@ -128,11 +127,13 @@ const Home: NextPage = () => {
                     <div>clínica</div>
                   </Text>
                   <ButtonContainer onClick={handleNavigate}>
-                    <Link href="/clinic" passHref>
-                      <ButtonStyled variant="outlined" color={'warning'}>
-                        Ver mais
-                      </ButtonStyled>
-                    </Link>
+                    {isClinicBoxClicked && (
+                      <Link href="/clinic" passHref>
+                        <ButtonStyled variant="outlined" color={'warning'}>
+                          Ver mais
+                        </ButtonStyled>
+                      </Link>
+                    )}
                   </ButtonContainer>
                 </OverlayClinicBox>
               </ClinicBox>

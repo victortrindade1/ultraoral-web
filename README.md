@@ -4,7 +4,7 @@ Projeto criado com NextJS e Typescript.
 
 ## O q estou fazendo agora
 
-Tenho q colocar o menu como um header de todas as pages.
+Estilizar página Clínica - back button
 
 Tenho q criar o activelink pra mostrar colorido o menu qnd tiver na página.
 

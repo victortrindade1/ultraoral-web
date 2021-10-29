@@ -9,3 +9,5 @@ export const Container = styled.div``
 export const Title = styled.h1<ITitle>``
 
 export const Subtitle = styled.p``
+
+export const BackButton = styled.img``

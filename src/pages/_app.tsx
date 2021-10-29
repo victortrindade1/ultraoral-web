@@ -5,6 +5,8 @@ import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
 import { AnimatePresence } from 'framer-motion'
 // import { DefaultSeo } from 'next-seo'
 
+import TopMenu from '../components/TopMenu'
+
 import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
 
@@ -35,6 +37,7 @@ export default function MyApp({
       <MuiThemeProvider theme={theme}>
         <ThemeProvider theme={theme}>
           {/* <Header /> */}
+          <TopMenu />
           <AnimatePresence
             exitBeforeEnter
             initial={false}
