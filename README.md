@@ -4,4 +4,8 @@ Projeto criado com NextJS e Typescript.
 
 ## O q estou fazendo agora
 
-Estou tentando clicar nos boxes da tela mobile pra aparecer efeito blur neles separados. Pra nao triplicar o código, vou criar um objeto com ref nele. O body vai ter components diferentes. O parâmetro isBoxClicked vai depender de um condicional no jsx.
+Vou criar animação na transição entre as páginas.
+
+Antes de fazer o menu, vou fazer uma segunda página( da clínica), q assim o menu eu já vou conseguir vincular tb com alguma página.
+
+Vou fazer menu. Quero criar uma lista de componentes, todos iguais. Como parämetro tem icone e url da page

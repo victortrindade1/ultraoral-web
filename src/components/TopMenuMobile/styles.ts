@@ -25,18 +25,19 @@ export const VisibleMenu = styled.div`
   justify-content: center;
 
   position: absolute;
-  top: 100px;
+  top: 49vh;
   visibility: visible;
   right: 0;
   left: 0;
 `
 
-export const Logo = styled.img`
-  width: 137px;
-`
-
+// height de HiddenMenu está ligado ao top de VisibleMenu
 export const HiddenMenu = styled.div`
-  height: 100px;
+  height: 50vh;
   overflow: auto;
   background: ${props => props.theme.palette.primary.dark};
+`
+
+export const Logo = styled.img`
+  width: 137px;
 `

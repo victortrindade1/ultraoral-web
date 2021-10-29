@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import Head from 'next/head'
 import { useMediaQuery } from '@mui/material'
 
@@ -102,6 +103,8 @@ const Home: NextPage = () => {
     }, [ref])
   }
 
+  const handleNavigate = () => {}
+
   return (
     <Container>
       <Head>
@@ -124,10 +127,12 @@ const Home: NextPage = () => {
                   <div>Conheça a</div>
                   <div>clínica</div>
                 </Text>
-                <ButtonContainer>
-                  <ButtonStyled variant="outlined" color={'warning'}>
-                    Ver mais
-                  </ButtonStyled>
+                <ButtonContainer onClick={handleNavigate}>
+                  <Link href="/clinic" passHref>
+                    <ButtonStyled variant="outlined" color={'warning'}>
+                      Ver mais
+                    </ButtonStyled>
+                  </Link>
                 </ButtonContainer>
               </OverlayClinicBox>
             </ClinicBox>
@@ -191,17 +196,6 @@ const Home: NextPage = () => {
           <CarouselDesktopContainer>
             <CarouselDesktop />
           </CarouselDesktopContainer>
-
-          {/* <div
-            style={{
-              height: '800px',
-              width: '100%',
-              background: '#fff',
-              display: 'block'
-            }}
-          >
-            Hey
-          </div> */}
         </>
       )}
     </Container>

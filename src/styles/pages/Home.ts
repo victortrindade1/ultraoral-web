@@ -39,7 +39,7 @@ export const CarouselDesktopContainer = styled.div`
 export const Body = styled.div`
   /* display: flex; */
   width: 100%;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 5px 0px 5px;
   min-height: 600px;
   /* height: inherit; */
   height: 100%;
