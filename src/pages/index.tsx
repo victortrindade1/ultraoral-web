@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import type { NextPage } from 'next'
-import Link from 'next/link'
-import Head from 'next/head'
 import { useMediaQuery } from '@mui/material'
 
+import Link from '../components/NoScrollLink'
+import Layout from '../components/Layout'
 import TopMenu from '../components/TopMenu'
 import CarouselDesktop from '../components/CarouselDesktop'
 
@@ -37,6 +37,9 @@ import {
   Logo,
   BackgroundRounded
 } from '../styles/pages/Home'
+
+const title = 'Gente Odontologia'
+const subtitle = 'Venha sorrir com a gente!'
 
 const Home: NextPage = () => {
   const [isClinicBoxClicked, setIsClinicBoxClicked] = useState(false)
@@ -106,99 +109,97 @@ const Home: NextPage = () => {
   const handleNavigate = () => {}
 
   return (
-    <Container>
-      <Head>
-        <title>Gente Odontologia</title>
-      </Head>
+    <Layout title="Gente Odontologia" description={`${title} - ${subtitle}`}>
+      <Container>
+        <TopMenu />
 
-      <TopMenu />
-
-      {isBreakpoint ? (
-        // Layout Mobile
-        <Body>
-          <Column>
-            <ClinicBox
-              ref={clinicBoxRef}
-              onClick={handleClickClinicBox}
-              image={img1}
-            >
-              <OverlayClinicBox isBoxClicked={isClinicBoxClicked}>
-                <Text>
-                  <div>Conheça a</div>
-                  <div>clínica</div>
-                </Text>
-                <ButtonContainer onClick={handleNavigate}>
-                  <Link href="/clinic" passHref>
+        {isBreakpoint ? (
+          // Layout Mobile
+          <Body>
+            <Column>
+              <ClinicBox
+                ref={clinicBoxRef}
+                onClick={handleClickClinicBox}
+                image={img1}
+              >
+                <OverlayClinicBox isBoxClicked={isClinicBoxClicked}>
+                  <Text>
+                    <div>Conheça a</div>
+                    <div>clínica</div>
+                  </Text>
+                  <ButtonContainer onClick={handleNavigate}>
+                    <Link href="/clinic" passHref>
+                      <ButtonStyled variant="outlined" color={'warning'}>
+                        Ver mais
+                      </ButtonStyled>
+                    </Link>
+                  </ButtonContainer>
+                </OverlayClinicBox>
+              </ClinicBox>
+              <MapsBox>
+                <IconButtonStyled>
+                  <BackgroundRounded>
+                    <Icon src={maps} alt={'maps'} />
+                  </BackgroundRounded>
+                </IconButtonStyled>
+              </MapsBox>
+              <DentistsBox
+                ref={dentistsBoxRef}
+                onClick={handleClickDentistsBox}
+                image={img4}
+              >
+                <OverlayDentistsBox isBoxClicked={isDentistsBoxClicked}>
+                  <Text>
+                    <div>Corpo</div>
+                    <div>clínico</div>
+                  </Text>
+                  <ButtonContainer>
                     <ButtonStyled variant="outlined" color={'warning'}>
                       Ver mais
                     </ButtonStyled>
-                  </Link>
-                </ButtonContainer>
-              </OverlayClinicBox>
-            </ClinicBox>
-            <MapsBox>
-              <IconButtonStyled>
-                <BackgroundRounded>
-                  <Icon src={maps} alt={'maps'} />
-                </BackgroundRounded>
-              </IconButtonStyled>
-            </MapsBox>
-            <DentistsBox
-              ref={dentistsBoxRef}
-              onClick={handleClickDentistsBox}
-              image={img4}
-            >
-              <OverlayDentistsBox isBoxClicked={isDentistsBoxClicked}>
-                <Text>
-                  <div>Corpo</div>
-                  <div>clínico</div>
-                </Text>
-                <ButtonContainer>
-                  <ButtonStyled variant="outlined" color={'warning'}>
-                    Ver mais
-                  </ButtonStyled>
-                </ButtonContainer>
-              </OverlayDentistsBox>
-            </DentistsBox>
-          </Column>
-          <Column>
-            <WhatsAppBox>
-              <IconButtonStyled>
-                <Icon src={whatsapp} alt={'whatsapp'} />
-              </IconButtonStyled>
-            </WhatsAppBox>
-            <SpecialitiesBox
-              ref={specialitiesBoxRef}
-              onClick={handleClickSpecialitiesBox}
-              image={img3}
-            >
-              <OverlaySpecialitiesBox isBoxClicked={isSpecialitiesBoxClicked}>
-                <Text>
-                  <span>Especialidades</span>
-                </Text>
-                <ButtonContainer>
-                  <ButtonStyled variant="outlined" color={'warning'}>
-                    Ver mais
-                  </ButtonStyled>
-                </ButtonContainer>
-              </OverlaySpecialitiesBox>
-            </SpecialitiesBox>
-            <ContactBox>
-              <IconButtonStyled>
-                <Logo src={logo} alt={'logo'} />
-              </IconButtonStyled>
-            </ContactBox>
-          </Column>
-        </Body>
-      ) : (
-        <>
-          {/* // Layout Desktop */}
-          <CarouselDesktopContainer>
-            <CarouselDesktop />
-          </CarouselDesktopContainer>
-        </>
-      )}
-    </Container>
+                  </ButtonContainer>
+                </OverlayDentistsBox>
+              </DentistsBox>
+            </Column>
+            <Column>
+              <WhatsAppBox>
+                <IconButtonStyled>
+                  <Icon src={whatsapp} alt={'whatsapp'} />
+                </IconButtonStyled>
+              </WhatsAppBox>
+              <SpecialitiesBox
+                ref={specialitiesBoxRef}
+                onClick={handleClickSpecialitiesBox}
+                image={img3}
+              >
+                <OverlaySpecialitiesBox isBoxClicked={isSpecialitiesBoxClicked}>
+                  <Text>
+                    <span>Especialidades</span>
+                  </Text>
+                  <ButtonContainer>
+                    <ButtonStyled variant="outlined" color={'warning'}>
+                      Ver mais
+                    </ButtonStyled>
+                  </ButtonContainer>
+                </OverlaySpecialitiesBox>
+              </SpecialitiesBox>
+              <ContactBox>
+                <IconButtonStyled>
+                  <Logo src={logo} alt={'logo'} />
+                </IconButtonStyled>
+              </ContactBox>
+            </Column>
+          </Body>
+        ) : (
+          <>
+            {/* // Layout Desktop */}
+            <CarouselDesktopContainer>
+              <CarouselDesktop />
+            </CarouselDesktopContainer>
+          </>
+        )}
+      </Container>
+    </Layout>
   )
 }
 

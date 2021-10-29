@@ -63,7 +63,8 @@ export default class MyDocument extends Document {
           />
 
           {/* Favicon */}
-          <link rel="icon" href="https://rocketseat.com.br/favicon.ico" />
+          {/* <link rel="icon" href="https://rocketseat.com.br/favicon.ico" /> */}
+          <link rel="icon" href="/favicon.png" type="image/png" />
         </Head>
         <body>
           <Main />
