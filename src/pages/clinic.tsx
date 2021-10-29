@@ -2,17 +2,20 @@ import React from 'react'
 import type { NextPage } from 'next'
 
 import Layout from '../components/Layout'
+import PageTitle from '../components/PageTitle'
 
 import { Container } from '../styles/pages/Clinic'
 
 const title = 'A Clínica'
-const subtitle = 'Conheça o conforto da clínica mais moderna de Campos'
+const subtitle =
+  'Seja bem-vindo(a)! Conheça o conforto da clínica mais moderna de Campos.'
 
 const Clinic: NextPage = () => {
   return (
-    <Layout title="Home" description={`${title} - ${subtitle}`}>
+    <Layout title="A Clínica" description={`${title} - ${subtitle}`}>
       <Container>
-        <h1>Hello World</h1>
+        <PageTitle title={title} subtitle={subtitle} center={true} />
+        {/* <h1>Hello World</h1> */}
       </Container>
     </Layout>
   )
