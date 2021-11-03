@@ -4,6 +4,7 @@ import { useMediaQuery } from '@mui/material'
 
 import Layout from '../components/Layout'
 import PageTitle from '../components/PageTitle'
+import Album from '../components/Album'
 
 import { Container, BodyClinic, Subtitle } from '../styles/pages/Clinic'
 
@@ -26,6 +27,7 @@ const Clinic: NextPage = () => {
             quidem fugit atque deleniti.
           </p>
           <Subtitle>Álbum de fotos</Subtitle>
+          <Album />
         </BodyClinic>
       </Container>
     </Layout>
