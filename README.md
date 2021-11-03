@@ -4,7 +4,8 @@ Projeto criado com NextJS e Typescript.
 
 ## O q estou fazendo agora
 
-Estilizar página Clínica - back button
+Estilizar página Clínica - back button:
+O back button vai ter só no mobile. Não tem pq ter no web.
 
 Tenho q criar o activelink pra mostrar colorido o menu qnd tiver na página.
 
