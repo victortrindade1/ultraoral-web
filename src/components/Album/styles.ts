@@ -19,10 +19,10 @@ export const PhotoThumb = styled.div<IContainerImage>`
   height: auto;
 `
 
-export const PhotoContainer = styled.div`
-  height: 50%;
-  width: 50%;
-  background-color: saddlebrown;
+export const CarouselContainer = styled.div`
+  height: auto;
+  width: 70%;
+
   margin: auto;
 `
 
