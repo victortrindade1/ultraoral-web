@@ -1,16 +1,33 @@
 import styled from 'styled-components'
+import Modal from '@mui/material/Modal'
 
-interface IContainer {
+interface IContainerImage {
   image: any
 }
 
-export const Container = styled.div``
+export const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 15vw 15vw 15vw;
+  grid-gap: 1vw;
+`
 
-export const Photo = styled.div<IContainer>`
+export const PhotoThumb = styled.div<IContainerImage>`
   background: ${props => props.theme.palette.primary.dark}
     url('${props => props.image}') no-repeat center;
   background-size: cover;
-  /* max-height: 800px; */
-  /* height: 70vw; */
-  height: 80px;
+  height: auto;
+`
+
+export const PhotoContainer = styled.div`
+  height: 50%;
+  width: 50%;
+  background-color: saddlebrown;
+  margin: auto;
+`
+
+export const Photo = styled.img``
+
+export const ModalStyled = styled(Modal)`
+  display: flex;
 `

@@ -30,6 +30,7 @@ export const Subtitle = styled.h2`
   font-size: 1.5rem;
   font-family: 'Roboto', sans-serif;
   padding-top: 15vw;
+  padding-bottom: 10px;
 
   color: ${props => props.theme.palette.primary.main};
 `

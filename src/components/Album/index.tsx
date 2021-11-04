@@ -19,7 +19,14 @@ import t_img8 from '../../assets/clinic/thumbs/img8.jpeg'
 import img9 from '../../assets/clinic/img9.png'
 import t_img9 from '../../assets/clinic/thumbs/img9.jpeg'
 
-import { Container, Photo } from './styles'
+import {
+  Container,
+  PhotoThumb,
+  PhotoContainer,
+  Photo,
+  ModalStyled
+} from './styles'
+import { useState } from 'react'
 
 const photos = [
   {
@@ -70,11 +77,36 @@ const photos = [
 ]
 
 const Album: React.FC = () => {
+  const [open, setOpen] = useState(false)
+
+  const handleOpen = () => {
+    setOpen(true)
+  }
+
+  const handleClose = () => {
+    setOpen(false)
+  }
+
   return (
     <Container>
       {photos.map((data, i) => (
-        <Photo key={i} image={data.thumb} title={data.alt} />
+        <PhotoThumb
+          key={i}
+          image={data.thumb}
+          title={data.alt}
+          onClick={handleOpen}
+        />
       ))}
+      <ModalStyled
+        open={open}
+        onClose={handleClose}
+        // aria-labelledby="modal-modal-title"
+        // aria-describedby="modal-modal-description"
+      >
+        <PhotoContainer>
+          <Photo src={''} alt={''} />
+        </PhotoContainer>
+      </ModalStyled>
     </Container>
   )
 }
