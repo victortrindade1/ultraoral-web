@@ -66,9 +66,11 @@ const photos = [
 
 const Album: React.FC = () => {
   const [open, setOpen] = useState(false)
+  const [id, setId] = useState(0)
 
-  const handleOpen = () => {
+  const handleOpen = i => {
     setOpen(true)
+    setId(i)
   }
 
   const handleClose = () => {
@@ -82,23 +84,13 @@ const Album: React.FC = () => {
           key={i}
           image={data.thumb}
           title={data.alt}
-          onClick={handleOpen}
+          onClick={() => handleOpen(i)}
         />
       ))}
-      <ModalStyled
-        open={open}
-        onClose={handleClose}
-        // aria-labelledby="modal-modal-title"
-        // aria-describedby="modal-modal-description"
-      >
-        {/* <Zoom in={open}> */}
-        {/* <PhotoContainer>
-            <Photo src={''} alt={''} />
-          </PhotoContainer> */}
+      <ModalStyled open={open} onClose={handleClose}>
         <CarouselContainer>
-          <CarouselClinic />
+          <CarouselClinic index={id} />
         </CarouselContainer>
-        {/* </Zoom> */}
       </ModalStyled>
     </Container>
   )

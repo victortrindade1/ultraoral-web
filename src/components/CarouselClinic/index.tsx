@@ -14,7 +14,10 @@ import Slide from './Slide'
 
 import { CarouselStyled } from './styles'
 
-const CarouselClinic: React.FC = () => {
+interface ICarouselClinic {
+  index: number
+}
+const CarouselClinic: React.FC<ICarouselClinic> = ({ index }) => {
   const slides = [
     {
       id: 1,
@@ -64,16 +67,7 @@ const CarouselClinic: React.FC = () => {
   ]
 
   return (
-    <CarouselStyled
-      // navButtonsAlwaysInvisible={true}
-      timeout={1000}
-      interval={500000000}
-      indicatorContainerProps={{
-        style: {
-          // display: 'none'
-        }
-      }}
-    >
+    <CarouselStyled timeout={300} autoPlay={false} index={index}>
       {slides.map((data, i) => (
         <Slide key={i} {...data} />
       ))}
