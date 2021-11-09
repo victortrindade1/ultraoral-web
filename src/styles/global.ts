@@ -20,6 +20,16 @@ export default createGlobalStyle<{ theme: Theme }>`
     color: ${props => props.theme.palette.primary.contrastText};
     font: 400 16px Roboto, sans-serif;
     -webkit-font-smoothing: antialiased !important;
+
+    /* Google Maps */
+    /* .is-map > #__next > .navbar {
+      display: none;
+    }
+    .is-map > #__next > .container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 !important;
+    } */
   }
 
   body, input, button {

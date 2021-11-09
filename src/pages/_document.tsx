@@ -1,4 +1,6 @@
 import React from 'react'
+// import settings from '../settings'
+
 import Document, {
   DocumentContext,
   DocumentInitialProps,
@@ -65,6 +67,12 @@ export default class MyDocument extends Document {
           {/* Favicon */}
           {/* <link rel="icon" href="https://rocketseat.com.br/favicon.ico" /> */}
           <link rel="icon" href="/favicon.png" type="image/png" />
+
+          {/* Google maps
+          <script
+            src={`https://maps.googleapis.com/maps/api/js?key=${settings?.googleMaps?.apiKey}&callback=initMap&libraries=&v=weekly`}
+            async
+          ></script> */}
         </Head>
         <body>
           <Main />

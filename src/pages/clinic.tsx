@@ -5,6 +5,7 @@ import { useMediaQuery } from '@mui/material'
 import Layout from '../components/Layout'
 import PageTitle from '../components/PageTitle'
 import Album from '../components/Album'
+import SimpleMap from '../components/SimpleMap'
 
 import { Container, BodyClinic, Subtitle } from '../styles/pages/Clinic'
 
@@ -28,6 +29,8 @@ const Clinic: NextPage = () => {
           </p>
           <Subtitle>Álbum de fotos</Subtitle>
           <Album />
+          <Subtitle>Como chegar</Subtitle>
+          <SimpleMap />
         </BodyClinic>
       </Container>
     </Layout>
