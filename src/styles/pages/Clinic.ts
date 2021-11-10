@@ -34,3 +34,25 @@ export const Subtitle = styled.h2`
 
   color: ${props => props.theme.palette.primary.main};
 `
+
+export const Address = styled.div`
+  color: ${props => props.theme.palette.primary.contrastText};
+  font-family: 'Roboto', sans-serif;
+  padding-top: 11px;
+  font-size: 1rem;
+`
+
+export const Text = styled.div`
+  padding-left: 11px;
+  word-break: break-word;
+`
+
+export const GridContact = styled.div<IResponsive>`
+  display: grid;
+  grid-template-columns: 0.01fr 1fr;
+  grid-row-gap: 11px;
+  color: ${props => props.theme.palette.primary.contrastText};
+  font-size: ${props => (props.isBreakpoint ? '4vw' : '2vw')};
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 15vw;
+`
