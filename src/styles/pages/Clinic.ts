@@ -56,3 +56,7 @@ export const GridContact = styled.div<IResponsive>`
   font-family: 'Roboto', sans-serif;
   padding-bottom: 15vw;
 `
+
+export const MapContainer = styled.div`
+  height: 50vh;
+`

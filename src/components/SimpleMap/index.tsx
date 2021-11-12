@@ -3,6 +3,8 @@ import GoogleMapReact from 'google-map-react'
 
 import Marker from './Marker'
 
+import { maps } from '../../config/maps'
+
 import { Container } from './styles'
 
 const SimpleMap = () => {
@@ -25,11 +27,11 @@ const SimpleMap = () => {
     <Container>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_KEY }}
-        defaultCenter={{ lat: 11.0168, lng: 76.9558 }}
-        defaultZoom={11}
+        defaultCenter={{ lat: maps.lat, lng: maps.lng }}
+        defaultZoom={18}
         options={getMapOptions}
       >
-        <Marker lat={11.0168} lng={76.9558} name="Gente Odontologia" />
+        <Marker lat={maps.lat} lng={maps.lng} name="Gente Odontologia" />
       </GoogleMapReact>
     </Container>
   )

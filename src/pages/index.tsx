@@ -4,8 +4,10 @@ import { useMediaQuery } from '@mui/material'
 
 import Link from '../components/NoScrollLink'
 import Layout from '../components/Layout'
-import CarouselDesktop from '../components/CarouselDesktop'
+// import CarouselDesktop from '../components/CarouselDesktop'
+import BodyDesktop from '../components/BodyDesktop'
 
+// import getMobileOS from '../utils/getMobileOS'
 import img1 from '../assets/slides/img1.jpeg'
 import img3 from '../assets/slides/img3.jpeg'
 import img4 from '../assets/slides/img4.png'
@@ -16,7 +18,7 @@ import logo from '../assets/icons/logo_ultraoral_gold.svg'
 
 import {
   Container,
-  CarouselDesktopContainer,
+  // CarouselDesktopContainer,
   Body,
   Column,
   OverlayClinicBox,
@@ -45,12 +47,11 @@ const Home: NextPage = () => {
   const [isSpecialitiesBoxClicked, setIsSpecialitiesBoxClicked] =
     useState(false)
   const [isDentistsBoxClicked, setIsDentistsBoxClicked] = useState(false)
+  const [isMobile, setIsMobile] = useState(true)
 
   const clinicBoxRef = useRef(null)
   const specialitiesBoxRef = useRef(null)
   const dentistsBoxRef = useRef(null)
-
-  const isBreakpoint = useMediaQuery('(max-width:768px)')
 
   useOutsideAlerterClinic(clinicBoxRef)
   useOutsideAlerterSpecialitites(specialitiesBoxRef)
@@ -105,14 +106,20 @@ const Home: NextPage = () => {
     }, [ref])
   }
 
-  const handleNavigate = () => {}
+  // const handleNavigate = () => {}
+
+  const isBreakpoint = useMediaQuery('(max-width:768px)')
+
+  useEffect(() => {
+    isBreakpoint ? setIsMobile(true) : setIsMobile(false)
+  }, [isBreakpoint])
 
   return (
     <Layout title="Gente Odontologia" description={`${title} - ${subtitle}`}>
       <Container>
         {/* <TopMenu /> */}
 
-        {isBreakpoint ? (
+        {isMobile ? (
           // Layout Mobile
           <Body>
             <Column>
@@ -126,7 +133,7 @@ const Home: NextPage = () => {
                     <div>Conheça a</div>
                     <div>clínica</div>
                   </Text>
-                  <ButtonContainer onClick={handleNavigate}>
+                  <ButtonContainer>
                     {isClinicBoxClicked && (
                       <Link href="/clinic" passHref>
                         <ButtonStyled variant="outlined" color={'warning'}>
@@ -138,11 +145,13 @@ const Home: NextPage = () => {
                 </OverlayClinicBox>
               </ClinicBox>
               <MapsBox>
-                <IconButtonStyled>
-                  <BackgroundRounded>
-                    <Icon src={maps} alt={'maps'} />
-                  </BackgroundRounded>
-                </IconButtonStyled>
+                <Link href="/map" passHref>
+                  <IconButtonStyled>
+                    <BackgroundRounded>
+                      <Icon src={maps} alt={'maps'} />
+                    </BackgroundRounded>
+                  </IconButtonStyled>
+                </Link>
               </MapsBox>
               <DentistsBox
                 ref={dentistsBoxRef}
@@ -164,9 +173,13 @@ const Home: NextPage = () => {
             </Column>
             <Column>
               <WhatsAppBox>
-                <IconButtonStyled>
-                  <Icon src={whatsapp} alt={'whatsapp'} />
-                </IconButtonStyled>
+                <Link
+                  href={`https://api.whatsapp.com/send?phone=22999999999&text=Olá, gostaria de agendar uma consulta!`}
+                >
+                  <IconButtonStyled>
+                    <Icon src={whatsapp} alt={'whatsapp'} />
+                  </IconButtonStyled>
+                </Link>
               </WhatsAppBox>
               <SpecialitiesBox
                 ref={specialitiesBoxRef}
@@ -193,10 +206,7 @@ const Home: NextPage = () => {
           </Body>
         ) : (
           <>
-            {/* // Layout Desktop */}
-            <CarouselDesktopContainer>
-              <CarouselDesktop />
-            </CarouselDesktopContainer>
+            <BodyDesktop />
           </>
         )}
       </Container>

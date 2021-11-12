@@ -1,15 +1,14 @@
 import React from 'react'
 import type { NextPage } from 'next'
 import { useMediaQuery } from '@mui/material'
+import { FaWhatsapp, FaPhone, FaRegEnvelope } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
 import PageTitle from '../components/PageTitle'
 import Album from '../components/Album'
 import SimpleMap from '../components/SimpleMap'
 
-// import { WhatsApp, Phone, Mail } from '@material-ui/icons'
-
-import { FaWhatsapp, FaPhone, FaRegEnvelope } from 'react-icons/fa'
+import { companyInfo } from '../config/companyInfo'
 
 import {
   Container,
@@ -19,7 +18,8 @@ import {
   // RowContact,
   // Icon,
   GridContact,
-  Text
+  Text,
+  MapContainer
 } from '../styles/pages/Clinic'
 
 const Clinic: NextPage = () => {
@@ -43,19 +43,18 @@ const Clinic: NextPage = () => {
           <Subtitle>Álbum de fotos</Subtitle>
           <Album />
           <Subtitle>Como chegar</Subtitle>
-          <SimpleMap />
-          <Address>
-            Rua Barão do Amazonas, 158 - Parque Rosario, Campos dos Goytacazes -
-            RJ, 28025-496
-          </Address>
+          <MapContainer>
+            <SimpleMap />
+          </MapContainer>
+          <Address>{companyInfo.street}</Address>
           <Subtitle>Contatos</Subtitle>
           <GridContact isBreakpoint={isBreakpoint}>
             <FaWhatsapp />
-            <Text>(22) 99999-9999</Text>
+            <Text>{companyInfo.whatsapp}</Text>
             <FaPhone />
-            <Text>(22) 2222-2222</Text>
+            <Text>{companyInfo.phone}</Text>
             <FaRegEnvelope />
-            <Text>contato@genteodontologia.com.br</Text>
+            <Text>{companyInfo.mail}</Text>
           </GridContact>
         </BodyClinic>
       </Container>
