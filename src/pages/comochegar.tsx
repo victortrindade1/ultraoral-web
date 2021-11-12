@@ -1,5 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
+import Button from '@material-ui/core/Button'
 
 import {
   FaWhatsapp,
@@ -22,16 +23,16 @@ import {
   Container,
   MapContainer,
   ButtonContainer,
-  MapButton,
+  // MapButton,
   MapButtonLabel,
   AddressContainer,
   Text
-} from '../styles/pages/Map'
+} from '../styles/pages/ComoChegar'
 import SimpleMap from '../components/SimpleMap'
 import { useEffect } from 'react'
 import { useState } from 'react'
 
-const Map: NextPage = () => {
+const ComoChegar: NextPage = () => {
   const [mapsLink, setMapsLink] = useState('')
 
   const isBreakpoint = useMediaQuery('(max-width:768px)')
@@ -65,10 +66,10 @@ const Map: NextPage = () => {
           {isBreakpoint && (
             <Link href={mapsLink}>
               <ButtonContainer>
-                <MapButton variant="contained" color={'warning'}>
+                <Button variant="contained" color={'warning'} fullWidth>
                   <FaMapMarkerAlt />
                   <MapButtonLabel>Abrir no App</MapButtonLabel>
-                </MapButton>
+                </Button>
               </ButtonContainer>
             </Link>
           )}
@@ -92,4 +93,4 @@ const Map: NextPage = () => {
   )
 }
 
-export default Map
+export default ComoChegar

@@ -17,7 +17,8 @@ export const ButtonContainer = styled.div`
   position: relative;
   bottom: 15vh;
 
-  width: 100%;
+  width: 80%;
+  margin: auto;
   display: flex;
   justify-content: center;
 `
@@ -44,7 +45,7 @@ export const AddressContainer = styled.div<IResponsive>`
   grid-row-gap: 18px;
   align-items: center;
   color: ${props => props.theme.palette.primary.contrastText};
-  font-size: ${props => (props.isBreakpoint ? '1rem' : '1rem')};
+  font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   /* padding-bottom: 15vw; */
   /* padding: 5vw 15vw 15vw 15vw; */

@@ -135,7 +135,7 @@ const Home: NextPage = () => {
                   </Text>
                   <ButtonContainer>
                     {isClinicBoxClicked && (
-                      <Link href="/clinic" passHref>
+                      <Link href="/clinica" passHref>
                         <ButtonStyled variant="outlined" color={'warning'}>
                           Ver mais
                         </ButtonStyled>
@@ -145,7 +145,7 @@ const Home: NextPage = () => {
                 </OverlayClinicBox>
               </ClinicBox>
               <MapsBox>
-                <Link href="/map" passHref>
+                <Link href="/comochegar" passHref>
                   <IconButtonStyled>
                     <BackgroundRounded>
                       <Icon src={maps} alt={'maps'} />
@@ -173,9 +173,10 @@ const Home: NextPage = () => {
             </Column>
             <Column>
               <WhatsAppBox>
-                <Link
+                {/* <Link
                   href={`https://api.whatsapp.com/send?phone=22999999999&text=Olá, gostaria de agendar uma consulta!`}
-                >
+                > */}
+                <Link href={'/agendaragora'}>
                   <IconButtonStyled>
                     <Icon src={whatsapp} alt={'whatsapp'} />
                   </IconButtonStyled>
