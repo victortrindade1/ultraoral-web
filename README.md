@@ -4,11 +4,11 @@ Projeto criado com NextJS e Typescript.
 
 ## O q estou fazendo agora
 
-pro whatsapp, é bem fácil
-
-```
-<p>My whatsapp +1 987654321 <a href="https://api.whatsapp.com/send?phone=0000000000&text=example">Web</a> | <a href="whatsapp://send?phone=0000000000&text=example">App</a></p>
-```
+Estou criando os icons das especialidades. pra criar o svg faço o seguinte:
+1- colo a imagem no inkscape
+2- rastreio bitmap
+3- salvo svg otimizado
+4- edito cor no vscode
 
 Tenho q criar o activelink pra mostrar colorido o menu qnd tiver na página.
 

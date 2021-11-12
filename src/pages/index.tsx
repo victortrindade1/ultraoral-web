@@ -173,9 +173,6 @@ const Home: NextPage = () => {
             </Column>
             <Column>
               <WhatsAppBox>
-                {/* <Link
-                  href={`https://api.whatsapp.com/send?phone=22999999999&text=Olá, gostaria de agendar uma consulta!`}
-                > */}
                 <Link href={'/agendaragora'}>
                   <IconButtonStyled>
                     <Icon src={whatsapp} alt={'whatsapp'} />
@@ -191,11 +188,16 @@ const Home: NextPage = () => {
                   <Text>
                     <span>Especialidades</span>
                   </Text>
-                  <ButtonContainer>
-                    <ButtonStyled variant="outlined" color={'warning'}>
-                      Ver mais
-                    </ButtonStyled>
-                  </ButtonContainer>
+
+                  {isSpecialitiesBoxClicked && (
+                    <Link href="/especialidades" passHref>
+                      <ButtonContainer>
+                        <ButtonStyled variant="outlined" color={'warning'}>
+                          Ver mais
+                        </ButtonStyled>
+                      </ButtonContainer>
+                    </Link>
+                  )}
                 </OverlaySpecialitiesBox>
               </SpecialitiesBox>
               <ContactBox>
