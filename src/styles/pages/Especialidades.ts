@@ -30,7 +30,8 @@ export const ItemSpeciality = styled.li<IResponsive>`
   &:hover,
   &:active {
     background-color: ${props =>
-      lighten(0.03, props.theme.palette.primary.dark)};
+      lighten(0.3, props.theme.palette.primary.dark)};
+    cursor: pointer;
   }
   transition: all 0.5s;
 `

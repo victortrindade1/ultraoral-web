@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import type { NextPage } from 'next'
 import { useMediaQuery } from '@mui/material'
 
 import Layout from '../components/Layout'
 import PageTitle from '../components/PageTitle'
+import ModalSpeciality from '../components/ModalSpeciality'
 
 import icon_endo from '../assets/icons/speciality_endo.svg'
 import icon_ciru from '../assets/icons/speciality_ciru.svg'
@@ -26,43 +27,82 @@ import {
 const listSpecialities = [
   {
     icon: icon_ciru,
-    speciality: 'Cirurgia'
+    speciality: 'Cirurgia',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo excepturi culpa nobis adipisci quidem ipsam, a sint quas assumenda eveniet facilis aliquam nam voluptates blanditiis saepe non dicta dolorum?'
   },
   {
     icon: icon_dent,
-    speciality: 'Dentística'
+    speciality: 'Dentística',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo excepturi culpa nobis adipisci quidem ipsam, a sint quas assumenda eveniet facilis aliquam nam voluptates blanditiis saepe non dicta dolorum?'
   },
   {
     icon: icon_endo,
-    speciality: 'Endodontia'
+    speciality: 'Endodontia',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo excepturi culpa nobis adipisci quidem ipsam, a sint quas assumenda eveniet facilis aliquam nam voluptates blanditiis saepe non dicta dolorum?'
   },
   {
     icon: icon_impl,
-    speciality: 'Implantodontia'
+    speciality: 'Implantodontia',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo excepturi culpa nobis adipisci quidem ipsam, a sint quas assumenda eveniet facilis aliquam nam voluptates blanditiis saepe non dicta dolorum?'
   },
   {
     icon: icon_pedi,
-    speciality: 'Odontopediatria'
+    speciality: 'Odontopediatria',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo excepturi culpa nobis adipisci quidem ipsam, a sint quas assumenda eveniet facilis aliquam nam voluptates blanditiis saepe non dicta dolorum?'
   },
   {
     icon: icon_orto,
-    speciality: 'Ortodontia'
+    speciality: 'Ortodontia',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo excepturi culpa nobis adipisci quidem ipsam, a sint quas assumenda eveniet facilis aliquam nam voluptates blanditiis saepe non dicta dolorum?'
   },
   {
     icon: icon_peri,
-    speciality: 'Periodontia'
+    speciality: 'Periodontia',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo excepturi culpa nobis adipisci quidem ipsam, a sint quas assumenda eveniet facilis aliquam nam voluptates blanditiis saepe non dicta dolorum?'
   },
   {
     icon: icon_prot,
-    speciality: 'Prótese'
+    speciality: 'Prótese',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo excepturi culpa nobis adipisci quidem ipsam, a sint quas assumenda eveniet facilis aliquam nam voluptates blanditiis saepe non dicta dolorum?'
   }
 ]
 
 const Especialidades: NextPage = () => {
+  const [modalData, setModalData] = useState({
+    title: '',
+    description: '',
+    background: null,
+    opened: false
+  })
+
   const title = 'Especialidades'
   const subtitle = 'Aqui você conta com a confiança dos melhores especialistas.'
 
   const isBreakpoint = useMediaQuery('(max-width:768px)')
+
+  const handleClose = () => {
+    setModalData({
+      ...modalData,
+      opened: false
+    })
+  }
+
+  const handleOpenModal = ({ speciality, description, icon }) => {
+    setModalData({
+      title: speciality,
+      description: description,
+      background: icon,
+      opened: true
+    })
+  }
 
   return (
     <Layout title="Especialidades" description={`${title} - ${subtitle}`}>
@@ -70,7 +110,11 @@ const Especialidades: NextPage = () => {
         <PageTitle title={title} subtitle={subtitle} />
         <ListSpecialities isBreakpoint={isBreakpoint}>
           {listSpecialities.map(item => (
-            <ItemSpeciality key={item.speciality} isBreakpoint={isBreakpoint}>
+            <ItemSpeciality
+              key={item.speciality}
+              isBreakpoint={isBreakpoint}
+              onClick={() => handleOpenModal(item)}
+            >
               <IconContainer>
                 <Icon src={item.icon} alt={item.speciality} />
               </IconContainer>
@@ -78,6 +122,11 @@ const Especialidades: NextPage = () => {
             </ItemSpeciality>
           ))}
         </ListSpecialities>
+        <ModalSpeciality
+          open={modalData.opened}
+          onClose={handleClose}
+          data={modalData}
+        />
       </Container>
     </Layout>
   )
