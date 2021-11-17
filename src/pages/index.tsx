@@ -163,11 +163,15 @@ const Home: NextPage = () => {
                     <div>Corpo</div>
                     <div>clínico</div>
                   </Text>
-                  <ButtonContainer>
-                    <ButtonStyled variant="outlined" color={'warning'}>
-                      Ver mais
-                    </ButtonStyled>
-                  </ButtonContainer>
+                  {isDentistsBoxClicked && (
+                    <Link href="/corpoclinico" passHref>
+                      <ButtonContainer>
+                        <ButtonStyled variant="outlined" color={'warning'}>
+                          Ver mais
+                        </ButtonStyled>
+                      </ButtonContainer>
+                    </Link>
+                  )}
                 </OverlayDentistsBox>
               </DentistsBox>
             </Column>
