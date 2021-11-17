@@ -5,5 +5,6 @@ export const companyInfo = {
   whatsapp: '(22) 99999-9999',
   whatsapp_url: '22999999999',
   phone: '(22) 2222-2222',
-  mail: 'contato@genteodontologia.com.br'
+  mail: 'contato@genteodontologia.com.br',
+  cnpj: '00.000.000/0001-00'
 }

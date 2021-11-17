@@ -2,18 +2,8 @@ import styled from 'styled-components'
 import Modal from '@mui/material/Modal'
 import { IoCloseOutline } from 'react-icons/io5'
 
-interface IContainer {
-  background?: any
-}
-
-export const ModalStyled = styled(Modal)`
-  display: flex;
-`
-
-export const Container = styled.div<IContainer>`
-  background: ${props => props.theme.palette.secondary.dark}
-    url('${props => props.background}') no-repeat center;
-  background-size: contain;
+export const Container = styled.div`
+  background-color: ${props => props.theme.palette.primary.dark};
   width: 80vw;
   max-height: 80vh;
   margin: auto;
@@ -21,6 +11,11 @@ export const Container = styled.div<IContainer>`
   padding: 10vw;
   font-family: 'Roboto', sans-serif;
   position: relative;
+  overflow: auto;
+`
+
+export const ModalStyled = styled(Modal)`
+  display: flex;
 `
 
 export const CloseButton = styled(IoCloseOutline).attrs({
@@ -38,13 +33,22 @@ export const CloseButton = styled(IoCloseOutline).attrs({
 
 export const Title = styled.h1`
   color: ${props => props.theme.palette.primary.main};
-  font-size: 2rem;
+  font-size: 2.25rem;
   margin-bottom: 3rem;
   font-weight: 300;
 `
 
-export const Text = styled.div`
+export const AddressContainer = styled.div`
+  display: grid;
+  grid-template-columns: 0.01fr 1fr;
+  grid-row-gap: 28px;
+  grid-column-gap: 18px;
+  align-items: center;
   color: ${props => props.theme.palette.primary.contrastText};
   font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-family: 'Roboto', sans-serif;
+`
+
+export const Text = styled.div`
+  word-break: break-word;
 `

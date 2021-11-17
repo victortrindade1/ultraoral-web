@@ -47,8 +47,6 @@ export const AddressContainer = styled.div<IResponsive>`
   color: ${props => props.theme.palette.primary.contrastText};
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
-  /* padding-bottom: 15vw; */
-  /* padding: 5vw 15vw 15vw 15vw; */
   padding: ${props =>
     props.isBreakpoint ? '5vw 5vw 15vw 5vw' : '2vw 20vw 15vw 20vw'};
 `

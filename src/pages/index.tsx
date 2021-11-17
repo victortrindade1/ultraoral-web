@@ -4,10 +4,9 @@ import { useMediaQuery } from '@mui/material'
 
 import Link from '../components/NoScrollLink'
 import Layout from '../components/Layout'
-// import CarouselDesktop from '../components/CarouselDesktop'
 import BodyDesktop from '../components/BodyDesktop'
+import ModalContact from '../components/ModalContact'
 
-// import getMobileOS from '../utils/getMobileOS'
 import img1 from '../assets/slides/img1.jpeg'
 import img3 from '../assets/slides/img3.jpeg'
 import img4 from '../assets/slides/img4.png'
@@ -48,6 +47,7 @@ const Home: NextPage = () => {
     useState(false)
   const [isDentistsBoxClicked, setIsDentistsBoxClicked] = useState(false)
   const [isMobile, setIsMobile] = useState(true)
+  const [openModalContact, setOpenModalContact] = useState(false)
 
   const clinicBoxRef = useRef(null)
   const specialitiesBoxRef = useRef(null)
@@ -114,11 +114,17 @@ const Home: NextPage = () => {
     isBreakpoint ? setIsMobile(true) : setIsMobile(false)
   }, [isBreakpoint])
 
+  const handleCloseModalContact = () => {
+    setOpenModalContact(false)
+  }
+
+  const handleOpenModalContact = () => {
+    setOpenModalContact(true)
+  }
+
   return (
     <Layout title="Gente Odontologia" description={`${title} - ${subtitle}`}>
       <Container>
-        {/* <TopMenu /> */}
-
         {isMobile ? (
           // Layout Mobile
           <Body>
@@ -205,7 +211,7 @@ const Home: NextPage = () => {
                 </OverlaySpecialitiesBox>
               </SpecialitiesBox>
               <ContactBox>
-                <IconButtonStyled>
+                <IconButtonStyled onClick={handleOpenModalContact}>
                   <Logo src={logo} alt={'logo'} />
                 </IconButtonStyled>
               </ContactBox>
@@ -216,6 +222,10 @@ const Home: NextPage = () => {
             <BodyDesktop />
           </>
         )}
+        <ModalContact
+          open={openModalContact}
+          onClose={handleCloseModalContact}
+        />
       </Container>
     </Layout>
   )

@@ -4,7 +4,7 @@ Projeto criado com NextJS e Typescript.
 
 ## O q estou fazendo agora
 
-Vou fazer o modal das especialidades.
+Vou fazer o modal das informações de contato.
 
 Tenho q criar o activelink pra mostrar colorido o menu qnd tiver na página.
 
