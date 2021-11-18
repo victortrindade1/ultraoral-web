@@ -4,7 +4,7 @@ Projeto criado com NextJS e Typescript.
 
 ## O q estou fazendo agora
 
-Vou fazer o modal das informações de contato.
+fazer posiçao fixa pro botão close do modal contact
 
 Tenho q criar o activelink pra mostrar colorido o menu qnd tiver na página.
 

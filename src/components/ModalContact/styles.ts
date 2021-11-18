@@ -8,14 +8,24 @@ export const Container = styled.div`
   max-height: 80vh;
   margin: auto;
   border-radius: 8px;
-  padding: 10vw;
+  padding: 5vw;
   font-family: 'Roboto', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   position: relative;
-  overflow: auto;
 `
 
 export const ModalStyled = styled(Modal)`
   display: flex;
+`
+
+export const ScrollableContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 5vw;
+  overflow: auto;
 `
 
 export const CloseButton = styled(IoCloseOutline).attrs({

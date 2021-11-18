@@ -15,6 +15,7 @@ import theme from '../../styles/theme'
 import {
   ModalStyled,
   Container,
+  ScrollableContainer,
   CloseButton,
   Title,
   AddressContainer,
@@ -32,19 +33,21 @@ const ModalContact: React.FC<IProps> = ({ open, onClose }) => {
       <Fade in={open} timeout={500}>
         <Container>
           <CloseButton onClick={onClose} />
-          <Title>Contato</Title>
-          <AddressContainer>
-            <FaWhatsapp color={theme.palette.primary.main} />
-            <Text>{companyInfo.whatsapp}</Text>
-            <FaPhone color={theme.palette.primary.main} />
-            <Text>{companyInfo.phone}</Text>
-            <FaMapMarkerAlt color={theme.palette.primary.main} />
-            <Text>{companyInfo.street}</Text>
-            <FaRegEnvelope color={theme.palette.primary.main} />
-            <Text>{companyInfo.mail}</Text>
-            <FaBuilding color={theme.palette.primary.main} />
-            <Text>CNPJ: {companyInfo.cnpj}</Text>
-          </AddressContainer>
+          <ScrollableContainer>
+            <Title>Contato</Title>
+            <AddressContainer>
+              <FaWhatsapp color={theme.palette.primary.main} />
+              <Text>{companyInfo.whatsapp}</Text>
+              <FaPhone color={theme.palette.primary.main} />
+              <Text>{companyInfo.phone}</Text>
+              <FaMapMarkerAlt color={theme.palette.primary.main} />
+              <Text>{companyInfo.street}</Text>
+              <FaRegEnvelope color={theme.palette.primary.main} />
+              <Text>{companyInfo.mail}</Text>
+              <FaBuilding color={theme.palette.primary.main} />
+              <Text>CNPJ: {companyInfo.cnpj}</Text>
+            </AddressContainer>
+          </ScrollableContainer>
         </Container>
       </Fade>
     </ModalStyled>
