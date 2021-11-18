@@ -1,13 +1,50 @@
 import React, { useEffect, useState } from 'react'
-import Link from 'next/link'
+import { AnimateSharedLayout } from 'framer-motion'
+import { useRouter } from 'next/dist/client/router'
+import { isActiveLink } from '../../utils/isActiveLink'
+
+import Link from '../NoScrollLink'
 
 import Logo from '../../assets/icons/logo_ultraoral_gold.svg'
 
-import { Container, Navigation, LogoContainer, Image } from './styles'
+import {
+  Container,
+  Navigation,
+  LinkContainer,
+  LogoContainer,
+  Image,
+  ActiveBorder
+} from './styles'
+
+const links: { name: string; href: string }[] = [
+  {
+    name: 'CLÍNICA',
+    href: '/clinica'
+  },
+  {
+    name: 'AGENDAR AGORA',
+    href: '/agendaragora'
+  },
+  {
+    name: 'COMO CHEGAR',
+    href: '/comochegar'
+  },
+  {
+    name: 'ESPECIALIDADES',
+    href: '/especialidades'
+  },
+  {
+    name: 'CORPO CLÍNICO',
+    href: '/corpoclinico'
+  }
+]
 
 const TopMenuDesktop: React.FC = () => {
+  const router = useRouter()
+
   const [isOnTop, setIsOnTop] = useState(true)
 
+  // Effect fade menu
   const handleScroll = () => {
     if (window.pageYOffset > 20) {
       setIsOnTop(false)
@@ -32,7 +69,26 @@ const TopMenuDesktop: React.FC = () => {
               </LogoContainer>
             </a>
           </Link>
-          <Link href={'/'}>
+          <AnimateSharedLayout>
+            {links.map(({ name, href }) => (
+              <Link key={name} href={href}>
+                <a>
+                  <LinkContainer>
+                    {name}
+                    {isActiveLink(href, router.pathname) && (
+                      <ActiveBorder layoutId="teta" animate />
+                      // <motion.div
+                      //   layoutId="navigation-underline"
+                      //   className="navigation-underline"
+                      //   animate
+                      // />
+                    )}
+                  </LinkContainer>
+                </a>
+              </Link>
+            ))}
+          </AnimateSharedLayout>
+          {/* <Link href={'/'}>
             <a>CLÍNICA</a>
           </Link>
           <Link href={'/'}>
@@ -49,7 +105,7 @@ const TopMenuDesktop: React.FC = () => {
           </Link>
           <Link href={'/'}>
             <a>CONTATO</a>
-          </Link>
+          </Link> */}
         </Navigation>
       </nav>
     </Container>

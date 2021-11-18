@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-
+import { motion } from 'framer-motion'
 type IContainer = {
   isOnTop: boolean
 }
@@ -72,4 +72,16 @@ export const LogoContainer = styled.div``
 export const Image = styled.img`
   height: 40px;
   width: auto;
+`
+
+export const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+`
+
+export const ActiveBorder = styled(motion.div)`
+  width: 100%;
+  border-bottom: 1px solid ${props => props.theme.palette.primary.main};
+  height: 5px;
 `
