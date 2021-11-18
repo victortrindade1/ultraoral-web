@@ -5,7 +5,9 @@ import {
   FaPhone,
   FaRegEnvelope,
   FaMapMarkerAlt,
-  FaBuilding
+  FaBuilding,
+  FaInstagram,
+  FaFacebook
 } from 'react-icons/fa'
 
 import { companyInfo } from '../../config/companyInfo'
@@ -19,7 +21,9 @@ import {
   CloseButton,
   Title,
   AddressContainer,
-  Text
+  Text,
+  SocialMediaContainer,
+  DividerStyled
 } from './styles'
 
 interface IProps {
@@ -47,6 +51,23 @@ const ModalContact: React.FC<IProps> = ({ open, onClose }) => {
               <FaBuilding color={theme.palette.primary.main} />
               <Text>CNPJ: {companyInfo.cnpj}</Text>
             </AddressContainer>
+            <DividerStyled />
+            <SocialMediaContainer>
+              <a
+                target="_blank"
+                href={companyInfo.instagram_url}
+                rel="noopener noreferrer"
+              >
+                <FaInstagram color={theme.palette.secondary.light} />
+              </a>
+              <a
+                target="_blank"
+                href={companyInfo.facebook_url}
+                rel="noopener noreferrer"
+              >
+                <FaFacebook color={theme.palette.secondary.light} />
+              </a>
+            </SocialMediaContainer>
           </ScrollableContainer>
         </Container>
       </Fade>

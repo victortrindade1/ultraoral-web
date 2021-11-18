@@ -6,5 +6,7 @@ export const companyInfo = {
   whatsapp_url: '22999999999',
   phone: '(22) 2222-2222',
   mail: 'contato@genteodontologia.com.br',
-  cnpj: '00.000.000/0001-00'
+  cnpj: '00.000.000/0001-00',
+  instagram_url: 'https://www.instagram.com/ultraoralodontologia/',
+  facebook_url: 'https://www.facebook.com/ultraoral'
 }
