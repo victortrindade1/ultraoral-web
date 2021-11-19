@@ -1,5 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
+import { useMediaQuery } from '@mui/material'
 
 import Layout from '../components/Layout'
 import PageTitle from '../components/PageTitle'
@@ -21,11 +22,13 @@ const Contato: NextPage = () => {
   const title = 'Contato'
   const subtitle = 'Gente Odontologia'
 
+  const isBreakpoint = useMediaQuery('(max-width:768px)')
+
   return (
     <Layout title="Contato" description={`${title} - ${subtitle}`}>
       <Container>
         <PageTitle title={title} subtitle={subtitle} />
-        <AddressContainer>
+        <AddressContainer isBreakpoint={isBreakpoint}>
           <FaWhatsapp color={theme.palette.primary.main} />
           <Text>{companyInfo.whatsapp}</Text>
           <FaPhone color={theme.palette.primary.main} />

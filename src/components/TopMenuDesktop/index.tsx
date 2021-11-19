@@ -57,6 +57,7 @@ const TopMenuDesktop: React.FC = () => {
     }
   }
 
+  // Effect fade menu
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
