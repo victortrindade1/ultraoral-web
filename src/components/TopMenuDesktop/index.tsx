@@ -36,6 +36,10 @@ const links: { name: string; href: string }[] = [
   {
     name: 'CORPO CLÍNICO',
     href: '/corpoclinico'
+  },
+  {
+    name: 'CONTATO',
+    href: '/contato'
   }
 ]
 
@@ -77,35 +81,12 @@ const TopMenuDesktop: React.FC = () => {
                     {name}
                     {isActiveLink(href, router.pathname) && (
                       <ActiveBorder layoutId="teta" animate />
-                      // <motion.div
-                      //   layoutId="navigation-underline"
-                      //   className="navigation-underline"
-                      //   animate
-                      // />
                     )}
                   </LinkContainer>
                 </a>
               </Link>
             ))}
           </AnimateSharedLayout>
-          {/* <Link href={'/'}>
-            <a>CLÍNICA</a>
-          </Link>
-          <Link href={'/'}>
-            <a>AGENDAR AGORA</a>
-          </Link>
-          <Link href={'/'}>
-            <a>COMO CHEGAR</a>
-          </Link>
-          <Link href={'/'}>
-            <a>ESPECIALIDADES</a>
-          </Link>
-          <Link href={'/'}>
-            <a>CORPO CLÍNICO</a>
-          </Link>
-          <Link href={'/'}>
-            <a>CONTATO</a>
-          </Link> */}
         </Navigation>
       </nav>
     </Container>
