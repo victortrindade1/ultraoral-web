@@ -9,7 +9,7 @@ interface IResponsive {
 }
 
 export const Container = styled.div<IResponsive>`
-  /* padding-top: ${props => (props.isBreakpoint ? '0px' : '20vw')}; */
+  padding-top: ${props => (props.isBreakpoint ? '20px' : '0px')};
 `
 
 export const TextContainer = styled.div<IResponsive>`

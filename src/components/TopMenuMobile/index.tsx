@@ -1,43 +1,57 @@
 import React, { useState } from 'react'
-import { Global } from '@emotion/react'
+import Hamburger from 'hamburger-react'
+// import Drawer from '@mui/material/Drawer'
 
-import { MenuContainer, VisibleMenu, HiddenMenu, Puller } from './styles'
+import Link from '../NoScrollLink'
+
+import Logo from '../../assets/icons/logo_gold_dente.svg'
+
+import {
+  Container,
+  MenuButtonContainer,
+  LogoContainer,
+  Image,
+  MenuContainer,
+  DrawerStyled
+} from './styles'
 
 const TopMenuMobile: React.FC = () => {
-  const [open, setOpen] = useState(false)
+  const [menuIsOpened, setMenuIsOpened] = useState(false)
 
-  const drawerBleeding = 40 // Altura arrastável
-
-  const toggleDrawer = (newOpen: boolean) => () => {
-    setOpen(newOpen)
+  const handleToggleMenu = () => {
+    menuIsOpened ? setMenuIsOpened(false) : setMenuIsOpened(true)
   }
 
+  // const toggleDrawer = (anchor, open) => (event) => {
+  //   if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+  //     return;
+  //   }
+
+  //   setState({ ...state, [anchor]: open });
+  // };
+
   return (
-    <MenuContainer
-      anchor="top"
-      open={open}
-      onClose={toggleDrawer(false)}
-      onOpen={toggleDrawer(true)}
-      swipeAreaWidth={drawerBleeding}
-      disableSwipeToOpen={false}
-      ModalProps={{
-        keepMounted: true
-      }}
-      // variant="permanent"
-    >
-      <Global
-        styles={{
-          '.MuiDrawer-root > .MuiPaper-root': {
-            height: 'auto',
-            overflow: 'visible'
-          }
-        }}
-      />
-      <VisibleMenu onClick={toggleDrawer(true)}>
-        <Puller />
-      </VisibleMenu>
-      <HiddenMenu></HiddenMenu>
-    </MenuContainer>
+    <>
+      <Container>
+        <Link href={'/'}>
+          <a>
+            <LogoContainer>
+              <Image src={Logo} alt={'logo'} />
+            </LogoContainer>
+          </a>
+        </Link>
+        <MenuButtonContainer>
+          <Hamburger toggled={menuIsOpened} toggle={handleToggleMenu} />
+        </MenuButtonContainer>
+      </Container>
+      <DrawerStyled
+        anchor={'left'}
+        open={menuIsOpened}
+        onClose={handleToggleMenu}
+      >
+        <MenuContainer>teste</MenuContainer>
+      </DrawerStyled>
+    </>
   )
 }
 

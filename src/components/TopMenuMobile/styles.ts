@@ -1,43 +1,38 @@
 import styled from 'styled-components'
-import Box from '@material-ui/core/Box'
-// import Image from 'next/image'
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
+import Drawer from '@mui/material/Drawer'
 
-export const MenuContainer = styled(SwipeableDrawer)``
-
-export const Puller = styled(Box)(({ theme }) => ({
-  width: '10vw',
-  height: '4px',
-  backgroundColor: theme.palette.primary.main,
-  borderRadius: 3,
-  position: 'absolute',
-  top: 25
-}))
-
-export const VisibleMenu = styled.div`
-  background: ${props => props.theme.palette.primary.dark};
-  border-radius: 0px 0px 8px 8px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 100%;
-  height: 40px;
+export const Container = styled.div`
   display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0px;
   align-items: center;
-  justify-content: center;
-
-  position: absolute;
-  top: 49vh;
-  visibility: visible;
-  right: 0;
-  left: 0;
+  justify-content: space-between;
+  color: ${props => props.theme.palette.primary.main};
+  background-color: ${props => props.theme.palette.secondary.dark};
+  z-index: 999;
+  padding: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 
-// height de HiddenMenu está ligado ao top de VisibleMenu
-export const HiddenMenu = styled.div`
-  height: 50vh;
-  overflow: auto;
-  background: ${props => props.theme.palette.primary.dark};
+export const MenuButtonContainer = styled.div``
+
+export const LogoContainer = styled.div`
+  display: flex;
+  margin: auto;
 `
 
-export const Logo = styled.img`
-  width: 137px;
+export const Image = styled.img`
+  height: 40px;
+  width: auto;
+`
+
+export const MenuContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: #456eee;
+`
+
+export const DrawerStyled = styled(Drawer)`
+  top: 50;
 `
