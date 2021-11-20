@@ -33,4 +33,5 @@ export const Subtitle = styled.p<IResponsive>`
 export const BackButton = styled.img`
   height: 10vw;
   max-height: 50px;
+  margin-left: 15px;
 `

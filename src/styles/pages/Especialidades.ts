@@ -18,7 +18,7 @@ export const ItemSpeciality = styled.li<IResponsive>`
   font-size: 1.5rem;
   align-items: center;
   grid-column-gap: 15px;
-  width: ${props => (props.isBreakpoint ? '70%' : '40%')};
+  width: ${props => (props.isBreakpoint ? '80%' : '40%')};
   margin: auto;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;

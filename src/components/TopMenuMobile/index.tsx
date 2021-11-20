@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Hamburger from 'hamburger-react'
-import { AnimateSharedLayout } from 'framer-motion'
 import { useRouter } from 'next/dist/client/router'
 
 import Link from '../NoScrollLink'
@@ -8,7 +7,7 @@ import { isActiveLink } from '../../utils/isActiveLink'
 
 import Logo from '../../assets/icons/logo_gold_dente.svg'
 import icon_clinic from '../../assets/icons/menu_clinic.svg'
-import icon_dentist from '../../assets/icons/menu_dentist.svg'
+import icon_dentist from '../../assets/icons/menu_corpoclinico.svg'
 import icon_specialities from '../../assets/icons/menu_specialities.svg'
 import icon_agendaragora from '../../assets/icons/menu_agendaragora.svg'
 import icon_comochegar from '../../assets/icons/menu_comochegar.svg'
@@ -21,7 +20,6 @@ import {
   Image,
   MenuContainer,
   DrawerStyled,
-  ActiveIconContainer,
   IconContainer,
   Icon,
   NameContainer
@@ -66,11 +64,6 @@ const TopMenuMobile: React.FC = () => {
   const router = useRouter()
 
   const handleToggleMenu = () => {
-    // if (menuIsOpened) {
-    //   setTimeout(() => setMenuIsOpened(false), 1000)
-    // } else {
-    //   setMenuIsOpened(true)
-    // }
     menuIsOpened ? setMenuIsOpened(false) : setMenuIsOpened(true)
   }
 
@@ -94,24 +87,16 @@ const TopMenuMobile: React.FC = () => {
         onClose={handleToggleMenu}
       >
         <MenuContainer>
-          <AnimateSharedLayout>
-            {links.map(({ name, icon, href }) => (
-              <Link key={href} href={href}>
-                <a onClick={() => setTimeout(handleToggleMenu, 1500)}>
-                  {isActiveLink(href, router.pathname) ? (
-                    <ActiveIconContainer layoutId="teta" animate>
-                      <Icon src={icon} alt={name} />
-                    </ActiveIconContainer>
-                  ) : (
-                    <IconContainer>
-                      <Icon src={icon} alt={name} />
-                    </IconContainer>
-                  )}
-                  <NameContainer>{name}</NameContainer>
-                </a>
-              </Link>
-            ))}
-          </AnimateSharedLayout>
+          {links.map(({ name, icon, href }) => (
+            <Link key={href} href={href}>
+              <a onClick={() => setTimeout(handleToggleMenu, 500)}>
+                <IconContainer isActive={isActiveLink(href, router.pathname)}>
+                  <Icon src={icon} alt={name} />
+                </IconContainer>
+                <NameContainer>{name}</NameContainer>
+              </a>
+            </Link>
+          ))}
         </MenuContainer>
       </DrawerStyled>
     </>

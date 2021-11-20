@@ -1,11 +1,12 @@
 import React from 'react'
 import { useMediaQuery } from '@mui/material'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
+import Link from '../NoScrollLink'
 
 import backIcon from '../../assets/icons/icon_back.svg'
 
 import { Container, TextContainer, Title, Subtitle, BackButton } from './styles'
-import { Button } from '@material-ui/core'
+// import { Button } from '@material-ui/core'
 
 interface IProps {
   title: string
@@ -20,29 +21,23 @@ const PageTitle = ({
 }: IProps): JSX.Element => {
   const isBreakpoint = useMediaQuery('(max-width:768px)')
 
-  const router = useRouter()
+  // const router = useRouter()
 
   return (
     <Container isBreakpoint={isBreakpoint}>
       {back && isBreakpoint && (
-        <Button onClick={() => router.back()}>
+        <Link href={'/'}>
+          {/* <Button> */}
           <BackButton src={backIcon} alt="Voltar" />
-        </Button>
+          {/* </Button> */}
+        </Link>
       )}
-      {/* <div className="mt-14 lg:mt-32 font-light w-full text-black dark:text-white"> */}
-      {/* <h1 className={`text-4xl sm:text-5xl lg:text-6xl mb-2 ${center && 'md:text-center'}`}> */}
       <TextContainer isBreakpoint={isBreakpoint}>
         <Title isBreakpoint={isBreakpoint}>{title}</Title>
-
         {subtitle && (
-          <Subtitle isBreakpoint={isBreakpoint}>
-            {/* <p className="text-2xl sm:text-3xl lg:text-4xl w-11/12 sm:w-5/6 md:w-11/12 lg:w-4/5 xl:w-3/5"> */}
-            {subtitle}
-          </Subtitle>
+          <Subtitle isBreakpoint={isBreakpoint}>{subtitle}</Subtitle>
         )}
       </TextContainer>
-
-      {/* </div> */}
     </Container>
   )
 }

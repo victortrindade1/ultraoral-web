@@ -39,7 +39,7 @@ export const CloseButton = styled(IoCloseOutline).attrs({
 export const Title = styled.h1`
   color: ${props => props.theme.palette.primary.main};
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
   font-weight: 300;
 `
 

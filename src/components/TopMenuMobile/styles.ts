@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Drawer from '@mui/material/Drawer'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 
 export const Container = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const Container = styled.div`
   color: ${props => props.theme.palette.primary.main};
   background-color: ${props => props.theme.palette.secondary.dark};
   z-index: 999;
-  padding: 10px;
+  padding: 15px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 
@@ -24,9 +24,10 @@ export const LogoContainer = styled.div`
 `
 
 export const Image = styled.img`
-  max-height: 40px;
-  max-width: 40px;
+  /* max-height: 40px; */
+  /* max-width: 40px; */
   width: auto;
+  height: 40px;
 `
 
 export const MenuContainer = styled.div`
@@ -51,33 +52,48 @@ export const MenuContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5vw 0;
-    &:hover {
+    padding: 15px 0;
+    /* &:hover {
       color: ${props => props.theme.palette.primary.main};
     }
     &.active {
       color: ${props => props.theme.palette.primary.main};
-    }
+    } */
   }
 `
 
 export const DrawerStyled = styled(Drawer)``
 
-export const ActiveIconContainer = styled(motion.div)`
+// export const ActiveIconContainer = styled(motion.div)`
+//   width: 50px;
+//   height: 50px;
+//   padding: 5px;
+//   border: 1px solid ${props => props.theme.palette.primary.main};
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `
+
+interface IActive {
+  isActive: boolean
+}
+export const IconContainer = styled.div<IActive>`
   width: 50px;
   height: 50px;
   padding: 5px;
-  border: 1px solid ${props => props.theme.palette.primary.main};
+  border: ${props =>
+    props.isActive ? `1px solid ${props.theme.palette.primary.main}` : 'none'};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: border 5s;
 `
 
-export const IconContainer = styled.div`
-  width: 50px;
-  height: 50px;
-  padding: 5px;
-  border: none;
+export const Icon = styled.img`
+  height: 40px;
+  width: auto;
 `
-
-export const Icon = styled.img``
 
 export const NameContainer = styled.div`
   text-align: center;
