@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
 import Button from '@material-ui/core/Button'
 
@@ -8,34 +8,31 @@ import {
   FaRegEnvelope,
   FaMapMarkerAlt
 } from 'react-icons/fa'
-import { useMediaQuery } from '@mui/material'
 
 import Link from '../components/NoScrollLink'
 import Layout from '../components/Layout'
 import PageTitle from '../components/PageTitle'
+import SimpleMap from '../components/SimpleMap'
 
 import { maps } from '../config/maps'
 import { companyInfo } from '../config/companyInfo'
 
 import theme from '../styles/theme'
+import IResponsive from '../interfaces/IResponsive'
 
 import {
   Container,
   MapContainer,
   ButtonContainer,
-  // MapButton,
   MapButtonLabel,
   AddressContainer,
   Text
 } from '../styles/pages/ComoChegar'
-import SimpleMap from '../components/SimpleMap'
-import { useEffect } from 'react'
-import { useState } from 'react'
 
-const ComoChegar: NextPage = () => {
+const ComoChegar: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   const [mapsLink, setMapsLink] = useState('')
 
-  const isBreakpoint = useMediaQuery('(max-width:768px)')
+  // const isBreakpoint = useMediaQuery('(max-width:768px)')
 
   const title = 'Como chegar'
   const subtitle =

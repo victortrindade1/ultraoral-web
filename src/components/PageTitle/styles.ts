@@ -1,12 +1,5 @@
 import styled from 'styled-components'
-
-// interface ITitle {
-//   readonly center: boolean
-// }
-
-interface IResponsive {
-  isBreakpoint: boolean
-}
+import IResponsive from '../../interfaces/IResponsive'
 
 export const Container = styled.div<IResponsive>`
   padding-top: ${props => (props.isBreakpoint ? '20px' : '0px')};

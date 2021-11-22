@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 import { lighten } from 'polished'
-
-interface IResponsive {
-  readonly isBreakpoint: boolean
-}
+import IResponsive from '../../interfaces/IResponsive'
 
 export const Container = styled.div``
 

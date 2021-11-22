@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
 import { AnimatePresence } from 'framer-motion'
 // import { DefaultSeo } from 'next-seo'
+import { useMediaQuery } from '@mui/material'
 
 import TopMenu from '../components/TopMenu'
 import Footer from '../components/Footer'
@@ -17,6 +18,8 @@ export default function MyApp({
   router
 }: AppProps): JSX.Element {
   const url = `https://genteodontologia.com.br${router.route}`
+
+  const isBreakpoint = useMediaQuery('(max-width:768px)')
 
   return (
     <>
@@ -38,13 +41,18 @@ export default function MyApp({
       <MuiThemeProvider theme={theme}>
         <ThemeProvider theme={theme}>
           {/* <Header /> */}
-          <TopMenu />
+          <TopMenu isBreakpoint={isBreakpoint} />
           <AnimatePresence
             exitBeforeEnter
             initial={false}
             onExitComplete={() => window.scrollTo(0, 0)}
           >
-            <Component {...pageProps} canonical={url} key={url} />
+            <Component
+              {...pageProps}
+              canonical={url}
+              key={url}
+              isBreakpoint={isBreakpoint}
+            />
           </AnimatePresence>
           <Footer />
           <GlobalStyle />

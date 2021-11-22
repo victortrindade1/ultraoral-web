@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import { darken } from 'polished'
-interface IResponsive {
-  readonly isBreakpoint: boolean
-}
+import IResponsive from '../../interfaces/IResponsive'
+
 export const Container = styled.div`
   width: 100%;
   /* background-color: fuchsia; */

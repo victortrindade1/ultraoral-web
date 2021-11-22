@@ -1,6 +1,7 @@
 import { Facebook, Instagram } from '@material-ui/icons'
 import React from 'react'
-import { useMediaQuery } from '@mui/material'
+
+import IResponsive from '../../interfaces/IResponsive'
 
 import logoDev from '../../assets/icons/logo_developer.svg'
 
@@ -14,9 +15,7 @@ import {
   Devlogo
 } from './styles'
 
-const Footer: React.FC = () => {
-  const isBreakpoint = useMediaQuery('(max-width:768px)')
-
+const Footer: React.FC<IResponsive> = ({ isBreakpoint }) => {
   return (
     <Container isBreakpoint={isBreakpoint}>
       <SocialMediaContainer>

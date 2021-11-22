@@ -1,8 +1,5 @@
 import styled from 'styled-components'
-
-interface IResponsive {
-  isBreakpoint: boolean
-}
+import IResponsive from '../../interfaces/IResponsive'
 
 export const Container = styled.div<IResponsive>`
   display: flex;

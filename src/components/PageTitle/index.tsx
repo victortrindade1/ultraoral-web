@@ -1,14 +1,14 @@
 import React from 'react'
-import { useMediaQuery } from '@mui/material'
-// import { useRouter } from 'next/router'
+
+import IResponsive from '../../interfaces/IResponsive'
+
 import Link from '../NoScrollLink'
 
 import backIcon from '../../assets/icons/icon_back.svg'
 
 import { Container, TextContainer, Title, Subtitle, BackButton } from './styles'
-// import { Button } from '@material-ui/core'
 
-interface IProps {
+interface IProps extends IResponsive {
   title: string
   subtitle?: string
   back?: boolean
@@ -17,12 +17,9 @@ interface IProps {
 const PageTitle = ({
   title,
   subtitle = '',
-  back = true
+  back = true,
+  isBreakpoint
 }: IProps): JSX.Element => {
-  const isBreakpoint = useMediaQuery('(max-width:768px)')
-
-  // const router = useRouter()
-
   return (
     <Container isBreakpoint={isBreakpoint}>
       {back && isBreakpoint && (

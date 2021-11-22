@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 import Button, { ButtonProps } from '@material-ui/core/Button'
-
-interface IResponsive {
-  readonly isBreakpoint: boolean
-}
+import IResponsive from '../../interfaces/IResponsive'
 
 export const Container = styled.div``
 

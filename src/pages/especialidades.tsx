@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import type { NextPage } from 'next'
-import { useMediaQuery } from '@mui/material'
+// import { useMediaQuery } from '@mui/material'
 
 import Layout from '../components/Layout'
 import PageTitle from '../components/PageTitle'
 import ModalSpeciality from '../components/ModalSpeciality'
+
+import IResponsive from '../interfaces/IResponsive'
 
 import icon_endo from '../assets/icons/speciality_endo.svg'
 import icon_ciru from '../assets/icons/speciality_ciru.svg'
@@ -75,7 +77,9 @@ const listSpecialities = [
   }
 ]
 
-const Especialidades: NextPage = () => {
+const Especialidades: NextPage<IResponsive> = ({
+  isBreakpoint
+}: IResponsive) => {
   const [modalData, setModalData] = useState({
     title: '',
     description: '',
@@ -85,8 +89,6 @@ const Especialidades: NextPage = () => {
 
   const title = 'Especialidades'
   const subtitle = 'Aqui você conta com a confiança dos melhores especialistas.'
-
-  const isBreakpoint = useMediaQuery('(max-width:768px)')
 
   const handleClose = () => {
     setModalData({

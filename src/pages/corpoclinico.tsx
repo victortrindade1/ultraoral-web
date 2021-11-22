@@ -1,13 +1,12 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import { useMediaQuery } from '@mui/material'
-// import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
-// import AccordionDetails from '@mui/material/AccordionDetails'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 import Layout from '../components/Layout'
 import PageTitle from '../components/PageTitle'
+
+import IResponsive from '../interfaces/IResponsive'
 
 import dent1 from '../assets/dentists/dent1.png'
 import dent2 from '../assets/dentists/dent2.jpeg'
@@ -86,11 +85,9 @@ const listDentists = [
   }
 ]
 
-const CorpoClinico: NextPage = () => {
+const CorpoClinico: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   const title = 'Corpo Clínico'
   const subtitle = 'Conheça nossa equipe de dentistas'
-
-  const isBreakpoint = useMediaQuery('(max-width:768px)')
 
   return (
     <Layout title="Corpo Clínico" description={`${title} - ${subtitle}`}>

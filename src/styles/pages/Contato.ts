@@ -1,8 +1,5 @@
 import styled from 'styled-components'
-
-interface IResponsive {
-  readonly isBreakpoint: boolean
-}
+import IResponsive from '../../interfaces/IResponsive'
 
 export const Container = styled.div``
 

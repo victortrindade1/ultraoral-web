@@ -1,7 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
 import { Button } from '@mui/material'
-import { useMediaQuery } from '@mui/material'
 import { FaWhatsapp, FaPhone } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
@@ -9,8 +8,9 @@ import PageTitle from '../components/PageTitle'
 import Link from '../components/NoScrollLink'
 
 import { companyInfo } from '../config/companyInfo'
-
 import theme from '../styles/theme'
+
+import IResponsive from '../interfaces/IResponsive'
 
 import {
   Container,
@@ -19,17 +19,18 @@ import {
   Text
 } from '../styles/pages/AgendarAgora'
 
-const AgendarAgora: NextPage = () => {
-  // const isBreakpoint = useMediaQuery('(max-width:768px)')
+const AgendarAgora: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   const title = 'Agendar agora'
   const subtitle = 'Vamos agendar uma consulta? Envie agora uma mensagem.'
-
-  const isBreakpoint = useMediaQuery('(max-width:768px)')
 
   return (
     <Layout title="Agendar" description={`${title} - ${subtitle}`}>
       <Container>
-        <PageTitle title={title} subtitle={subtitle} />
+        <PageTitle
+          title={title}
+          subtitle={subtitle}
+          isBreakpoint={isBreakpoint}
+        />
 
         <Link
           href={`https://api.whatsapp.com/send?phone=${companyInfo.whatsapp_url}&text=Olá, gostaria de agendar uma consulta!`}

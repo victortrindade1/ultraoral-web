@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
 import type { NextPage } from 'next'
-import { useMediaQuery } from '@mui/material'
+// import { useMediaQuery } from '@mui/material'
 
 import Link from '../components/NoScrollLink'
 import Layout from '../components/Layout'
 import BodyDesktop from '../components/BodyDesktop'
 import ModalContact from '../components/ModalContact'
+
+import IResponsive from '../interfaces/IResponsive'
 
 import img1 from '../assets/slides/img1.jpeg'
 import img3 from '../assets/slides/img3.jpeg'
@@ -17,7 +19,6 @@ import logo from '../assets/icons/logo_ultraoral_gold.svg'
 
 import {
   Container,
-  // CarouselDesktopContainer,
   Body,
   Column,
   OverlayClinicBox,
@@ -41,7 +42,7 @@ import {
 const title = 'Gente Odontologia'
 const subtitle = 'Venha sorrir com a gente!'
 
-const Home: NextPage = () => {
+const Home: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   const [isClinicBoxClicked, setIsClinicBoxClicked] = useState(false)
   const [isSpecialitiesBoxClicked, setIsSpecialitiesBoxClicked] =
     useState(false)
@@ -107,8 +108,6 @@ const Home: NextPage = () => {
   }
 
   // const handleNavigate = () => {}
-
-  const isBreakpoint = useMediaQuery('(max-width:768px)')
 
   useEffect(() => {
     isBreakpoint ? setIsMobile(true) : setIsMobile(false)

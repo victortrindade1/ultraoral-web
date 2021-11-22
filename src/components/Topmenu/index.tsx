@@ -1,16 +1,15 @@
 import React from 'react'
-import { useMediaQuery } from '@mui/material'
 
 import TopMenuMobile from '../TopMenuMobile'
 import TopMenuDesktop from '../TopMenuDesktop'
 
+import IResponsive from '../../interfaces/IResponsive'
+
 import { Container } from './styles'
 
-const TopMenu: React.FC = () => {
-  const isBreakpoint = useMediaQuery('(max-width:768px)')
-
+const TopMenu: React.FC<IResponsive> = ({ isBreakpoint }) => {
   return (
-    <Container isBreakingpoint={isBreakpoint}>
+    <Container isBreakpoint={isBreakpoint}>
       {isBreakpoint ? <TopMenuMobile /> : <TopMenuDesktop />}
     </Container>
   )

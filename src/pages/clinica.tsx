@@ -1,6 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import { useMediaQuery } from '@mui/material'
+// import { useMediaQuery } from '@mui/material'
 import { FaWhatsapp, FaPhone, FaRegEnvelope } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
@@ -9,6 +9,8 @@ import Album from '../components/Album'
 import SimpleMap from '../components/SimpleMap'
 
 import { companyInfo } from '../config/companyInfo'
+
+import IResponsive from '../interfaces/IResponsive'
 
 import {
   Container,
@@ -22,8 +24,8 @@ import {
   MapContainer
 } from '../styles/pages/Clinic'
 
-const Clinic: NextPage = () => {
-  const isBreakpoint = useMediaQuery('(max-width:768px)')
+const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
+  // const isBreakpoint = useMediaQuery('(max-width:768px)')
 
   const title = 'A Clínica'
   const subtitle =

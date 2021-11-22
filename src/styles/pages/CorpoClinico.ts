@@ -2,13 +2,10 @@ import styled from 'styled-components'
 import Accordion from '@mui/material/Accordion'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import { darken } from 'polished'
+import IResponsive from '../../interfaces/IResponsive'
 
 interface IContainerImage {
   image: any
-}
-
-interface IResponsive {
-  readonly isBreakpoint: boolean
 }
 
 export const Container = styled.div``
