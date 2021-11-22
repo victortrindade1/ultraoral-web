@@ -34,7 +34,11 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   return (
     <Layout title="A Clínica" description={`${title} - ${subtitle}`}>
       <Container>
-        <PageTitle title={title} subtitle={subtitle} />
+        <PageTitle
+          title={title}
+          subtitle={subtitle}
+          isBreakpoint={isBreakpoint}
+        />
         <BodyClinic isBreakpoint={isBreakpoint}>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quidem

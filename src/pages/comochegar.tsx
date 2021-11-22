@@ -57,7 +57,11 @@ const ComoChegar: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   return (
     <Layout title="A Clínica" description={`${title} - ${subtitle}`}>
       <Container>
-        <PageTitle title={title} subtitle={subtitle} />
+        <PageTitle
+          title={title}
+          subtitle={subtitle}
+          isBreakpoint={isBreakpoint}
+        />
         <MapContainer>
           <SimpleMap />
           {isBreakpoint && (

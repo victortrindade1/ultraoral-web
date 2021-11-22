@@ -92,7 +92,11 @@ const CorpoClinico: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   return (
     <Layout title="Corpo Clínico" description={`${title} - ${subtitle}`}>
       <Container>
-        <PageTitle title={title} subtitle={subtitle} />
+        <PageTitle
+          title={title}
+          subtitle={subtitle}
+          isBreakpoint={isBreakpoint}
+        />
         <ListDentists isBreakpoint={isBreakpoint}>
           {listDentists.map(item => (
             <ItemDentist key={item.cro}>

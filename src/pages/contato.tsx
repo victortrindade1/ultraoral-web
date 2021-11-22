@@ -29,7 +29,11 @@ const Contato: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   return (
     <Layout title="Contato" description={`${title} - ${subtitle}`}>
       <Container>
-        <PageTitle title={title} subtitle={subtitle} />
+        <PageTitle
+          title={title}
+          subtitle={subtitle}
+          isBreakpoint={isBreakpoint}
+        />
         <AddressContainer isBreakpoint={isBreakpoint}>
           <FaWhatsapp color={theme.palette.primary.main} />
           <Text>{companyInfo.whatsapp}</Text>

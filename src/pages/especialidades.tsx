@@ -109,7 +109,11 @@ const Especialidades: NextPage<IResponsive> = ({
   return (
     <Layout title="Especialidades" description={`${title} - ${subtitle}`}>
       <Container>
-        <PageTitle title={title} subtitle={subtitle} />
+        <PageTitle
+          title={title}
+          subtitle={subtitle}
+          isBreakpoint={isBreakpoint}
+        />
         <ListSpecialities isBreakpoint={isBreakpoint}>
           {listSpecialities.map(item => (
             <ItemSpeciality

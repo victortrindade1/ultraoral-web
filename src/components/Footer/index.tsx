@@ -34,7 +34,7 @@ const Footer: React.FC<IResponsive> = ({ isBreakpoint }) => {
           <Instagram />
         </a>
       </SocialMediaContainer>
-      <DevContainer>
+      <DevContainer isBreakpoint={isBreakpoint}>
         <Text>Powered by</Text>
         <a
           target="_blank"

@@ -22,11 +22,12 @@ export const SocialMediaContainer = styled.div`
   }
 `
 
-export const DevContainer = styled.div`
+export const DevContainer = styled.div<IResponsive>`
   position: absolute;
   right: 0;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: ${props => (props.isBreakpoint ? 'column' : 'row')}; */
+  flex-direction: column;
   align-items: flex-start;
   margin: 15px;
 `
@@ -34,6 +35,7 @@ export const DevContainer = styled.div`
 export const Text = styled.div`
   color: ${props => props.theme.palette.secondary.light};
   font-size: 0.5rem;
+  /* margin: 10px 0; */
 `
 
 export const Devlogo = styled.img`
