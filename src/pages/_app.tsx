@@ -6,6 +6,7 @@ import { AnimatePresence } from 'framer-motion'
 // import { DefaultSeo } from 'next-seo'
 
 import TopMenu from '../components/TopMenu'
+import Footer from '../components/Footer'
 
 import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
@@ -45,7 +46,7 @@ export default function MyApp({
           >
             <Component {...pageProps} canonical={url} key={url} />
           </AnimatePresence>
-          {/* <Footer /> */}
+          <Footer />
           <GlobalStyle />
         </ThemeProvider>
       </MuiThemeProvider>

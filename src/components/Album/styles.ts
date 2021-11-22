@@ -17,6 +17,10 @@ export const PhotoThumb = styled.div<IContainerImage>`
     url('${props => props.image}') no-repeat center;
   background-size: cover;
   height: auto;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 export const CarouselContainer = styled.div`
