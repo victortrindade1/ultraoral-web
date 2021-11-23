@@ -7,7 +7,7 @@ import { Container, DescriptionContainer, Description } from './styles'
 
 interface ISlide {
   description?: string
-  url: any
+  url: string
   alt: string
 }
 

@@ -21,17 +21,17 @@ const Footer: React.FC<IResponsive> = ({ isBreakpoint }) => {
       <SocialMediaContainer>
         <a
           target="_blank"
-          href={companyInfo.facebook_url}
-          rel="noopener noreferrer"
-        >
-          <Facebook />
-        </a>
-        <a
-          target="_blank"
           href={companyInfo.instagram_url}
           rel="noopener noreferrer"
         >
           <Instagram />
+        </a>
+        <a
+          target="_blank"
+          href={companyInfo.facebook_url}
+          rel="noopener noreferrer"
+        >
+          <Facebook />
         </a>
       </SocialMediaContainer>
       <DevContainer isBreakpoint={isBreakpoint}>

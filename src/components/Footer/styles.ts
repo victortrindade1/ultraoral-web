@@ -26,7 +26,6 @@ export const DevContainer = styled.div<IResponsive>`
   position: absolute;
   right: 0;
   display: flex;
-  /* flex-direction: ${props => (props.isBreakpoint ? 'column' : 'row')}; */
   flex-direction: column;
   align-items: flex-start;
   margin: 15px;

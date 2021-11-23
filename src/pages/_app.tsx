@@ -54,7 +54,7 @@ export default function MyApp({
               isBreakpoint={isBreakpoint}
             />
           </AnimatePresence>
-          <Footer />
+          <Footer isBreakpoint={isBreakpoint} />
           <GlobalStyle />
         </ThemeProvider>
       </MuiThemeProvider>

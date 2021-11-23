@@ -8,7 +8,9 @@ interface IContainerImage {
   image: any
 }
 
-export const Container = styled.div``
+export const Container = styled.div`
+  padding-bottom: 15vw;
+`
 
 export const ListDentists = styled.ul<IResponsive>`
   width: ${props => (props.isBreakpoint ? '100%' : '70%')};
