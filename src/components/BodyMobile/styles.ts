@@ -14,7 +14,7 @@ interface IBackgroundBox {
 export const Container = styled.div`
   /* display: flex; */
   width: 100%;
-  padding: 0px 5px 15vw 5px;
+  padding: 0px 5px 0 5px;
   min-height: 600px;
   /* height: inherit; */
   height: 100%;
