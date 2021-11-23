@@ -1,6 +1,5 @@
 import React from 'react'
 import type { NextPage } from 'next'
-// import { useMediaQuery } from '@mui/material'
 import { FaWhatsapp, FaPhone, FaRegEnvelope } from 'react-icons/fa'
 
 import Layout from '../components/Layout'
@@ -17,16 +16,12 @@ import {
   BodyClinic,
   Subtitle,
   Address,
-  // RowContact,
-  // Icon,
   GridContact,
   Text,
   MapContainer
 } from '../styles/pages/Clinic'
 
 const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
-  // const isBreakpoint = useMediaQuery('(max-width:768px)')
-
   const title = 'A Clínica'
   const subtitle =
     'Seja bem-vindo(a)! Conheça o conforto da clínica mais moderna de Campos.'

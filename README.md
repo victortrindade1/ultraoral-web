@@ -4,7 +4,7 @@ Projeto criado com NextJS e Typescript.
 
 ## O q estou fazendo agora
 
-Fazer botão no slide desktop
+Mudar carousel da page clinica
 
 Fazer slides no front do mobile?
 

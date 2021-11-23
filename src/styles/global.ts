@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
 import { Theme } from './styled'
-// import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 

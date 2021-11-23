@@ -1,4 +1,4 @@
 import styled from 'styled-components'
-import Carousel from 'react-material-ui-carousel'
+import Slider from 'react-slick'
 
-export const CarouselStyled = styled(Carousel)``
+export const CarouselStyled = styled(Slider)``

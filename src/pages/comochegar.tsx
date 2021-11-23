@@ -32,8 +32,6 @@ import {
 const ComoChegar: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   const [mapsLink, setMapsLink] = useState('')
 
-  // const isBreakpoint = useMediaQuery('(max-width:768px)')
-
   const title = 'Como chegar'
   const subtitle =
     'Situada no coração da Pelinca, a clínica possui acesso fácil e rápido!'
@@ -77,11 +75,7 @@ const ComoChegar: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
         </MapContainer>
         <AddressContainer isBreakpoint={isBreakpoint}>
           <FaMapMarkerAlt color={theme.palette.primary.main} />
-          <Text>
-            {/* Rua Barão do Amazonas, 158 - Parque Rosario, Campos dos Goytacazes -
-            RJ, 28025-496 */}
-            {companyInfo.street}
-          </Text>
+          <Text>{companyInfo.street}</Text>
           <FaWhatsapp color={theme.palette.primary.main} />
           <Text>{companyInfo.whatsapp}</Text>
           <FaPhone color={theme.palette.primary.main} />

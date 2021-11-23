@@ -67,7 +67,7 @@ const CarouselClinic: React.FC<ICarouselClinic> = ({ index }) => {
   ]
 
   return (
-    <CarouselStyled timeout={300} autoPlay={false} index={index}>
+    <CarouselStyled initialSlide={index}>
       {slides.map((data, i) => (
         <Slide key={i} {...data} />
       ))}

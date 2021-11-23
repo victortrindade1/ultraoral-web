@@ -1,7 +1,5 @@
 import React from 'react'
 
-// import Link from '../NoScrollLink'
-
 import img1 from '../../assets/slides/img1.jpeg'
 import img2 from '../../assets/slides/img2.png'
 
@@ -37,26 +35,6 @@ const CarouselDesktop: React.FC = () => {
       pauseOnHover={false}
       swipe={false}
       touchMove={false}
-      // slidesToShow={1}
-      // slidesToScroll={1}
-      // navButtonsAlwaysInvisible={true}
-      // timeout={1000}
-      // interval={500000000}
-      // indicatorContainerProps={{
-      //   style: {
-      //     display: 'none'
-      //   }
-      // }}
-      // autoPlay={true}
-      // autoFocus={false}
-      // emulateTouch={false}
-      // infiniteLoop={true}
-      // interval={5000}
-      // showArrows={false}
-      // showStatus={false}
-      // showIndicators={false}
-      // stopOnHover={false}
-      // swipeable={false}
     >
       {slides.map((data, i) => (
         <Slide key={i} {...data} />

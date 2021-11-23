@@ -1,6 +1,5 @@
 import React from 'react'
 import type { NextPage } from 'next'
-// import { useMediaQuery } from '@mui/material'
 
 import Layout from '../components/Layout'
 import PageTitle from '../components/PageTitle'
@@ -23,8 +22,6 @@ import { Container, AddressContainer, Text } from '../styles/pages/Contato'
 const Contato: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   const title = 'Contato'
   const subtitle = 'Gente Odontologia'
-  // console.log(props.isBreakpoint)
-  // const isBreakpoint = useMediaQuery('(max-width:768px)')
 
   return (
     <Layout title="Contato" description={`${title} - ${subtitle}`}>
