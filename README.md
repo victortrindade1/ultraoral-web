@@ -4,7 +4,7 @@ Projeto criado com NextJS e Typescript.
 
 ## O q estou fazendo agora
 
-Refatorar body mobile
+Fazer botão no slide desktop
 
 Fazer slides no front do mobile?
 
