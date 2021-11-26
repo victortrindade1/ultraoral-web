@@ -100,7 +100,7 @@ const CorpoClinico: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
         <ListDentists isBreakpoint={isBreakpoint}>
           {listDentists.map(item => (
             <ItemDentist key={item.cro}>
-              <AccordionStyled>
+              <AccordionStyled color={'primary'}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon color={'info'} />}
                 >
