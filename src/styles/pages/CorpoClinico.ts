@@ -20,8 +20,7 @@ export const ListDentists = styled.ul<IResponsive>`
 export const ItemDentist = styled.li``
 
 export const AccordionStyled = styled(Accordion)`
-  background-color: ${props => props.theme.palette.primary.dark};
-  background-color: #333;
+  background-color: ${props => props.theme.palette.primary.dark} !important;
   margin: 5vw;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
