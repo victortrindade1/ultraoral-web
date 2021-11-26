@@ -47,7 +47,7 @@ export const DescriptionContainer = styled.div`
   color: ${props => props.theme.palette.primary.contrastText};
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  padding: 5vw;
+  padding: 5vw !important;
 `
 
 export const Name = styled.div`
