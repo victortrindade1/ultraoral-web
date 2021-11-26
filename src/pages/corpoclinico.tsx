@@ -114,7 +114,7 @@ const CorpoClinico: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
                     <Cro>{item.cro}</Cro>
                   </DescriptionContainer>
                 </AccordionSummary>
-                <AccordionDetailsStyled>
+                <AccordionDetailsStyled sx={{ padding: '5vw' }}>
                   <SkillList>
                     {item.skills.map((item, i) => (
                       <SkillContainer key={i}>{item}</SkillContainer>
