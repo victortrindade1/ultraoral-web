@@ -6,7 +6,7 @@ import { AnimatePresence } from 'framer-motion'
 // import { DefaultSeo } from 'next-seo'
 import { useMediaQuery } from '@mui/material'
 
-import TopMenu from '../components/TopMenu'
+import TopMenu from '../components/TopMenu/TopMenu'
 import Footer from '../components/Footer'
 
 import GlobalStyle from '../styles/global'
