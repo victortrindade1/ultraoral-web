@@ -75,10 +75,12 @@ export const SocialMediaContainer = styled.div`
 `
 
 export const DividerStyled = styled(Divider)`
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid ${props => props.theme.palette.primary.contrastText};
-  margin: 3em 0;
-  padding: 0;
+  /* display: block; */
+  /* height: 1px; */
+  /* border: 0; */
+  /* border-top: 1px solid ${props =>
+    props.theme.palette.primary.contrastText}; */
+  /* margin: 3em 0; */
+  /* padding: 0; */
+  /* margin: 5vw; */
 `

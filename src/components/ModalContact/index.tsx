@@ -51,7 +51,16 @@ const ModalContact: React.FC<IProps> = ({ open, onClose }) => {
               <FaBuilding color={theme.palette.primary.main} />
               <Text>CNPJ: {companyInfo.cnpj}</Text>
             </AddressContainer>
-            <DividerStyled />
+            <DividerStyled
+              sx={{
+                border: '0',
+                borderTop: `1px solid ${theme.palette.primary.contrastText}`,
+                padding: '0',
+                display: 'block',
+                height: '1px',
+                margin: '5vw'
+              }}
+            />
             <SocialMediaContainer>
               <a
                 target="_blank"
