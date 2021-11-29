@@ -21,7 +21,9 @@ export const Container = styled.div`
 
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  overflow: hidden;
+  /* overflow: scroll; */
+  margin-bottom: 13px;
+  margin-top: 15px;
 `
 
 export const Column = styled.div`
@@ -73,6 +75,7 @@ export const OverlayClinicBox = styled.div<IBox>`
   background-color: ${props => props.isBoxClicked && 'rgba(0, 0, 0, 0.5)'};
 
   transition: all 0.5s;
+  position: relative;
 `
 export const OverlaySpecialitiesBox = styled.div<IBox>`
   width: 100%;
@@ -88,6 +91,8 @@ export const OverlaySpecialitiesBox = styled.div<IBox>`
   background-color: ${props => props.isBoxClicked && 'rgba(0, 0, 0, 0.5)'};
 
   transition: all 0.5s;
+
+  position: relative;
 `
 
 export const OverlayDentistsBox = styled.div<IBox>`
@@ -104,6 +109,7 @@ export const OverlayDentistsBox = styled.div<IBox>`
   background-color: ${props => props.isBoxClicked && 'rgba(0, 0, 0, 0.5)'};
 
   transition: all 0.5s;
+  position: relative;
 `
 
 export const MapsBox = styled.div`

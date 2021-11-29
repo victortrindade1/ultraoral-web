@@ -6,11 +6,13 @@ export const Container = styled.div<IResponsive>`
   flex: 1;
   background-color: ${props => props.theme.palette.primary.dark};
   position: relative;
+  /* bottom: 0px; */
   justify-content: ${props => (props.isBreakpoint ? 'flex-start' : 'center')};
   align-items: center;
   border-top: 1px solid ${props => props.theme.palette.primary.main};
   min-height: 60px;
   margin-top: ${props => (props.isBreakpoint ? '5vw' : '0')};
+  height: 80px;
 `
 
 export const SocialMediaContainer = styled.div`
@@ -28,7 +30,7 @@ export const DevContainer = styled.div<IResponsive>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 15px;
+  margin-right: 15px;
 `
 
 export const Text = styled.div`
