@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
+import { Divider } from '@mui/material'
+
 type IContainer = {
   isOnTop: boolean
 }
@@ -35,11 +37,11 @@ export const Navigation = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-right: 30px;
+  /* padding-right: 30px; */
 
   a:first-child {
-    padding: 0px 50px 0px 50px;
-    border-right: 1px solid #dddddd;
+    /* padding: 0px 50px 0px 50px; */
+    /* border-right: 1px solid #dddddd; */
     display: block;
     text-align: center;
     img {
@@ -82,4 +84,15 @@ export const ActiveBorder = styled(motion.div)`
   width: 100%;
   border-bottom: 1px solid ${props => props.theme.palette.primary.main};
   height: 5px;
+`
+
+export const DividerStyled = styled(Divider)`
+  height: 40px;
+  border-color: ${props => props.theme.palette.primary.contrastText};
+`
+
+export const ClickableLink = styled.div`
+  height: 50px;
+  display: flex;
+  align-items: center;
 `

@@ -13,7 +13,9 @@ import {
   LinkContainer,
   LogoContainer,
   Image,
-  ActiveBorder
+  ActiveBorder,
+  DividerStyled,
+  ClickableLink
 } from './styles'
 
 const links: { name: string; href: string }[] = [
@@ -74,17 +76,20 @@ const TopMenuDesktop: React.FC = () => {
               </LogoContainer>
             </a>
           </Link>
+          <DividerStyled light={true} orientation={'vertical'} />
           <AnimateSharedLayout>
             {links.map(({ name, href }) => (
               <Link key={name} href={href}>
-                <a>
-                  <LinkContainer>
-                    {name}
-                    {isActiveLink(href, router.pathname) && (
-                      <ActiveBorder layoutId="teta" animate />
-                    )}
-                  </LinkContainer>
-                </a>
+                <ClickableLink>
+                  <a>
+                    <LinkContainer>
+                      {name}
+                      {isActiveLink(href, router.pathname) && (
+                        <ActiveBorder layoutId="teta" animate />
+                      )}
+                    </LinkContainer>
+                  </a>
+                </ClickableLink>
               </Link>
             ))}
           </AnimateSharedLayout>
