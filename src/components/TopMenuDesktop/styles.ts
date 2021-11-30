@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
-import { Divider } from '@mui/material'
 
 type IContainer = {
   isOnTop: boolean
@@ -84,11 +83,6 @@ export const ActiveBorder = styled(motion.div)`
   width: 100%;
   border-bottom: 1px solid ${props => props.theme.palette.primary.main};
   height: 5px;
-`
-
-export const DividerStyled = styled(Divider)`
-  height: 40px;
-  border-color: ${props => props.theme.palette.primary.contrastText};
 `
 
 export const ClickableLink = styled.div`

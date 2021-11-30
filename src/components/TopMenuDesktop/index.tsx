@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { AnimateSharedLayout } from 'framer-motion'
+import { Divider } from '@mui/material'
 import { useRouter } from 'next/dist/client/router'
 import { isActiveLink } from '../../utils/isActiveLink'
-
+import theme from '../../styles/theme'
 import Link from '../NoScrollLink'
 
 import Logo from '../../assets/icons/logo_ultraoral_gold.svg'
@@ -14,7 +15,6 @@ import {
   LogoContainer,
   Image,
   ActiveBorder,
-  DividerStyled,
   ClickableLink
 } from './styles'
 
@@ -76,7 +76,14 @@ const TopMenuDesktop: React.FC = () => {
               </LogoContainer>
             </a>
           </Link>
-          <DividerStyled light={true} orientation={'vertical'} />
+          <Divider
+            light={true}
+            orientation={'vertical'}
+            sx={{
+              height: '40px',
+              borderColor: theme.palette.primary.contrastText
+            }}
+          />
           <AnimateSharedLayout>
             {links.map(({ name, href }) => (
               <Link key={name} href={href}>
