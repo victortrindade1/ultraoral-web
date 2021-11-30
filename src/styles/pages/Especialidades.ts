@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import { lighten } from 'polished'
 import IResponsive from '../../interfaces/IResponsive'
 
-export const Container = styled.div``
+export const Container = styled.div`
+  min-height: 100vh;
+`
 
 export const ListSpecialities = styled.ul<IResponsive>`
   padding: ${props => (props.isBreakpoint ? '5vw 0 15vw 0' : '0 0 10vw 0')};

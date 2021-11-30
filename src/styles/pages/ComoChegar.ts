@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import Button, { ButtonProps } from '@material-ui/core/Button'
 import IResponsive from '../../interfaces/IResponsive'
 
-export const Container = styled.div``
+export const Container = styled.div`
+  min-height: 100vh;
+`
 
 export const MapContainer = styled.div`
   height: 80vh;

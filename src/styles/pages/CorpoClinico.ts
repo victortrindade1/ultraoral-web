@@ -10,6 +10,7 @@ interface IContainerImage {
 
 export const Container = styled.div`
   padding-bottom: 15vw;
+  min-height: 100vh;
 `
 
 export const ListDentists = styled.ul<IResponsive>`
