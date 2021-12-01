@@ -89,4 +89,8 @@ export const ClickableLink = styled.div`
   height: 50px;
   display: flex;
   align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
