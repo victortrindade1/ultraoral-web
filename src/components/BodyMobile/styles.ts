@@ -140,7 +140,9 @@ export const ContactBox = styled.div`
   margin-bottom: 10px;
   justify-content: center;
   align-items: center;
-  background-color: ${props => lighten(0.05, props.theme.palette.primary.dark)};
+  /* background-color: ${props =>
+    lighten(0.01, props.theme.palette.primary.dark)}; */
+  background-color: #000;
 `
 
 export const Text = styled.div`

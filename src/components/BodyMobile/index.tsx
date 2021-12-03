@@ -4,12 +4,13 @@ import Link from '../../components/NoScrollLink'
 import ModalContact from '../../components/ModalContact'
 
 import img1 from '../../assets/slides/img1.jpeg'
-import img3 from '../../assets/slides/img3.jpeg'
-import img4 from '../../assets/slides/img4.png'
+import img2 from '../../assets/slides/img2.jpeg'
+import dentistsImg from '../../assets/dentists/dentists.jpg'
 
 import whatsapp from '../../assets/icons/whatsapp-square-color.svg'
 import maps from '../../assets/icons/icon_maps.svg'
-import logo from '../../assets/icons/logo_ultraoral_gold.svg'
+import logo from '../../assets/logo/logo_original.svg'
+
 import {
   Container,
   Column,
@@ -140,7 +141,7 @@ const BodyMobile: React.FC = () => {
           <DentistsBox
             ref={dentistsBoxRef}
             onClick={handleClickDentistsBox}
-            image={img4}
+            image={dentistsImg}
           >
             <OverlayDentistsBox isBoxClicked={isDentistsBoxClicked}>
               <Text>
@@ -170,7 +171,7 @@ const BodyMobile: React.FC = () => {
           <SpecialitiesBox
             ref={specialitiesBoxRef}
             onClick={handleClickSpecialitiesBox}
-            image={img3}
+            image={img2}
           >
             <OverlaySpecialitiesBox isBoxClicked={isSpecialitiesBoxClicked}>
               <Text>

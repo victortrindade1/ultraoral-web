@@ -1,14 +1,14 @@
 import React from 'react'
 
-import img1 from '../../assets/clinic/img1.png'
-import img2 from '../../assets/clinic/img2.png'
-import img3 from '../../assets/clinic/img3.png'
-import img4 from '../../assets/clinic/img4.png'
-import img5 from '../../assets/clinic/img5.png'
-import img6 from '../../assets/clinic/img6.png'
-import img7 from '../../assets/clinic/img7.png'
-import img8 from '../../assets/clinic/img8.png'
-import img9 from '../../assets/clinic/img9.png'
+import img1 from '../../assets/clinic/img1.jpg'
+import img2 from '../../assets/clinic/img2.jpg'
+import img3 from '../../assets/clinic/img3.jpg'
+import img4 from '../../assets/clinic/img4.jpg'
+import img5 from '../../assets/clinic/img5.jpg'
+import img6 from '../../assets/clinic/img6.jpg'
+import img7 from '../../assets/clinic/img7.jpg'
+import img8 from '../../assets/clinic/img8.jpg'
+import img9 from '../../assets/clinic/img9.jpg'
 
 import Slide from './Slide'
 

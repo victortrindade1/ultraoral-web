@@ -1,7 +1,7 @@
 import React from 'react'
 
 import img1 from '../../assets/slides/img1.jpeg'
-import img2 from '../../assets/slides/img2.png'
+import img2 from '../../assets/slides/img2.jpeg'
 
 import Slide from './Slide'
 

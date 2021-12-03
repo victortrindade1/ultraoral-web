@@ -6,7 +6,8 @@ import { isActiveLink } from '../../utils/isActiveLink'
 import theme from '../../styles/theme'
 import Link from '../NoScrollLink'
 
-import Logo from '../../assets/icons/logo_ultraoral_gold.svg'
+// import Logo from '../../assets/icons/logo_ultraoral_gold.svg'
+import Logo from '../../assets/logo/logo_original.svg'
 
 import {
   Container,

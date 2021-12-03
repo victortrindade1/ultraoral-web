@@ -8,10 +8,10 @@ import PageTitle from '../components/PageTitle'
 
 import IResponsive from '../interfaces/IResponsive'
 
-import dent1 from '../assets/dentists/dent1.png'
-import dent2 from '../assets/dentists/dent2.jpeg'
-import dent3 from '../assets/dentists/dent3.png'
-import dent4 from '../assets/dentists/dent4.png'
+import dent1 from '../assets/dentists/dent1.jpg'
+import dent2 from '../assets/dentists/dent2.jpg'
+import dent3 from '../assets/dentists/dent3.jpg'
+import dent4 from '../assets/dentists/dent4.jpg'
 
 import {
   Container,

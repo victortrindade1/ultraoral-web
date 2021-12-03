@@ -69,8 +69,9 @@ export const Navigation = styled.div`
 export const LogoContainer = styled.div``
 
 export const Image = styled.img`
-  height: 40px;
-  width: auto;
+  height: auto;
+  max-width: 215px;
+  width: 20vw;
 `
 
 export const LinkContainer = styled.div`
