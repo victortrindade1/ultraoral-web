@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg version="1.1" viewBox="0 0 95.248 32.674" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clipPath20">
+   <path d="m0 0h4701v1545h-4701z"/>
+  </clipPath>
+  <clipPath id="clipPath26">
+   <path d="m16.75 1096.1c0 146.66 52.75 235.44 141.52 324.2 81.051 81.06 198.13 124.8 325.5 124.8 128.66 0 297.2-36.02 379.54-115.79l-66.903-101.64c-90.062 149.24-214.86 192.98-312.64 192.98-96.492 0-180.12-30.87-240.59-90.05-65.61-64.33-99.063-221.29-99.063-334.5v-28.31c0-113.22 33.453-270.19 99.063-334.52 60.468-59.176 144.1-90.059 240.59-90.059 83.629 0 225.15 39.883 293.34 158.25v163.4h-90.062v28.304h211v-229.01c-82.34-81.059-207.13-145.39-414.27-145.39-127.37 0-243.16 45.035-325.5 124.8-90.058 86.199-141.52 177.55-141.52 324.22z"/>
+  </clipPath>
+  <linearGradient id="linearGradient42" x2="1" gradientTransform="matrix(881.3 0 0 -881.3 16.752 1082)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#79453e" offset="0"/>
+   <stop stop-color="#79453e" offset=".024182"/>
+   <stop stop-color="#ea9d8c" offset=".31841"/>
+   <stop stop-color="#ea9d8c" offset=".33616"/>
+   <stop stop-color="#c17465" offset=".62189"/>
+   <stop stop-color="#834c41" offset=".96579"/>
+   <stop stop-color="#834c41" offset="1"/>
+  </linearGradient>
+  <clipPath id="clipPath52">
+   <path d="m2202.9 1532.3h133.8l600.83-710.19v710.19h23.16v-900.6h-23.16l-710.18 841.41v-841.41h-24.45z"/>
+  </clipPath>
+  <linearGradient id="linearGradient68" x2="1" gradientTransform="matrix(757.79 0 0 -757.79 2202.9 1082)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#79453e" offset="0"/>
+   <stop stop-color="#79453e" offset=".024182"/>
+   <stop stop-color="#ea9d8c" offset=".31841"/>
+   <stop stop-color="#ea9d8c" offset=".33616"/>
+   <stop stop-color="#c17465" offset=".62189"/>
+   <stop stop-color="#834c41" offset=".96579"/>
+   <stop stop-color="#834c41" offset="1"/>
+  </linearGradient>
+  <clipPath id="clipPath78">
+   <path d="m3346.6 1532.3h750.06v-24.45h-313.91v-876.15h-122.22v876.15h-313.93z"/>
+  </clipPath>
+  <linearGradient id="linearGradient94" x2="1" gradientTransform="matrix(750.06 0 0 -750.06 3346.6 1082)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#79453e" offset="0"/>
+   <stop stop-color="#79453e" offset=".024182"/>
+   <stop stop-color="#ea9d8c" offset=".31841"/>
+   <stop stop-color="#ea9d8c" offset=".33616"/>
+   <stop stop-color="#c17465" offset=".62189"/>
+   <stop stop-color="#834c41" offset=".96579"/>
+   <stop stop-color="#834c41" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(-64.4 -77.473)">
+  <g transform="matrix(.035278 0 0 -.035278 63.809 131.98)">
+   <g clip-path="url(#clipPath20)">
+    <g clip-path="url(#clipPath26)">
+     <path d="m468 618v1h-17v1h-16v1h-7v1h-7v1h-8v1h-7v1h-8v1h-7v1h-5v1h-4v1h-4v1h-5v1h-4v1h-4v1h-5v1h-4v1h-5v1h-4v1h-3v1h-3v1h-3v1h-3v1h-3v1h-3v1h-3v1h-3v1h-3v1h-3v1h-3v1h-3v1h-3v1h-3v1h-3v1h-2v1h-3v1h-2v1h-2v1h-2v1h-3v1h-2v1h-2v1h-2v1h-3v1h-2v1h-2v1h-2v1h-3v1h-2v1h-2v1h-3v1h-1v1h-2v1h-2v1h-2v1h-1v1h-2v1h-2v1h-2v1h-1v1h-2v1h-2v1h-2v1h-2v1h-1v1h-2v1h-2v1h-2v1h-1v1h-2v1h-2v1h-2v1h-1v1h-2v1h-1v1h-2v1h-1v1h-1v1h-2v1h-1v1h-2v1h-1v1h-2v1h-1v1h-1v1h-2v1h-1v1h-2v1h-1v1h-1v1h-2v1h-1v1h-2v1h-1v1h-2v1h-1v1h-1v1h-2v1h-1v1h-1v1h-1v1h-1v1h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v1h-1v1h-1v1h-1v1h-1v1h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2h-1v1h-1v1h-1v1h-1v2h-1v1h-1v1h-1v1h-1v2h-1v1h-1v1h-1v1h-1v2h-1v1h-1v1h-1v2h-1v1h-1v2h-1v1h-1v1h-1v2h-1v1h-1v2h-1v1h-1v1h-1v2h-1v1h-1v2h-1v1h-1v2h-1v2h-1v1h-1v2h-1v1h-1v2h-1v1h-1v2h-1v2h-1v1h-1v2h-1v2h-1v1h-1v2h-1v2h-1v2h-1v1h-1v2h-1v2h-1v2h-1v2h-1v2h-1v2h-1v2h-1v2h-1v2h-1v2h-1v2h-1v2h-1v3h-1v2h-1v2h-1v3h-1v2h-1v2h-1v3h-1v2h-1v3h-1v3h-1v2h-1v3h-1v3h-1v3h-1v2h-1v4h-1v3h-1v3h-1v4h-1v3h-1v4h-1v3h-1v5h-1v4h-1v4h-1v4h-1v5h-1v6h-1v5h-1v6h-1v6h-1v8h-1v9h-1v9h-1v14h-1v21h-1v59h1v21h1v14h1v10h1v8h1v8h1v6h1v5h1v6h1v6h1v4h1v4h1v5h1v4h1v4h1v4h1v3h1v4h1v3h1v3h1v4h1v3h1v3h1v2h1v3h1v3h1v3h1v2h1v3h1v3h1v2h1v2h1v2h1v3h1v2h1v2h1v3h1v2h1v2h1v2h1v2h1v2h1v2h1v2h1v2h1v2h1v2h1v2h1v1h1v2h1v2h1v2h1v1h1v2h1v2h1v2h1v1h1v2h1v2h1v1h1v2h1v1h1v2h1v1h1v2h1v2h1v1h1v2h1v1h1v2h1v1h1v1h1v2h1v1h1v2h1v1h1v1h1v2h1v1h1v2h1v1h1v1h1v2h1v1h1v1h1v2h1v1h1v1h1v1h1v2h1v1h1v1h1v1h1v2h1v1h1v1h1v1h1v2h1v1h1v1h1v1h1v1h1v1h1v2h1v1h1v1h1v1h1v1h1v1h1v2h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v2h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v2h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h2v1h1v1h1v1h1v1h1v1h1v1h2v1h1v1h1v1h1v1h1v1h1v1h2v1h1v1h1v1h1v1h1v1h1v1h2v1h1v1h1v1h1v1h2v1h1v1h1v1h2v1h1v1h2v1h1v1h1v1h2v1h1v1h2v1h1v1h1v1h2v1h1v1h2v1h1v1h1v1h2v1h1v1h2v1h1v1h1v1h2v1h2v1h1v1h2v1h2v1h2v1h1v1h2v1h2v1h2v1h2v1h1v1h2v1h2v1h2v1h1v1h2v1h2v1h2v1h1v1h2v1h2v1h2v1h2v1h3v1h2v1h2v1h2v1h3v1h2v1h2v1h3v1h2v1h2v1h2v1h3v1h2v1h2v1h3v1h2v1h3v1h3v1h3v1h3v1h3v1h3v1h3v1h3v1h3v1h3v1h3v1h4v1h3v1h3v1h4v1h4v1h5v1h4v1h5v1h4v1h5v1h4v1h5v1h4v1h7v1h8v1h8v1h7v1h8v1h7v1h17v1h71v-1h16v-1h12v-1h11v-1h9v-1h9v-1h8v-1h7v-1h6v-1h7v-1h7v-1h5v-1h6v-1h5v-1h6v-1h5v-1h4v-1h5v-1h4v-1h5v-1h5v-1h4v-1h3v-1h4v-1h4v-1h4v-1h4v-1h4v-1h3v-1h4v-1h3v-1h3v-1h4v-1h3v-1h3v-1h3v-1h3v-1h3v-1h3v-1h3v-1h3v-1h3v-1h3v-1h3v-1h2v-1h3v-1h2v-1h3v-1h2v-1h3v-1h2v-1h3v-1h2v-1h2v-1h3v-1h2v-1h2v-1h2v-1h2v-1h2v-1h3v-1h2v-1h2v-1h2v-1h2v-1h2v-1h2v-1h1v-1h2v-1h2v-1h2v-1h2v-1h2v-1h2v-1h2v-1h1v-1h2v-1h1v-1h2v-1h2v-1h1v-1h2v-1h1v-1h2v-1h2v-1h1v-1h2v-1h1v-1h2v-1h1v-1h2v-1h1v-1h1v-1h2v-1h1v-1h1v-1h2v-1h1v-1h1v-1h2v-1h1v-1h1v-1h1v-1h2v-1h1v-1h1v-1h1v-1h1v-1h2v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v1h-1v2h-1v1h-1v2h-1v1h-1v2h-1v1h-1v2h-1v2h-1v1h-1v2h-1v1h-1v2h-1v1h-1v2h-1v1h-1v2h-1v1h-1v1h-1v2h-1v1h-1v2h-1v1h-1v1h-1v2h-1v1h-1v1h-1v2h-1v1h-1v1h-1v2h-1v1h-1v1h-1v2h-1v1h-1v1h-1v2h-1v1h-1v1h-1v1h-1v1h-1v2h-1v1h-1v1h-1v1h-1v1h-1v2h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v2h-1v1h-1v1h-1v1h-1v1h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v1h-1v1h-1v1h-1v1h-2v1h-1v1h-1v1h-1v1h-2v1h-1v1h-1v1h-2v1h-1v1h-1v1h-1v1h-2v1h-1v1h-2v1h-1v1h-2v1h-1v1h-2v1h-1v1h-1v1h-2v1h-1v1h-2v1h-1v1h-2v1h-1v1h-2v1h-2v1h-2v1h-1v1h-2v1h-2v1h-1v1h-2v1h-2v1h-2v1h-1v1h-2v1h-2v1h-2v1h-2v1h-2v1h-2v1h-2v1h-2v1h-2v1h-2v1h-3v1h-2v1h-2v1h-3v1h-2v1h-2v1h-3v1h-2v1h-3v1h-3v1h-2v1h-3v1h-3v1h-3v1h-3v1h-3v1h-4v1h-3v1h-4v1h-4v1h-3v1h-5v1h-4v1h-5v1h-5v1h-6v1h-6v1h-7v1h-10v1h-11v1h-41v-1h-16v-1h-8v-1h-8v-1h-8v-1h-8v-1h-5v-1h-4v-1h-5v-1h-5v-1h-4v-1h-5v-1h-4v-1h-4v-1h-3v-1h-3v-1h-3v-1h-3v-1h-3v-1h-4v-1h-3v-1h-3v-1h-3v-1h-3v-1h-2v-1h-2v-1h-2v-1h-3v-1h-2v-1h-2v-1h-3v-1h-2v-1h-2v-1h-3v-1h-2v-1h-2v-1h-2v-1h-2v-1h-2v-1h-1v-1h-2v-1h-2v-1h-2v-1h-2v-1h-1v-1h-2v-1h-2v-1h-2v-1h-2v-1h-1v-1h-2v-1h-2v-1h-1v-1h-2v-1h-1v-1h-1v-1h-2v-1h-1v-1h-2v-1h-1v-1h-2v-1h-1v-1h-1v-1h-2v-1h-1v-1h-2v-1h-1v-1h-1v-1h-2v-1h-1v-1h-1v-1h-2v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-2v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-2v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-2h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-2h-1v-1h-1v-1h-1v-2h-1v-1h-1v-1h-1v-2h-1v-1h-1v-1h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-2h-1v-1h-1v-2h-1v-2h-1v-1h-1v-2h-1v-1h-1v-2h-1v-2h-1v-2h-1v-2h-1v-2h-1v-2h-1v-2h-1v-2h-1v-1h-1v-2h-1v-3h-1v-2h-1v-2h-1v-2h-1v-3h-1v-2h-1v-2h-1v-2h-1v-2h-1v-3h-1v-3h-1v-2h-1v-3h-1v-2h-1v-3h-1v-3h-1v-2h-1v-3h-1v-3h-1v-3h-1v-3h-1v-3h-1v-3h-1v-3h-1v-3h-1v-4h-1v-3h-1v-4h-1v-3h-1v-4h-1v-3h-1v-4h-1v-4h-1v-4h-1v-4h-1v-4h-1v-4h-1v-5h-1v-4h-1v-5h-1v-5h-1v-5h-1v-5h-1v-6h-1v-5h-1v-6h-1v-7h-1v-6h-1v-7h-1v-8h-1v-8h-1v-9h-1v-11h-1v-11h-1v-17h-1v-90h1v-17h1v-12h1v-10h1v-9h1v-8h1v-8h1v-7h1v-7h1v-6h1v-6h1v-5h1v-6h1v-5h1v-5h1v-5h1v-5h1v-4h1v-5h1v-4h1v-4h1v-4h1v-4h1v-4h1v-4h1v-4h1v-3h1v-3h1v-4h1v-3h1v-4h1v-3h1v-3h1v-3h1v-3h1v-3h1v-3h1v-3h1v-3h1v-3h1v-2h1v-3h1v-2h1v-3h1v-2h1v-3h1v-3h1v-2h1v-2h1v-2h1v-3h1v-2h1v-2h1v-2h1v-2h1v-3h1v-2h1v-1h1v-2h1v-2h1v-2h1v-2h1v-2h1v-2h1v-2h1v-2h1v-1h1v-2h1v-2h1v-1h1v-2h1v-1h1v-2h1v-2h1v-1h1v-2h1v-1h1v-2h1v-1h1v-1h1v-2h1v-1h1v-1h1v-2h1v-1h1v-1h1v-2h1v-1h1v-1h1v-1h1v-1h1v-2h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2v-1h1v-1h1v-1h1v-1h1v-1h2v-1h1v-1h1v-1h1v-1h1v-1h1v-1h2v-1h1v-1h1v-1h1v-1h2v-1h1v-1h2v-1h1v-1h2v-1h1v-1h1v-1h2v-1h1v-1h2v-1h1v-1h1v-1h2v-1h1v-1h2v-1h1v-1h2v-1h1v-1h2v-1h2v-1h2v-1h2v-1h1v-1h2v-1h2v-1h2v-1h2v-1h1v-1h2v-1h2v-1h2v-1h2v-1h2v-1h2v-1h2v-1h3v-1h2v-1h2v-1h3v-1h2v-1h2v-1h3v-1h2v-1h2v-1h3v-1h3v-1h3v-1h3v-1h3v-1h3v-1h4v-1h3v-1h3v-1h3v-1h3v-1h5v-1h4v-1h5v-1h5v-1h4v-1h5v-1h4v-1h8v-1h8v-1h8v-1h8v-1h15v-1h42v1h12v1h8v1h7v1h7v1h5v1h6v1h5v1h5v1h4v1h4v1h4v1h4v1h4v1h3v1h3v1h4v1h3v1h4v1h2v1h3v1h3v1h3v1h3v1h2v1h3v1h3v1h2v1h3v1h2v1h2v1h3v1h2v1h2v1h3v1h2v1h2v1h2v1h2v1h2v1h2v1h2v1h2v1h2v1h2v1h2v1h2v1h1v1h2v1h2v1h1v1h2v1h2v1h2v1h1v1h2v1h2v1h1v1h2v1h1v1h2v1h1v1h2v1h1v1h2v1h1v1h2v1h1v1h2v1h1v1h1v1h2v1h1v1h1v1h1v1h2v1h1v1h1v1h2v1h1v1h1v1h1v1h2v1h1v1h1v1h1v1h1v1h1v1h1v1h2v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v1h1v2h1v1h1v1h1v1h1v1h1v1h1v2h1v1h1v1h1v1h1v2h1v1h1v1h1v2h1v1h1v1h1v1h1v2h1v1h1v1h1v2h1v1h1v2h1v2h1v1h1v2h1v1h1v2h1v1h1v2h1v1h1v2h1v2h1v162h-90v30h212v-230h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-2v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-2v-1h-1v-1h-1v-1h-1v-1h-1v-1h-1v-1h-2v-1h-1v-1h-1v-1h-1v-1h-2v-1h-1v-1h-1v-1h-1v-1h-2v-1h-1v-1h-1v-1h-2v-1h-1v-1h-1v-1h-1v-1h-2v-1h-1v-1h-1v-1h-2v-1h-1v-1h-2v-1h-1v-1h-2v-1h-1v-1h-2v-1h-1v-1h-1v-1h-2v-1h-1v-1h-2v-1h-1v-1h-2v-1h-1v-1h-2v-1h-2v-1h-1v-1h-2v-1h-2v-1h-1v-1h-2v-1h-1v-1h-2v-1h-2v-1h-1v-1h-2v-1h-2v-1h-2v-1h-2v-1h-1v-1h-2v-1h-2v-1h-2v-1h-2v-1h-1v-1h-2v-1h-2v-1h-2v-1h-2v-1h-2v-1h-3v-1h-2v-1h-2v-1h-2v-1h-2v-1h-2v-1h-2v-1h-2v-1h-3v-1h-2v-1h-2v-1h-3v-1h-2v-1h-2v-1h-3v-1h-2v-1h-3v-1h-2v-1h-3v-1h-3v-1h-2v-1h-3v-1h-3v-1h-3v-1h-3v-1h-2v-1h-3v-1h-3v-1h-4v-1h-3v-1h-3v-1h-4v-1h-3v-1h-3v-1h-3v-1h-4v-1h-4v-1h-4v-1h-4v-1h-4v-1h-4v-1h-4v-1h-4v-1h-5v-1h-6v-1h-5v-1h-5v-1h-5v-1h-5v-1h-7v-1h-6v-1h-7v-1h-7v-1h-7v-1h-10v-1h-10v-1h-9v-1h-15v-1h-16v-1h-29v-1" fill="url(#linearGradient42)"/>
+    </g>
+   </g>
+  </g>
+  <g transform="matrix(.035278 0 0 -.035278 23.063 131.98)">
+   <g clip-path="url(#clipPath52)">
+    <path d="m2202.9 1532.3h133.8l600.83-710.19v710.19h23.16v-900.6h-23.16l-710.18 841.41v-841.41h-24.45v900.6" fill="url(#linearGradient68)"/>
+   </g>
+  </g>
+  <g transform="matrix(.035278 0 0 -.035278 15.126 131.98)">
+   <g clip-path="url(#clipPath78)">
+    <path d="m3346.6 1532.3h750.06v-24.45h-313.91v-876.15h-122.22v876.15h-313.93v24.45" fill="url(#linearGradient94)"/>
+   </g>
+  </g>
+ </g>
+</svg>
