@@ -41,6 +41,7 @@ export const Title = styled.h1`
   font-size: 2rem;
   margin: 3rem 0;
   font-weight: 300;
+  font-family: 'Celine Peach Sans', sans-serif;
 `
 
 export const Text = styled.div`
