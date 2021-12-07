@@ -84,7 +84,7 @@ export const DividerStyled = styled(Divider)`
   /* margin: 3em 0; */
   /* padding: 0; */
   /* margin: 5vw; */
-  margin-top: 50px;
+  /* margin-top: 50px; */
 `
 
 // export const LogoContainer = styled.div`
