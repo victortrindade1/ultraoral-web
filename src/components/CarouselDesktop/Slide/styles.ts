@@ -33,7 +33,7 @@ export const Description = styled.div`
 
   color: ${props => props.theme.palette.primary.contrastText};
 
-  font: 300 4vw 'Roboto', sans-serif;
+  font: 300 4vw 'Quesha', sans-serif;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px black;

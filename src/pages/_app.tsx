@@ -9,8 +9,10 @@ import { useMediaQuery } from '@mui/material'
 import TopMenu from '../components/TopMenu'
 import Footer from '../components/Footer'
 
+import '../../public/fonts/style.css'
 import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
+import Head from 'next/head'
 
 export default function MyApp({
   Component,
@@ -23,6 +25,10 @@ export default function MyApp({
 
   return (
     <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
       {/* <Head>
         <title>Gente Odontologia</title>
       </Head> */}

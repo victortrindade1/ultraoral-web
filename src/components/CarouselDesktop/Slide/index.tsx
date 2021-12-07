@@ -23,7 +23,7 @@ const Slide: React.FC<ISlide> = ({ url, description }: ISlide) => {
         </DescriptionContainer>
         <Link href="/agendaragora" passHref>
           <ButtonContainer>
-            <ButtonStyled variant="outlined" color={'warning'}>
+            <ButtonStyled variant="contained" color={'warning'}>
               AGENDAR AGORA
             </ButtonStyled>
           </ButtonContainer>

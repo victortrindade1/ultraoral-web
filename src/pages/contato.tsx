@@ -24,7 +24,7 @@ const Contato: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   const subtitle = 'Gente Odontologia'
 
   return (
-    <Layout title="Contato" description={`${title} - ${subtitle}`}>
+    <Layout title={`${title} - Gente`} description={`${title} - ${subtitle}`}>
       <Container>
         <PageTitle
           title={title}
@@ -40,8 +40,12 @@ const Contato: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
           <Text>{companyInfo.street}</Text>
           <FaRegEnvelope color={theme.palette.primary.main} />
           <Text>{companyInfo.mail}</Text>
-          <FaBuilding color={theme.palette.primary.main} />
-          <Text>CNPJ: {companyInfo.cnpj}</Text>
+          {companyInfo.cnpj !== '' && (
+            <>
+              <FaBuilding color={theme.palette.primary.main} />
+              <Text>CNPJ: {companyInfo.cnpj}</Text>
+            </>
+          )}
         </AddressContainer>
       </Container>
     </Layout>

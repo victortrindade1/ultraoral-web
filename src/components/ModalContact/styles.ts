@@ -47,6 +47,7 @@ export const Title = styled.h1`
   font-size: 2.25rem;
   margin-bottom: 3rem;
   font-weight: 300;
+  font-family: 'Celine Peach Sans', 'Roboto', sans-serif;
 `
 
 export const AddressContainer = styled.div`

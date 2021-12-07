@@ -48,8 +48,12 @@ const ModalContact: React.FC<IProps> = ({ open, onClose }) => {
               <Text>{companyInfo.street}</Text>
               <FaRegEnvelope color={theme.palette.primary.main} />
               <Text>{companyInfo.mail}</Text>
-              <FaBuilding color={theme.palette.primary.main} />
-              <Text>CNPJ: {companyInfo.cnpj}</Text>
+              {companyInfo.cnpj !== '' && (
+                <>
+                  <FaBuilding color={theme.palette.primary.main} />
+                  <Text>CNPJ: {companyInfo.cnpj}</Text>
+                </>
+              )}
             </AddressContainer>
             <DividerStyled
               sx={{

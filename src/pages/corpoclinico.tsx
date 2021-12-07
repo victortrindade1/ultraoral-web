@@ -72,7 +72,7 @@ const listDentists = [
     photo: dent3
   },
   {
-    name: 'Dr. Fábio Pinheiro',
+    name: 'Dr. Fabio Pinheiro',
     cro: 'CRO-RJ 48080',
     skills: ['Harmonização Orofacial'],
     treatments: [
@@ -90,7 +90,7 @@ const CorpoClinico: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   const subtitle = 'Conheça nossa equipe de dentistas'
 
   return (
-    <Layout title="Corpo Clínico" description={`${title} - ${subtitle}`}>
+    <Layout title={`${title} - Gente`} description={`${title} - ${subtitle}`}>
       <Container>
         <PageTitle
           title={title}

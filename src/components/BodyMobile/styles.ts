@@ -146,7 +146,7 @@ export const ContactBox = styled.div`
 `
 
 export const Text = styled.div`
-  font: 500 6vw 'Roboto', sans-serif;
+  font: 500 9vw 'Quesha', 'Roboto', sans-serif;
 
   color: ${props => props.theme.palette.primary.contrastText};
   text-transform: uppercase;
@@ -154,12 +154,12 @@ export const Text = styled.div`
   text-shadow: 1px 1px 2px black;
 
   > div:nth-of-type(1) {
-    font-size: 2.5vw;
+    font-size: 5vw;
     padding-bottom: 5px;
   }
 
   > span {
-    font-size: 4.5vw;
+    font-size: 7vw;
   }
 `
 

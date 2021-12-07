@@ -107,7 +107,7 @@ const Especialidades: NextPage<IResponsive> = ({
   }
 
   return (
-    <Layout title="Especialidades" description={`${title} - ${subtitle}`}>
+    <Layout title={`${title} - Gente`} description={`${title} - ${subtitle}`}>
       <Container>
         <PageTitle
           title={title}

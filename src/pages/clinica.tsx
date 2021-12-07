@@ -27,7 +27,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
     'Seja bem-vindo(a)! Conheça o conforto da clínica mais moderna de Campos.'
 
   return (
-    <Layout title="A Clínica" description={`${title} - ${subtitle}`}>
+    <Layout title={`${title} - Gente`} description={`${title} - ${subtitle}`}>
       <Container>
         <PageTitle
           title={title}

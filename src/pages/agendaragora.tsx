@@ -24,7 +24,7 @@ const AgendarAgora: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   const subtitle = 'Vamos agendar uma consulta? Envie agora uma mensagem.'
 
   return (
-    <Layout title="Agendar" description={`${title} - ${subtitle}`}>
+    <Layout title={`${title} - Gente`} description={`${title} - ${subtitle}`}>
       <Container>
         <PageTitle
           title={title}

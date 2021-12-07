@@ -53,7 +53,7 @@ const ComoChegar: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   }, [])
 
   return (
-    <Layout title="A Clínica" description={`${title} - ${subtitle}`}>
+    <Layout title={`${title} - Gente`} description={`${title} - ${subtitle}`}>
       <Container>
         <PageTitle
           title={title}

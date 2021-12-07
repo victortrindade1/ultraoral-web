@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Quesha';
+  src: url('Quesha.ttf') format('truetype');
+  /* font-weight: 300; */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Celine Peach Sans';
+  src: url('CelinePeachSans.ttf') format('truetype');
+  /* font-weight: 300; */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Celine Peach Script';
+  src: url('CelinePeachScript.ttf') format('truetype');
+  /* font-weight: 300; */
+  font-style: normal;
+  font-display: swap;
+}

@@ -52,7 +52,8 @@ export const DescriptionContainer = styled.div`
 `
 
 export const Name = styled.div`
-  font-size: 2rem;
+  font-size: 3rem;
+  font-family: 'Celine Peach Script', 'Roboto', sans-serif;
 `
 
 export const Cro = styled.div`
