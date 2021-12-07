@@ -41,6 +41,10 @@ const links: { name: string; href: string }[] = [
     href: '/corpoclinico'
   },
   {
+    name: 'CASOS CLÍNICOS',
+    href: '/casosclinicos'
+  },
+  {
     name: 'CONTATO',
     href: '/contato'
   }

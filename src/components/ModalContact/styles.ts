@@ -9,7 +9,7 @@ export const Container = styled.div`
   max-height: 80vh;
   margin: auto;
   border-radius: 8px;
-  padding: 5vw;
+  padding: 5vw 5vw 3vw 5vw;
   font-family: 'Roboto', sans-serif;
 
   display: flex;
@@ -65,15 +65,15 @@ export const Text = styled.div`
   word-break: break-word;
 `
 
-export const SocialMediaContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
+// export const SocialMediaContainer = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   font-size: 2rem;
 
-  > a {
-    margin: 0vw 2vw;
-  }
-`
+//   > a {
+//     margin: 0vw 2vw;
+//   }
+// `
 
 export const DividerStyled = styled(Divider)`
   /* display: block; */
@@ -84,4 +84,21 @@ export const DividerStyled = styled(Divider)`
   /* margin: 3em 0; */
   /* padding: 0; */
   /* margin: 5vw; */
+  margin-top: 50px;
 `
+
+// export const LogoContainer = styled.div`
+//   /* padding: 10vw; */
+//   /* padding-top: 50px; */
+//   /* max-width: 200px; */
+//   display: flex;
+//   flex: 1;
+//   justify-content: center;
+// `
+
+// export const Logo = styled.img`
+//   /* height: auto;
+//   min-width: 50vw; */
+//   max-width: 200px;
+//   width: fit-content;
+// `

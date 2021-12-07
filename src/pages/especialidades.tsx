@@ -25,6 +25,7 @@ import {
   Icon,
   SpecialityName
 } from '../styles/pages/Especialidades'
+import Logo from '../components/Logo'
 
 const listSpecialities = [
   {
@@ -128,6 +129,7 @@ const Especialidades: NextPage<IResponsive> = ({
             </ItemSpeciality>
           ))}
         </ListSpecialities>
+        <Logo />
         <ModalSpeciality
           open={modalData.opened}
           onClose={handleClose}

@@ -15,11 +15,23 @@ export const Container = styled.div<IResponsive>`
 `
 
 export const SocialMediaContainer = styled.div`
+  display: flex;
+  flex: 0.4;
+  align-items: center;
+  justify-content: space-around;
+
   > a svg {
     height: 40px;
     width: auto;
     fill: ${props => props.theme.palette.secondary.light};
-    margin-left: 15px;
+    /* margin-left: 15px; */
+  }
+
+  > div svg {
+    height: 30px;
+    width: auto;
+    fill: ${props => props.theme.palette.secondary.light};
+    cursor: pointer;
   }
 `
 

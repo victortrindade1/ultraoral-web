@@ -20,6 +20,7 @@ import {
   Text,
   MapContainer
 } from '../styles/pages/Clinic'
+import Logo from '../components/Logo'
 
 const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   const title = 'A Clínica'
@@ -58,6 +59,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
             <Text>{companyInfo.mail}</Text>
           </GridContact>
         </BodyClinic>
+        <Logo />
       </Container>
     </Layout>
   )

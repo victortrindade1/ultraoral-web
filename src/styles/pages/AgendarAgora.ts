@@ -22,7 +22,7 @@ export const ContactContainer = styled.div<IResponsive>`
   width: ${props => (props.isBreakpoint ? '80%' : '40%')};
   margin: auto;
   padding-top: ${props => (props.isBreakpoint ? '15vw' : '5vw')};
-  padding-bottom: 15vw;
+  padding-bottom: 5vw;
 `
 
 export const Text = styled.div`

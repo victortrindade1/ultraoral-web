@@ -18,6 +18,7 @@ import theme from '../styles/theme'
 import IResponsive from '../interfaces/IResponsive'
 
 import { Container, AddressContainer, Text } from '../styles/pages/Contato'
+import Logo from '../components/Logo'
 
 const Contato: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   const title = 'Contato'
@@ -47,6 +48,7 @@ const Contato: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
             </>
           )}
         </AddressContainer>
+        <Logo />
       </Container>
     </Layout>
   )

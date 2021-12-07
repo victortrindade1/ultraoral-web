@@ -5,12 +5,14 @@ import {
   FaPhone,
   FaRegEnvelope,
   FaMapMarkerAlt,
-  FaBuilding,
-  FaInstagram,
-  FaFacebook
+  FaBuilding
+  // FaInstagram,
+  // FaFacebook
 } from 'react-icons/fa'
 
 import { companyInfo } from '../../config/companyInfo'
+
+// import logo from '../../assets/logo/logo_original.svg'
 
 import theme from '../../styles/theme'
 
@@ -22,9 +24,12 @@ import {
   Title,
   AddressContainer,
   Text,
-  SocialMediaContainer,
+  // SocialMediaContainer,
   DividerStyled
+  // LogoContainer,
+  // Logo
 } from './styles'
+import Logo from '../Logo'
 
 interface IProps {
   open: boolean
@@ -65,7 +70,7 @@ const ModalContact: React.FC<IProps> = ({ open, onClose }) => {
                 margin: '5vw'
               }}
             />
-            <SocialMediaContainer>
+            {/* <SocialMediaContainer>
               <a
                 target="_blank"
                 href={companyInfo.instagram_url}
@@ -80,7 +85,8 @@ const ModalContact: React.FC<IProps> = ({ open, onClose }) => {
               >
                 <FaFacebook color={theme.palette.secondary.light} />
               </a>
-            </SocialMediaContainer>
+            </SocialMediaContainer> */}
+            <Logo />
           </ScrollableContainer>
         </Container>
       </Fade>

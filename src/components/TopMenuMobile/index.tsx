@@ -14,6 +14,7 @@ import icon_specialities from '../../assets/icons/menu_specialities.svg'
 import icon_agendaragora from '../../assets/icons/menu_agendaragora.svg'
 import icon_comochegar from '../../assets/icons/menu_comochegar.svg'
 import icon_contact from '../../assets/icons/menu_contact.svg'
+import icon_cliniccases from '../../assets/icons/menu_cliniccases.svg'
 
 import {
   Container,
@@ -52,6 +53,11 @@ const links: { name: string; icon: any; href: string }[] = [
     name: 'CORPO CLÍNICO',
     href: '/corpoclinico',
     icon: icon_dentist
+  },
+  {
+    name: 'CASOS CLÍNICOS',
+    href: '/casosclinicos',
+    icon: icon_cliniccases
   },
   {
     name: 'CONTATO',

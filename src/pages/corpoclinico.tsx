@@ -28,6 +28,7 @@ import {
   TreatmentList,
   TreatmentContainer
 } from '../styles/pages/CorpoClinico'
+import Logo from '../components/Logo'
 
 const listDentists = [
   {
@@ -130,6 +131,7 @@ const CorpoClinico: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
             </ItemDentist>
           ))}
         </ListDentists>
+        <Logo />
       </Container>
     </Layout>
   )

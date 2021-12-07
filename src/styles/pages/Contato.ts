@@ -16,7 +16,7 @@ export const AddressContainer = styled.div<IResponsive>`
   font-size: ${props => (props.isBreakpoint ? '1rem' : '1.5rem')};
   font-family: 'Roboto', sans-serif;
   padding: ${props =>
-    props.isBreakpoint ? '0 15vw 15vw 15vw' : '2vw 20vw 15vw 20vw'};
+    props.isBreakpoint ? '0 15vw 5vw 15vw' : '2vw 20vw 5vw 20vw'};
 
   > svg {
     font-size: 1.5rem;

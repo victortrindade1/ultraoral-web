@@ -6,6 +6,7 @@ import { FaWhatsapp, FaPhone } from 'react-icons/fa'
 import Layout from '../components/Layout'
 import PageTitle from '../components/PageTitle'
 import Link from '../components/NoScrollLink'
+import Logo from '../components/Logo'
 
 import { companyInfo } from '../config/companyInfo'
 import theme from '../styles/theme'
@@ -48,6 +49,8 @@ const AgendarAgora: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
           <FaPhone color={theme.palette.primary.main} />
           <Text>{companyInfo.phone}</Text>
         </ContactContainer>
+
+        <Logo />
       </Container>
     </Layout>
   )

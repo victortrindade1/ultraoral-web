@@ -134,15 +134,35 @@ export const WhatsAppBox = styled.div`
   background-color: ${props => props.theme.palette.primary.dark};
 `
 
-export const ContactBox = styled.div`
+export const ClinicCasesBox = styled.div<IBackgroundBox>`
   display: flex;
   flex: 0.3;
   margin-bottom: 10px;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   /* background-color: ${props =>
     lighten(0.01, props.theme.palette.primary.dark)}; */
-  background-color: #000;
+  /* background-color: #000; */
+  background: ${props => props.theme.palette.primary.dark}
+    url('${props => props.image}') no-repeat center;
+  background-size: cover;
+`
+
+export const OverlayClinicCasesBox = styled.div<IBox>`
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  backdrop-filter: blur(6px);
+
+  opacity: ${props => (props.isBoxClicked ? 1 : 0)};
+  background-color: ${props => props.isBoxClicked && 'rgba(0, 0, 0, 0.5)'};
+
+  transition: all 0.5s;
+  position: relative;
 `
 
 export const Text = styled.div`
@@ -161,6 +181,7 @@ export const Text = styled.div`
   > span {
     font-size: 7vw;
   }
+  padding-bottom: 20px;
 `
 
 export const ButtonContainer = styled.div`

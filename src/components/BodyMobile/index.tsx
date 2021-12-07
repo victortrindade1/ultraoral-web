@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 import Link from '../../components/NoScrollLink'
-import ModalContact from '../../components/ModalContact'
+// import ModalContact from '../../components/ModalContact'
 
 import img1 from '../../assets/slides/img1.jpeg'
 import img2 from '../../assets/slides/img2.jpeg'
 import dentistsImg from '../../assets/dentists/dentists.jpg'
+import casesImg from '../../assets/cases/cases.jpg'
 
 import whatsapp from '../../assets/icons/whatsapp-square-color.svg'
 import maps from '../../assets/icons/icon_maps.svg'
-import logo from '../../assets/logo/logo_original.svg'
+// import logo from '../../assets/logo/logo_original.svg'
 
 import {
   Container,
@@ -22,13 +23,14 @@ import {
   SpecialitiesBox,
   OverlaySpecialitiesBox,
   OverlayDentistsBox,
-  ContactBox,
+  OverlayClinicCasesBox,
+  ClinicCasesBox,
   Text,
   ButtonContainer,
   ButtonStyled,
   Icon,
   IconButtonStyled,
-  Logo,
+  // Logo,
   BackgroundRounded
 } from './styles'
 
@@ -37,19 +39,22 @@ const BodyMobile: React.FC = () => {
   const [isSpecialitiesBoxClicked, setIsSpecialitiesBoxClicked] =
     useState(false)
   const [isDentistsBoxClicked, setIsDentistsBoxClicked] = useState(false)
-  const [openModalContact, setOpenModalContact] = useState(false)
+  const [isClinicCasesBoxClicked, setIsClinicCasesBoxClicked] = useState(false)
 
   const clinicBoxRef = useRef(null)
   const specialitiesBoxRef = useRef(null)
   const dentistsBoxRef = useRef(null)
+  const clinicCasesBoxRef = useRef(null)
 
   useOutsideAlerterClinic(clinicBoxRef)
   useOutsideAlerterSpecialitites(specialitiesBoxRef)
   useOutsideAlerterDentists(dentistsBoxRef)
+  useOutsideAlerterClinicCases(clinicCasesBoxRef)
 
   const handleClickClinicBox = () => setIsClinicBoxClicked(true)
   const handleClickSpecialitiesBox = () => setIsSpecialitiesBoxClicked(true)
   const handleClickDentistsBox = () => setIsDentistsBoxClicked(true)
+  const handleClickClinicCasesBox = () => setIsClinicCasesBoxClicked(true)
 
   function useOutsideAlerterClinic(ref) {
     useEffect(() => {
@@ -96,13 +101,28 @@ const BodyMobile: React.FC = () => {
     }, [ref])
   }
 
-  const handleCloseModalContact = () => {
-    setOpenModalContact(false)
+  function useOutsideAlerterClinicCases(ref) {
+    useEffect(() => {
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setIsClinicCasesBoxClicked(false)
+        }
+      }
+
+      document.addEventListener('click', handleClickOutside)
+      return () => {
+        document.removeEventListener('click', handleClickOutside)
+      }
+    }, [ref])
   }
 
-  const handleOpenModalContact = () => {
-    setOpenModalContact(true)
-  }
+  // const handleCloseModalContact = () => {
+  //   setOpenModalContact(false)
+  // }
+
+  // const handleOpenModalContact = () => {
+  //   setOpenModalContact(true)
+  // }
 
   return (
     <>
@@ -189,14 +209,31 @@ const BodyMobile: React.FC = () => {
               )}
             </OverlaySpecialitiesBox>
           </SpecialitiesBox>
-          <ContactBox>
-            <IconButtonStyled onClick={handleOpenModalContact}>
-              <Logo src={logo} alt={'logo'} />
-            </IconButtonStyled>
-          </ContactBox>
+          <ClinicCasesBox
+            ref={clinicCasesBoxRef}
+            onClick={handleClickClinicCasesBox}
+            image={casesImg}
+          >
+            <OverlayClinicCasesBox isBoxClicked={isClinicCasesBoxClicked}>
+              <Text>
+                <div>Casos</div>
+                <div>clínicos</div>
+              </Text>
+
+              {isClinicCasesBoxClicked && (
+                <Link href="/casosclinicos" passHref>
+                  <ButtonContainer>
+                    <ButtonStyled variant="outlined" color={'warning'}>
+                      Ver mais
+                    </ButtonStyled>
+                  </ButtonContainer>
+                </Link>
+              )}
+            </OverlayClinicCasesBox>
+          </ClinicCasesBox>
         </Column>
       </Container>
-      <ModalContact open={openModalContact} onClose={handleCloseModalContact} />
+      {/* <ModalContact open={openModalContact} onClose={handleCloseModalContact} /> */}
     </>
   )
 }

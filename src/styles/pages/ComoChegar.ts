@@ -47,7 +47,7 @@ export const AddressContainer = styled.div<IResponsive>`
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   padding: ${props =>
-    props.isBreakpoint ? '5vw 5vw 15vw 5vw' : '2vw 20vw 15vw 20vw'};
+    props.isBreakpoint ? '5vw 5vw 5vw 5vw' : '2vw 20vw 5vw 20vw'};
 `
 
 export const Text = styled.div`
