@@ -15,14 +15,14 @@ export const Container = styled.div`
   /* display: flex; */
   width: 100%;
   padding: 0px 5px 0 5px;
-  min-height: 600px;
+  min-height: 100vh;
   /* height: inherit; */
   height: 100%;
 
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   /* overflow: scroll; */
-  margin-bottom: 13px;
+  /* margin-bottom: 13px; */
   margin-top: 15px;
 `
 

@@ -48,7 +48,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
             <SimpleMap />
           </MapContainer>
           <Address>{companyInfo.street}</Address>
-          <Subtitle>Contatos</Subtitle>
+          <Subtitle>Contato</Subtitle>
           <GridContact isBreakpoint={isBreakpoint}>
             <FaWhatsapp />
             <Text>{companyInfo.whatsapp}</Text>

@@ -11,7 +11,6 @@ export const Container = styled.div<IResponsive>`
   align-items: center;
   border-top: 1px solid ${props => props.theme.palette.primary.main};
   min-height: 60px;
-  margin-top: ${props => (props.isBreakpoint ? '5vw' : '0')};
   height: 80px;
 `
 
