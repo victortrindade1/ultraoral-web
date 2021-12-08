@@ -24,9 +24,8 @@ const CasosClinicos: NextPage<IResponsive> = ({
           subtitle={subtitle}
           isBreakpoint={isBreakpoint}
         />
-
-        <Logo />
       </Container>
+      <Logo />
     </Layout>
   )
 }

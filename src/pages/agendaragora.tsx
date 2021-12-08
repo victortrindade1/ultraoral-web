@@ -49,9 +49,8 @@ const AgendarAgora: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
           <FaPhone color={theme.palette.primary.main} />
           <Text>{companyInfo.phone}</Text>
         </ContactContainer>
-
-        <Logo />
       </Container>
+      <Logo />
     </Layout>
   )
 }

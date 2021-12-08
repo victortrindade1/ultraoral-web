@@ -84,8 +84,8 @@ const ComoChegar: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
           <FaRegEnvelope color={theme.palette.primary.main} />
           <Text>{companyInfo.mail}</Text>
         </AddressContainer>
-        <Logo />
       </Container>
+      <Logo />
     </Layout>
   )
 }

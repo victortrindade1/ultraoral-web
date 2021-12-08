@@ -67,8 +67,8 @@ const ModalContact: React.FC<IProps> = ({ open, onClose }) => {
                 padding: '0',
                 display: 'block',
                 height: '1px',
-                margin: '5vw',
-                marginTop: '50px'
+                margin: '15vw 0'
+                // marginTop: '50px'
               }}
             />
             {/* <SocialMediaContainer>

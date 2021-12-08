@@ -48,8 +48,8 @@ const Contato: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
             </>
           )}
         </AddressContainer>
-        <Logo />
       </Container>
+      <Logo />
     </Layout>
   )
 }

@@ -4,6 +4,7 @@ import IResponsive from '../../interfaces/IResponsive'
 
 export const Container = styled.div`
   min-height: 100vh;
+  /* position: relative; */
 `
 
 export const ListSpecialities = styled.ul<IResponsive>`

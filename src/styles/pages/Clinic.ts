@@ -10,6 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
   flex: 1;
   min-height: 100vh;
+  /* position: relative; */
 `
 
 export const BodyClinic = styled.div<IResponsive>`
@@ -54,7 +55,7 @@ export const GridContact = styled.div<IResponsive>`
   color: ${props => props.theme.palette.primary.contrastText};
   font-size: ${props => (props.isBreakpoint ? '4vw' : '2vw')};
   font-family: 'Roboto', sans-serif;
-  padding-bottom: 5vw;
+  padding-bottom: 15vw;
 `
 
 export const MapContainer = styled.div`

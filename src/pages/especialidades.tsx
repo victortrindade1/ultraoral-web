@@ -129,13 +129,13 @@ const Especialidades: NextPage<IResponsive> = ({
             </ItemSpeciality>
           ))}
         </ListSpecialities>
-        <Logo />
         <ModalSpeciality
           open={modalData.opened}
           onClose={handleClose}
           data={modalData}
         />
       </Container>
+      <Logo />
     </Layout>
   )
 }

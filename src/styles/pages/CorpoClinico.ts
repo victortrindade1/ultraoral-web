@@ -11,11 +11,13 @@ interface IContainerImage {
 export const Container = styled.div`
   /* padding-bottom: 15vw; */
   min-height: 100vh;
+  /* position: relative; */
 `
 
 export const ListDentists = styled.ul<IResponsive>`
   width: ${props => (props.isBreakpoint ? '100%' : '70%')};
   margin: auto;
+  padding-bottom: 15vw;
 `
 
 export const ItemDentist = styled.li``

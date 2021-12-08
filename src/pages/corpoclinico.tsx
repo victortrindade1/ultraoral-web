@@ -131,8 +131,8 @@ const CorpoClinico: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
             </ItemDentist>
           ))}
         </ListDentists>
-        <Logo />
       </Container>
+      <Logo />
     </Layout>
   )
 }

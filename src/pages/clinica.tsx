@@ -59,8 +59,8 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
             <Text>{companyInfo.mail}</Text>
           </GridContact>
         </BodyClinic>
-        <Logo />
       </Container>
+      <Logo />
     </Layout>
   )
 }
