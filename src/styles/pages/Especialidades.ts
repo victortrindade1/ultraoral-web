@@ -8,7 +8,7 @@ export const Container = styled.div`
 `
 
 export const ListSpecialities = styled.ul<IResponsive>`
-  padding: ${props => (props.isBreakpoint ? '5vw 0 5vw 0' : '0 0 5vw 0')};
+  padding: ${props => (props.isBreakpoint ? '5vw 0 15vw 0' : '0 0 15vw 0')};
 `
 
 export const ItemSpeciality = styled.li<IResponsive>`
