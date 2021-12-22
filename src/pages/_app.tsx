@@ -1,29 +1,29 @@
 import React from 'react'
-// import { AppProps } from 'next/app'
+import { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
-// import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 // import { DefaultSeo } from 'next-seo'
-// import { useMediaQuery } from '@mui/material'
+import { useMediaQuery } from '@mui/material'
 
-import UnderConstruction from '../components/PageUnderConstruction'
-// import TopMenu from '../components/TopMenu'
-// import Footer from '../components/Footer'
+// import UnderConstruction from '../components/PageUnderConstruction'
+import TopMenu from '../components/TopMenu'
+import Footer from '../components/Footer'
 
 import '../../public/fonts/style.css'
-// import GlobalStyle from '../styles/global'
+import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
 import Head from 'next/head'
 
-// export default function MyApp({
-//   Component,
-//   pageProps,
-//   router
-// }: AppProps): JSX.Element {
-//   const url = `https://genteodontologia.com.br${router.route}`
+export default function MyApp({
+  Component,
+  pageProps,
+  router
+}: AppProps): JSX.Element {
+  const url = `https://genteodontologia.com.br${router.route}`
 
-//   const isBreakpoint = useMediaQuery('(max-width:768px)')
-export default function MyApp() {
+  const isBreakpoint = useMediaQuery('(max-width:768px)')
+
   return (
     <>
       <Head>
@@ -44,9 +44,6 @@ export default function MyApp() {
       /> */}
       <MuiThemeProvider theme={theme}>
         <ThemeProvider theme={theme}>
-          <UnderConstruction />
-
-          {/*
           <TopMenu isBreakpoint={isBreakpoint} />
           <AnimatePresence
             exitBeforeEnter
@@ -62,7 +59,6 @@ export default function MyApp() {
           </AnimatePresence>
           <Footer isBreakpoint={isBreakpoint} />
           <GlobalStyle />
-          */}
         </ThemeProvider>
       </MuiThemeProvider>
     </>
