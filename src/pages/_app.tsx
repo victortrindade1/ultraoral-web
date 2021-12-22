@@ -6,6 +6,7 @@ import { AnimatePresence } from 'framer-motion'
 // import { DefaultSeo } from 'next-seo'
 import { useMediaQuery } from '@mui/material'
 
+import UnderConstruction from '../components/PageUnderConstruction'
 import TopMenu from '../components/TopMenu'
 import Footer from '../components/Footer'
 
@@ -47,6 +48,11 @@ export default function MyApp({
       <MuiThemeProvider theme={theme}>
         <ThemeProvider theme={theme}>
           {/* <Header /> */}
+
+          <UnderConstruction />
+
+          {/*
+
           <TopMenu isBreakpoint={isBreakpoint} />
           <AnimatePresence
             exitBeforeEnter
@@ -62,6 +68,7 @@ export default function MyApp({
           </AnimatePresence>
           <Footer isBreakpoint={isBreakpoint} />
           <GlobalStyle />
+          */}
         </ThemeProvider>
       </MuiThemeProvider>
     </>

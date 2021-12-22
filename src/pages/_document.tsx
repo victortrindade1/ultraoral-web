@@ -56,6 +56,12 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
+          {/* Fonte Press Start 2P */}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+            rel="stylesheet"
+          />
+
           {/* Ícones Material UI */}
           <link
             rel="stylesheet"
