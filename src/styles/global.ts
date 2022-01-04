@@ -20,7 +20,7 @@ export default createGlobalStyle<{ theme: Theme }>`
     background: ${props => props.theme.palette.secondary.dark};
 
     color: ${props => props.theme.palette.primary.contrastText};
-    font: 400 16px Roboto, sans-serif;
+    font: 400 16px Work Sans, sans-serif;
     -webkit-font-smoothing: antialiased !important;
 
     /* Google Maps */

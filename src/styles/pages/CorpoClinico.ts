@@ -31,7 +31,7 @@ export const AccordionStyled = styled(Accordion)`
 export const AccordionDetailsStyled = styled(AccordionDetails)`
   display: flex;
   flex-wrap: wrap;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   background-color: ${props => darken(0.03, props.theme.palette.primary.dark)};
   border-radius: 0px 0px 8px 8px;
   padding: 5vw;
@@ -48,14 +48,14 @@ export const PhotoContainer = styled.div<IContainerImage>`
 
 export const DescriptionContainer = styled.div`
   color: ${props => props.theme.palette.primary.contrastText};
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   padding: 5vw;
 `
 
 export const Name = styled.div`
   font-size: 3rem;
-  font-family: 'Celine Peach Script', 'Roboto', sans-serif;
+  font-family: 'Celine Peach Script', 'Work Sans', sans-serif;
 `
 
 export const Cro = styled.div`

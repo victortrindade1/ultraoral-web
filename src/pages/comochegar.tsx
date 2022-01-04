@@ -35,7 +35,8 @@ const ComoChegar: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
 
   const title = 'Como chegar'
   const subtitle =
-    'Situada no coração da Pelinca, a clínica possui acesso fácil e rápido!'
+    // 'Situada no coração da Pelinca, a clínica possui acesso fácil e rápido!'
+    'Situada no Ed Connect Work Station, a clínica possui acesso rápido e fácil!'
 
   // Update state link to Google Maps or Apple Maps
   useEffect(() => {

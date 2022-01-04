@@ -19,7 +19,7 @@ export const Container = styled.div<IContainer>`
   margin: auto;
   border-radius: 8px;
   padding: 10vw;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   position: relative;
 `
 

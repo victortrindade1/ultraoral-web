@@ -10,7 +10,7 @@ export const Container = styled.div`
   margin: auto;
   border-radius: 8px;
   padding: 5vw 5vw 3vw 5vw;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@ export const Title = styled.h1`
   font-size: 2.25rem;
   margin-bottom: 3rem;
   font-weight: 300;
-  font-family: 'Celine Peach Sans', 'Roboto', sans-serif;
+  font-family: 'Celine Peach Sans', 'Work Sans', sans-serif;
 `
 
 export const AddressContainer = styled.div`
@@ -58,7 +58,7 @@ export const AddressContainer = styled.div`
   align-items: center;
   color: ${props => props.theme.palette.primary.contrastText};
   font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 `
 
 export const Text = styled.div`

@@ -44,23 +44,30 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt">
         <Head>
-          {/* Fonte Roboto */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
             crossOrigin="anonymous"
           />
-          <link
+
+          {/* Fonte Roboto */}
+          {/* <link
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+          /> */}
+
+          {/* Fonte Work Sans */}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
             rel="stylesheet"
           />
 
-          {/* Fonte Press Start 2P */}
+          {/* Fonte Press Start 2P
           <link
             href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
             rel="stylesheet"
-          />
+          /> */}
 
           {/* Ícones Material UI */}
           <link

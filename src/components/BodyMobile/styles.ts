@@ -166,7 +166,7 @@ export const OverlayClinicCasesBox = styled.div<IBox>`
 `
 
 export const Text = styled.div`
-  font: 500 9vw 'Quesha', 'Roboto', sans-serif;
+  font: 500 9vw 'Quesha', 'Work Sans', sans-serif;
 
   color: ${props => props.theme.palette.primary.contrastText};
   text-transform: uppercase;

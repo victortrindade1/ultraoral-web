@@ -8,6 +8,6 @@ export const companyInfo = {
   phone: '(22) 3704-3432',
   mail: 'contato@genteodontologia.com.br',
   cnpj: '',
-  instagram_url: 'https://www.instagram.com/ultraoralodontologia/',
-  facebook_url: 'https://www.facebook.com/ultraoral'
+  instagram_url: 'https://www.instagram.com/gente_odontologiahumanizada/',
+  facebook_url: 'https://www.facebook.com/'
 }

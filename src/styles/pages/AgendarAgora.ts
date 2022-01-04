@@ -19,7 +19,7 @@ export const ContactContainer = styled.div<IResponsive>`
   align-items: center;
   color: ${props => props.theme.palette.primary.contrastText};
   font-size: ${props => (props.isBreakpoint ? '1.5rem' : '2rem')};
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   width: ${props => (props.isBreakpoint ? '80%' : '40%')};
   margin: auto;
   padding-top: ${props => (props.isBreakpoint ? '15vw' : '5vw')};

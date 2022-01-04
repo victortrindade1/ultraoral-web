@@ -97,7 +97,7 @@ export const Icon = styled.img`
 
 export const NameContainer = styled.div`
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   padding-top: 5px;

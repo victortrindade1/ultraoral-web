@@ -20,7 +20,7 @@ export const ItemSpeciality = styled.li<IResponsive>`
   grid-column-gap: 15px;
   width: ${props => (props.isBreakpoint ? '80%' : '40%')};
   margin: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   background: ${props => props.theme.palette.primary.dark};
   border-radius: 8px;
