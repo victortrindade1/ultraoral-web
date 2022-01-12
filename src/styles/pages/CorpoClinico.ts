@@ -35,6 +35,10 @@ export const AccordionDetailsStyled = styled(AccordionDetails)`
   background-color: ${props => darken(0.03, props.theme.palette.primary.dark)};
   border-radius: 0px 0px 8px 8px;
   padding: 5vw;
+  font-size: 1rem;
+
+  display: flex;
+  flex-direction: column;
 `
 
 export const PhotoContainer = styled.div<IContainerImage>`
@@ -84,4 +88,10 @@ export const TreatmentList = styled.ul`
 
 export const TreatmentContainer = styled.div`
   padding: 5px 0px 5px 0px;
+`
+
+export const AdviseContainer = styled.div`
+  color: ${props => props.theme.palette.secondary.light};
+  padding-top: 30px;
+  font-size: 0.9rem;
 `

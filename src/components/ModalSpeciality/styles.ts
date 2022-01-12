@@ -21,6 +21,8 @@ export const Container = styled.div<IContainer>`
   padding: 10vw;
   font-family: 'Work Sans', sans-serif;
   position: relative;
+  overflow: auto;
+  line-height: 2;
 `
 
 export const CloseButton = styled(IoCloseOutline).attrs({
@@ -49,3 +51,5 @@ export const Text = styled.div`
   font-size: 1rem;
   margin-bottom: 0.5rem;
 `
+
+export const TextContainer = styled.div``

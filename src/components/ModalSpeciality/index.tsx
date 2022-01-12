@@ -1,7 +1,14 @@
 import React from 'react'
 import Fade from '@mui/material/Fade'
 
-import { ModalStyled, Container, CloseButton, Title, Text } from './styles'
+import {
+  ModalStyled,
+  Container,
+  CloseButton,
+  Title,
+  Text
+  // TextContainer
+} from './styles'
 
 interface IProps {
   data: {
@@ -19,8 +26,10 @@ const ModalSpeciality: React.FC<IProps> = ({ data, open, onClose }) => {
       <Fade in={open} timeout={500}>
         <Container background={data.background}>
           <CloseButton onClick={onClose} />
+          {/* <TextContainer> */}
           <Title>{data.title}</Title>
           <Text>{data.description}</Text>
+          {/* </TextContainer> */}
         </Container>
       </Fade>
     </ModalStyled>
