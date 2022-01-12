@@ -33,7 +33,7 @@ import Logo from '../components/Logo'
 const listSpecialities = [
   {
     icon: icon_dent,
-    speciality: 'Odontologia Restauradora – Dentística/Estética',
+    speciality: 'Odontologia Restauradora – Dentística / Estética',
     description:
       'Dentística, você já ouviu falar? Se trata de uma área da odontologia voltada a restauração do sorriso não somente em seu aspecto visual, mas também funcional, dividindo-se em dentística estética e restauradora, respectivamente. Esta é a área de maior interesse atualmente!! A tratamos com grande responsabilidade com foco no planejamento fotográfico e baseado em exames de imagem, além de restaurações convencionais, predominantemente em resina composta, tanto para os dentes anteriores quanto para os posteriores, nesta área que se agrega os tratamentos de Clareamento Dental, Facetas em Resina Composta, Laminados Cerâmicos tipo Lentes de Contato Dental, restaurações cervicais entre outros...'
   },
@@ -154,6 +154,7 @@ const Especialidades: NextPage<IResponsive> = ({
           open={modalData.opened}
           onClose={handleClose}
           data={modalData}
+          isBreakpoint={isBreakpoint}
         />
       </Container>
       <Logo />

@@ -18,16 +18,22 @@ interface IProps {
   }
   open: boolean
   onClose: () => void
+  isBreakpoint: boolean
 }
 
-const ModalSpeciality: React.FC<IProps> = ({ data, open, onClose }) => {
+const ModalSpeciality: React.FC<IProps> = ({
+  data,
+  open,
+  onClose,
+  isBreakpoint
+}) => {
   return (
     <ModalStyled open={open} onClose={onClose}>
       <Fade in={open} timeout={500}>
         <Container background={data.background}>
           <CloseButton onClick={onClose} />
           {/* <TextContainer> */}
-          <Title>{data.title}</Title>
+          <Title isBreakpoint={isBreakpoint}>{data.title}</Title>
           <Text>{data.description}</Text>
           {/* </TextContainer> */}
         </Container>

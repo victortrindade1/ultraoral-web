@@ -15,7 +15,7 @@ export const ItemSpeciality = styled.li<IResponsive>`
   display: grid;
   grid-template-columns: 0.1fr 1fr;
   color: ${props => props.theme.palette.primary.contrastText};
-  font-size: 1.5rem;
+  font-size: ${props => (props.isBreakpoint ? '1.2rem' : '1.5rem')};
   align-items: center;
   grid-column-gap: 15px;
   width: ${props => (props.isBreakpoint ? '80%' : '40%')};

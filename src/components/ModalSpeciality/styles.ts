@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Modal from '@mui/material/Modal'
 import { IoCloseOutline } from 'react-icons/io5'
+import IResponsive from '../../interfaces/IResponsive'
 
 interface IContainer {
   background?: any
@@ -38,9 +39,9 @@ export const CloseButton = styled(IoCloseOutline).attrs({
   }
 `
 
-export const Title = styled.h1`
+export const Title = styled.h1<IResponsive>`
   color: ${props => props.theme.palette.primary.main};
-  font-size: 2rem;
+  font-size: ${props => (props.isBreakpoint ? '1.5rem' : '2rem')};
   margin: 3rem 0;
   font-weight: 300;
   font-family: 'Celine Peach Sans', sans-serif;
