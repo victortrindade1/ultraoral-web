@@ -4,6 +4,7 @@ import type { NextPage } from 'next'
 import Layout from '../components/Layout'
 import PageTitle from '../components/PageTitle'
 import Logo from '../components/Logo'
+import Album from '../components/Album'
 
 import IResponsive from '../interfaces/IResponsive'
 
@@ -24,6 +25,7 @@ const CasosClinicos: NextPage<IResponsive> = ({
           subtitle={subtitle}
           isBreakpoint={isBreakpoint}
         />
+        <Album />
       </Container>
       <Logo />
     </Layout>

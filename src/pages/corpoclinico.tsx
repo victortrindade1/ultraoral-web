@@ -17,7 +17,7 @@ import dent2 from '../assets/dentists/dent2.jpg'
 import dent_carina from '../assets/dentists/dent_carina.jpg'
 import dent_tere from '../assets/dentists/dent_teresinha.jpg'
 import dent_anderson from '../assets/dentists/dent_anderson.jpg'
-import dent_leonardo from '../assets/dentists/dent_leonardo.jpg'
+// import dent_leonardo from '../assets/dentists/dent_leonardo.jpg'
 
 import {
   Container,
@@ -128,22 +128,22 @@ const listDentists = [
       'Ciriurgias Avançadas'
     ],
     photo: dent_anderson
-  },
-  {
-    name: 'Dr. Leonardo',
-    cro: 'CRO-RJ 33571',
-    skills: [
-      'Especialidade em Prótese Dentária',
-      'Especialidade em Implantodontia',
-      'Especialidade em DTM'
-    ],
-    treatments: [
-      'Tratamentos e diagnóstico das DTMs',
-      'Confecção de placas e dispositivos Miorrelaxantes',
-      'Tratamento de distúrbios parafuncionais (bruxismo, apertamentos, desgastes articulares)'
-    ],
-    photo: dent_leonardo
   }
+  // {
+  //   name: 'Dr. Leonardo Cordeiro',
+  //   cro: 'CRO-RJ 33571',
+  //   skills: [
+  //     'Especialidade em Prótese Dentária',
+  //     'Especialidade em Implantodontia',
+  //     'Especialidade em DTM'
+  //   ],
+  //   treatments: [
+  //     'Tratamentos e diagnóstico das DTMs',
+  //     'Confecção de placas e dispositivos Miorrelaxantes',
+  //     'Tratamento de distúrbios parafuncionais (bruxismo, apertamentos, desgastes articulares)'
+  //   ],
+  //   photo: dent_leonardo
+  // }
 ]
 
 const CorpoClinico: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
