@@ -9,5 +9,5 @@ export const companyInfo = {
   mail: 'contato@genteodontologia.com.br',
   cnpj: '',
   instagram_url: 'https://www.instagram.com/gente_odontologiahumanizada/',
-  facebook_url: 'https://www.facebook.com/'
+  facebook_url: 'https://www.facebook.com/Cl%C3%ADnica-Gente-114129097841028/'
 }
