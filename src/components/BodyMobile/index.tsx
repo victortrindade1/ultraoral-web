@@ -5,7 +5,7 @@ import Link from '../../components/NoScrollLink'
 
 import img1 from '../../assets/slides/img1.jpeg'
 import img2 from '../../assets/slides/img2.jpeg'
-import dentistsImg from '../../assets/dentists/dentists.jpg'
+import dentistsImg from '../../assets/dentists/dentists2.jpeg'
 import casesImg from '../../assets/cases/cases.jpg'
 
 import whatsapp from '../../assets/icons/whatsapp-square-color.svg'
