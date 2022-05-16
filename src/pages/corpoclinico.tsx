@@ -10,13 +10,13 @@ import PageTitle from '../components/PageTitle'
 
 import IResponsive from '../interfaces/IResponsive'
 
-import dent1 from '../assets/dentists/dent1.jpg'
-import dent2 from '../assets/dentists/dent2.jpg'
+import dent_neiff from '../assets/dentists/dent_neiff.jpeg'
+import dent_guilherme from '../assets/dentists/dent_guilherme.jpeg'
 // import dent3 from '../assets/dentists/dent3.jpg'
 // import dent4 from '../assets/dentists/dent4.jpg'
-import dent_carina from '../assets/dentists/dent_carina.jpg'
-import dent_tere from '../assets/dentists/dent_teresinha.jpg'
-import dent_anderson from '../assets/dentists/dent_anderson.jpg'
+import dent_carina from '../assets/dentists/dent_carina.jpeg'
+// import dent_tere from '../assets/dentists/dent_teresinha.jpg'
+// import dent_anderson from '../assets/dentists/dent_anderson.jpg'
 // import dent_leonardo from '../assets/dentists/dent_leonardo.jpg'
 
 import {
@@ -55,7 +55,7 @@ const listDentists = [
       'Clareamento Dental',
       'Clínica Geral'
     ],
-    photo: dent1
+    photo: dent_neiff
   },
   {
     name: 'Dr. Guilherme Trindade',
@@ -77,30 +77,30 @@ const listDentists = [
       'Facetas em Resina Composta',
       'AIO (Aparelho IntraOral)'
     ],
-    photo: dent2
+    photo: dent_guilherme
   },
-  {
-    name: 'Dra. Terezinha Raposo Alvarenga',
-    cro: 'CRO-RJ 19813',
-    skills: [
-      'Especialidade em Implantodontia',
-      'Especialidade em HOF – Harmonização Orofacial',
-      'Membro da ABEO',
-      'Membro da STBI'
-    ],
-    treatments: [
-      'Botox',
-      'Preenchimento (ácido hialurônico e fios)',
-      'Bioestimulação de colágeno (fios, intradermoterapia, microagulhamento, skinbooster)',
-      'Lipo de papada enzimática',
-      'Lipo de papada cirúrgica',
-      'Bichectomia',
-      'Lifting facial com fios',
-      'Rinomodelação',
-      'Peeling'
-    ],
-    photo: dent_tere
-  },
+  // {
+  //   name: 'Dra. Terezinha Raposo Alvarenga',
+  //   cro: 'CRO-RJ 19813',
+  //   skills: [
+  //     'Especialidade em Implantodontia',
+  //     'Especialidade em HOF – Harmonização Orofacial',
+  //     'Membro da ABEO',
+  //     'Membro da STBI'
+  //   ],
+  //   treatments: [
+  //     'Botox',
+  //     'Preenchimento (ácido hialurônico e fios)',
+  //     'Bioestimulação de colágeno (fios, intradermoterapia, microagulhamento, skinbooster)',
+  //     'Lipo de papada enzimática',
+  //     'Lipo de papada cirúrgica',
+  //     'Bichectomia',
+  //     'Lifting facial com fios',
+  //     'Rinomodelação',
+  //     'Peeling'
+  //   ],
+  //   photo: dent_tere
+  // },
   {
     name: 'Dra. Carina Johnson',
     cro: 'CRO-RJ 39019',
@@ -114,21 +114,21 @@ const listDentists = [
     ],
     photo: dent_carina,
     isPediatric: true
-  },
-  {
-    name: 'Dr. Anderson A. Gomes',
-    cro: '',
-    skills: [
-      'Especialidade em Cirurgia e Traumatologia BucoMaxiloFacial',
-      'Professor de Cirurgia Oral'
-    ],
-    treatments: [
-      'Cirurgia de Extrações de Sisos',
-      'Cirurgias Orais gerais (dentes extranumerários, Lesões em mucosa e intraosseas, remoção de dentes impactados)',
-      'Ciriurgias Avançadas'
-    ],
-    photo: dent_anderson
   }
+  // {
+  //   name: 'Dr. Anderson A. Gomes',
+  //   cro: '',
+  //   skills: [
+  //     'Especialidade em Cirurgia e Traumatologia BucoMaxiloFacial',
+  //     'Professor de Cirurgia Oral'
+  //   ],
+  //   treatments: [
+  //     'Cirurgia de Extrações de Sisos',
+  //     'Cirurgias Orais gerais (dentes extranumerários, Lesões em mucosa e intraosseas, remoção de dentes impactados)',
+  //     'Ciriurgias Avançadas'
+  //   ],
+  //   photo: dent_anderson
+  // }
   // {
   //   name: 'Dr. Leonardo Cordeiro',
   //   cro: 'CRO-RJ 33571',
