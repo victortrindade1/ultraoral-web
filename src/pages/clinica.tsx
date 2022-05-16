@@ -10,14 +10,15 @@ import PageTitle from '../components/PageTitle'
 // import SimpleMap from '../components/SimpleMap'
 import Logo from '../components/Logo'
 
-import img1 from '../assets/clinic/img1.jpg'
-import img2 from '../assets/clinic/img2.jpg'
-import cadeira_temporario from '../assets/clinic/cadeira_temporario.jpeg'
-import camera_intraoral_temporario from '../assets/clinic/camera_intraoral_temporario.jpeg'
+import sala_primeiro_atendimento from '../assets/clinic/sala_primeiro_atendimento.jpeg'
+import estudio_fotografia from '../assets/clinic/estudio_fotografia.jpeg'
+import cadeira from '../assets/clinic/cadeira.jpeg'
+import camera_intraoral from '../assets/clinic/camera_intraoral.jpeg'
 import raio_x_temporario from '../assets/clinic/raio_x_temporario.jpeg'
-import laserterapia_temporario from '../assets/clinic/laserterapia_temporario.jpeg'
-import lupas_temporario from '../assets/clinic/lupas_temporario.jpeg'
+import laserterapia from '../assets/clinic/laserterapia.jpeg'
+import lupas from '../assets/clinic/lupas.jpeg'
 import clinica_completa from '../assets/clinic/clinica_completa.png'
+import recepcao from '../assets/clinic/recepcao.jpeg'
 
 import { companyInfo } from '../config/companyInfo'
 
@@ -82,7 +83,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
           <PhotoTextContainer isBreakpoint={isBreakpoint}>
             <PhotoContainer isBreakpoint={isBreakpoint}>
               <Photo
-                src={img1}
+                src={sala_primeiro_atendimento}
                 alt="sala-primeiro-atendimento"
                 isBreakpoint={isBreakpoint}
               />
@@ -112,7 +113,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
 
             <FlippedPhotoContainer isBreakpoint={isBreakpoint}>
               <Photo
-                src={cadeira_temporario}
+                src={cadeira}
                 alt="cadeira-odontologica"
                 isBreakpoint={isBreakpoint}
               />
@@ -124,7 +125,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
           <PhotoTextContainer isBreakpoint={isBreakpoint}>
             <PhotoContainer isBreakpoint={isBreakpoint}>
               <Photo
-                src={camera_intraoral_temporario}
+                src={camera_intraoral}
                 alt="camera-intra-oral"
                 isBreakpoint={isBreakpoint}
               />
@@ -172,7 +173,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
           <PhotoTextContainer isBreakpoint={isBreakpoint}>
             <PhotoContainer isBreakpoint={isBreakpoint}>
               <Photo
-                src={img2}
+                src={estudio_fotografia}
                 alt="estudio-de-fotografia"
                 isBreakpoint={isBreakpoint}
               />
@@ -201,7 +202,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
 
             <FlippedPhotoContainer isBreakpoint={isBreakpoint}>
               <Photo
-                src={laserterapia_temporario}
+                src={laserterapia}
                 alt="laserterapia"
                 isBreakpoint={isBreakpoint}
               />
@@ -213,7 +214,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
           <PhotoTextContainer isBreakpoint={isBreakpoint}>
             <PhotoContainer isBreakpoint={isBreakpoint}>
               <Photo
-                src={lupas_temporario}
+                src={lupas}
                 alt="lupas-de-magnificacao"
                 isBreakpoint={isBreakpoint}
               />
@@ -243,7 +244,11 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
             </FlippedTextContainer>
 
             <FlippedPhotoContainer isBreakpoint={isBreakpoint}>
-              <Photo src={img2} alt="recepcao" isBreakpoint={isBreakpoint} />
+              <Photo
+                src={recepcao}
+                alt="recepcao"
+                isBreakpoint={isBreakpoint}
+              />
             </FlippedPhotoContainer>
           </PhotoTextContainer>
 
@@ -251,11 +256,13 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
 
           <PhotoTextContainer isBreakpoint={isBreakpoint}>
             <PhotoContainer isBreakpoint={isBreakpoint}>
-              <Photo
-                src={clinica_completa}
-                alt="todas-especialidades"
-                isBreakpoint={isBreakpoint}
-              />
+              <div>
+                <Photo
+                  src={clinica_completa}
+                  alt="todas-especialidades"
+                  isBreakpoint={isBreakpoint}
+                />
+              </div>
             </PhotoContainer>
 
             <TextContainer>
