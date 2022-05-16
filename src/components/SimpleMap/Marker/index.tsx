@@ -1,6 +1,6 @@
 import React from 'react'
 
-import marker from '../../../assets/icons/marker.svg'
+import marker from '../../../assets/icons/marker4.svg'
 
 import { Container, Icon } from './styles'
 
