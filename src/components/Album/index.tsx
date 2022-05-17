@@ -9,6 +9,14 @@ import t_case3 from '../../assets/cases/thumbnails/case3.jpeg'
 import t_case4 from '../../assets/cases/thumbnails/case4.jpeg'
 import t_case5 from '../../assets/cases/thumbnails/case5.jpeg'
 import t_case6 from '../../assets/cases/thumbnails/case6.jpeg'
+import t_case7 from '../../assets/cases/thumbnails/case7.jpeg'
+import t_case8 from '../../assets/cases/thumbnails/case8.jpeg'
+import t_case9 from '../../assets/cases/thumbnails/case9.jpeg'
+import t_case10 from '../../assets/cases/thumbnails/case10.jpeg'
+import t_case11 from '../../assets/cases/thumbnails/case11.jpeg'
+import t_case12 from '../../assets/cases/thumbnails/case12.jpeg'
+import t_case13 from '../../assets/cases/thumbnails/case13.jpeg'
+import t_case14 from '../../assets/cases/thumbnails/case14.jpeg'
 
 import { Container, PhotoThumb, CarouselContainer, ModalStyled } from './styles'
 import { useState } from 'react'
@@ -43,6 +51,46 @@ const photos = [
     id: 6,
     alt: 'case6',
     thumb: t_case6
+  },
+  {
+    id: 7,
+    alt: 'case7',
+    thumb: t_case7
+  },
+  {
+    id: 8,
+    alt: 'case8',
+    thumb: t_case8
+  },
+  {
+    id: 9,
+    alt: 'case9',
+    thumb: t_case9
+  },
+  {
+    id: 10,
+    alt: 'case10',
+    thumb: t_case10
+  },
+  {
+    id: 11,
+    alt: 'case11',
+    thumb: t_case11
+  },
+  {
+    id: 12,
+    alt: 'case12',
+    thumb: t_case12
+  },
+  {
+    id: 13,
+    alt: 'case13',
+    thumb: t_case13
+  },
+  {
+    id: 14,
+    alt: 'case14',
+    thumb: t_case14
   }
 ]
 

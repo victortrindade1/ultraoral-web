@@ -6,9 +6,14 @@ import case3 from '../../assets/cases/case3.jpg'
 import case4 from '../../assets/cases/case4.jpg'
 import case5 from '../../assets/cases/case5.jpg'
 import case6 from '../../assets/cases/case6.jpg'
-// import img7 from '../../assets/cases/case7.jpg'
-// import img8 from '../../assets/cases/case8.jpg'
-// import img9 from '../../assets/cases/case9.jpg'
+import case7 from '../../assets/cases/case7.jpg'
+import case8 from '../../assets/cases/case8.jpg'
+import case9 from '../../assets/cases/case9.jpg'
+import case10 from '../../assets/cases/case10.jpg'
+import case11 from '../../assets/cases/case11.jpg'
+import case12 from '../../assets/cases/case12.jpg'
+import case13 from '../../assets/cases/case13.jpg'
+import case14 from '../../assets/cases/case14.jpg'
 
 import Slide from './Slide'
 
@@ -48,6 +53,46 @@ const CarouselCases: React.FC<ICarouselCases> = ({ index }) => {
       id: 6,
       url: case6,
       alt: 'case6'
+    },
+    {
+      id: 7,
+      url: case7,
+      alt: 'case7'
+    },
+    {
+      id: 8,
+      url: case8,
+      alt: 'case8'
+    },
+    {
+      id: 9,
+      url: case9,
+      alt: 'case9'
+    },
+    {
+      id: 10,
+      url: case10,
+      alt: 'case10'
+    },
+    {
+      id: 11,
+      url: case11,
+      alt: 'case11'
+    },
+    {
+      id: 12,
+      url: case12,
+      alt: 'case12'
+    },
+    {
+      id: 13,
+      url: case13,
+      alt: 'case13'
+    },
+    {
+      id: 14,
+      url: case14,
+      alt: 'case14'
     }
   ]
 

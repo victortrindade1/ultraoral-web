@@ -6,7 +6,7 @@ import Link from '../../components/NoScrollLink'
 import a_clinica from '../../assets/slides/a_clinica.jpg'
 import especialidades from '../../assets/slides/especialidades.jpg'
 import dentistsImg from '../../assets/dentists/dentists2.jpeg'
-import casesImg from '../../assets/cases/case11.jpg'
+import casesImg from '../../assets/cases/case9.jpg'
 
 import whatsapp from '../../assets/icons/whatsapp-square-color.svg'
 import maps from '../../assets/icons/icon_maps.svg'

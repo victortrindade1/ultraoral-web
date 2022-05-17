@@ -8,7 +8,7 @@ interface IContainerImage {
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 20vw 20vw 20vw;
+  grid-template-rows: 20vw 20vw 20vw 20vw 20vw 20vw 20vw;
   grid-gap: 2vw;
   margin: 0vw 15vw 15vw 15vw;
   padding-bottom: 15vw;
