@@ -173,90 +173,94 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
           <Subtitle>Raio-X com revelação digital instantânea</Subtitle>
 
           <PhotoTextContainer isBreakpoint={isBreakpoint}>
-            <FlippedTextContainer isBreakpoint={isBreakpoint}>
+            <PhotoContainer isBreakpoint={isBreakpoint}>
+              <Photo
+                src={raio_x_temporario}
+                alt="raio-x"
+                isBreakpoint={isBreakpoint}
+              />
+            </PhotoContainer>
+
+            <TextContainer>
               <p>
                 Contamos com aparelho digital de Raio-X que, conectado por um
                 sensor a um computador, faz a{' '}
                 <span>revelação digital na hora</span>, projetando na TV ou em
                 um monitor a fim de facilitar o procedimento para o operador.
               </p>
-            </FlippedTextContainer>
-
-            <FlippedPhotoContainer isBreakpoint={isBreakpoint}>
-              <Photo
-                src={raio_x_temporario}
-                alt="raio-x"
-                isBreakpoint={isBreakpoint}
-              />
-            </FlippedPhotoContainer>
+            </TextContainer>
           </PhotoTextContainer>
 
           <Subtitle>Estúdio de fotografia</Subtitle>
 
           <PhotoTextContainer isBreakpoint={isBreakpoint} isReverse>
-            <PhotoContainer isBreakpoint={isBreakpoint}>
-              <Photo
-                src={estudio_fotografia}
-                alt="estudio-de-fotografia"
-                isBreakpoint={isBreakpoint}
-              />
-            </PhotoContainer>
-
-            <TextContainer>
+            <FlippedTextContainer isBreakpoint={isBreakpoint}>
               <p>
                 No estúdio registramos{' '}
                 <span>todas as etapas dos tratamentos</span>, para viabilizar os
                 planejamentos e para o cliente poder checar o decorrer do mesmo.
               </p>
-            </TextContainer>
+            </FlippedTextContainer>
+            <FlippedPhotoContainer isBreakpoint={isBreakpoint}>
+              <Photo
+                src={estudio_fotografia}
+                alt="estudio-de-fotografia"
+                isBreakpoint={isBreakpoint}
+              />
+            </FlippedPhotoContainer>
           </PhotoTextContainer>
 
           <Subtitle>Laserterapia</Subtitle>
 
           <PhotoTextContainer isBreakpoint={isBreakpoint}>
-            <FlippedTextContainer isBreakpoint={isBreakpoint}>
+            <PhotoContainer isBreakpoint={isBreakpoint}>
+              <Photo
+                src={laserterapia}
+                alt="laserterapia"
+                isBreakpoint={isBreakpoint}
+              />
+            </PhotoContainer>
+            <TextContainer>
               <p>
                 A Laserterapia é um moderno tratamento utilizado em aceleradores
                 de cicatrização, bioestimuladores,{' '}
                 <span>redução de sensibilidade</span> entres outros
                 procedimentos.
               </p>
-            </FlippedTextContainer>
-
-            <FlippedPhotoContainer isBreakpoint={isBreakpoint}>
-              <Photo
-                src={laserterapia}
-                alt="laserterapia"
-                isBreakpoint={isBreakpoint}
-              />
-            </FlippedPhotoContainer>
+            </TextContainer>
           </PhotoTextContainer>
 
           <Subtitle>Lupas de magnificação</Subtitle>
 
           <PhotoTextContainer isBreakpoint={isBreakpoint} isReverse>
-            <PhotoContainer isBreakpoint={isBreakpoint}>
-              <Photo
-                src={lupas}
-                alt="lupas-de-magnificacao"
-                isBreakpoint={isBreakpoint}
-              />
-            </PhotoContainer>
-
-            <TextContainer>
+            <FlippedTextContainer isBreakpoint={isBreakpoint}>
               <p>
                 As Lupas de Magnificação permitem ao dentista ter uma{' '}
                 <span>visão ampliada</span>, evitando quaisquer erros
                 transoperatórios e ressaltando todos os detalhes, sobretudo nos
                 tratamentos Estéticos e Endodônticos.
               </p>
-            </TextContainer>
+            </FlippedTextContainer>
+            <FlippedPhotoContainer isBreakpoint={isBreakpoint}>
+              <Photo
+                src={lupas}
+                alt="lupas-de-magnificacao"
+                isBreakpoint={isBreakpoint}
+              />
+            </FlippedPhotoContainer>
           </PhotoTextContainer>
 
           <Subtitle>Recepção</Subtitle>
 
           <PhotoTextContainer isBreakpoint={isBreakpoint}>
-            <FlippedTextContainer isBreakpoint={isBreakpoint}>
+            <PhotoContainer isBreakpoint={isBreakpoint}>
+              <Photo
+                src={recepcao}
+                alt="recepcao"
+                isBreakpoint={isBreakpoint}
+              />
+            </PhotoContainer>
+            <TextContainer>
               <p>
                 Em nossa recepção montamos sempre um{' '}
                 <span>coffee delicioso</span> para pequenas degustações, além de
@@ -264,31 +268,13 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
                 Enquanto aguarda, você curtirá nossa <span>Aromaterapia</span>,
                 que promove relaxamento, conforto e tranquilidade.
               </p>
-            </FlippedTextContainer>
-
-            <FlippedPhotoContainer isBreakpoint={isBreakpoint}>
-              <Photo
-                src={recepcao}
-                alt="recepcao"
-                isBreakpoint={isBreakpoint}
-              />
-            </FlippedPhotoContainer>
+            </TextContainer>
           </PhotoTextContainer>
 
           <Subtitle>Clínica completa</Subtitle>
 
           <PhotoTextContainer isBreakpoint={isBreakpoint} isReverse>
-            <PhotoContainer isBreakpoint={isBreakpoint}>
-              <div>
-                <Photo
-                  src={clinica_completa}
-                  alt="todas-especialidades"
-                  isBreakpoint={isBreakpoint}
-                />
-              </div>
-            </PhotoContainer>
-
-            <TextContainer>
+            <FlippedTextContainer isBreakpoint={isBreakpoint}>
               <p>
                 Nosso corpo clínico abraça{' '}
                 <span>todas as Especialidades da Odontologia</span>, SEMPRE
@@ -296,7 +282,16 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
                 associando todas as áreas da Odontologia, bem como da Medicina,
                 Fonoaudiologia, Fisioterapia entre outras!!
               </p>
-            </TextContainer>
+            </FlippedTextContainer>
+            <FlippedPhotoContainer isBreakpoint={isBreakpoint}>
+              <div>
+                <Photo
+                  src={clinica_completa}
+                  alt="todas-especialidades"
+                  isBreakpoint={isBreakpoint}
+                />
+              </div>
+            </FlippedPhotoContainer>
           </PhotoTextContainer>
 
           {/* <Subtitle>Álbum de fotos</Subtitle>
