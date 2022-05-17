@@ -3,10 +3,10 @@ import React, { useState, useEffect, useRef } from 'react'
 import Link from '../../components/NoScrollLink'
 // import ModalContact from '../../components/ModalContact'
 
-import img1 from '../../assets/slides/img1.jpeg'
-import img2 from '../../assets/slides/img2.jpeg'
+import a_clinica from '../../assets/slides/a_clinica.jpg'
+import especialidades from '../../assets/slides/especialidades.jpg'
 import dentistsImg from '../../assets/dentists/dentists2.jpeg'
-import casesImg from '../../assets/cases/cases.jpg'
+import casesImg from '../../assets/cases/case11.jpg'
 
 import whatsapp from '../../assets/icons/whatsapp-square-color.svg'
 import maps from '../../assets/icons/icon_maps.svg'
@@ -131,7 +131,7 @@ const BodyMobile: React.FC = () => {
           <ClinicBox
             ref={clinicBoxRef}
             onClick={handleClickClinicBox}
-            image={img1}
+            image={a_clinica}
           >
             <OverlayClinicBox isBoxClicked={isClinicBoxClicked}>
               <Text>
@@ -191,7 +191,7 @@ const BodyMobile: React.FC = () => {
           <SpecialitiesBox
             ref={specialitiesBoxRef}
             onClick={handleClickSpecialitiesBox}
-            image={img2}
+            image={especialidades}
           >
             <OverlaySpecialitiesBox isBoxClicked={isSpecialitiesBoxClicked}>
               <Text>

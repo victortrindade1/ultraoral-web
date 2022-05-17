@@ -13,12 +13,13 @@ import Logo from '../components/Logo'
 import sala_primeiro_atendimento from '../assets/clinic/sala_primeiro_atendimento.jpeg'
 import estudio_fotografia from '../assets/clinic/estudio_fotografia.jpeg'
 import cadeira from '../assets/clinic/cadeira.jpeg'
-import camera_intraoral from '../assets/clinic/camera_intraoral.jpeg'
+import scanner_intraoral from '../assets/clinic/scanner_intraoral.jpeg'
 import raio_x_temporario from '../assets/clinic/raio_x_temporario.jpeg'
 import laserterapia from '../assets/clinic/laserterapia.jpeg'
 import lupas from '../assets/clinic/lupas.jpeg'
 import clinica_completa from '../assets/clinic/clinica_completa.png'
 import recepcao from '../assets/clinic/recepcao.jpeg'
+import camera_intraoral from '../assets/clinic/camera_intraoral_temporario.jpeg'
 
 import { companyInfo } from '../config/companyInfo'
 
@@ -120,20 +121,20 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
             </FlippedPhotoContainer>
           </PhotoTextContainer>
 
-          <Subtitle>Câmera intra-oral com projeção em SmartTV</Subtitle>
+          <Subtitle>Câmera intraoral com projeção em SmartTV</Subtitle>
 
           <PhotoTextContainer isBreakpoint={isBreakpoint}>
             <PhotoContainer isBreakpoint={isBreakpoint}>
               <Photo
                 src={camera_intraoral}
-                alt="camera-intra-oral"
+                alt="camera_intraoral"
                 isBreakpoint={isBreakpoint}
               />
             </PhotoContainer>
 
             <TextContainer>
               <p>
-                Contamos com câmera intra-oral para permitir ao cliente{' '}
+                Contamos com câmera intraoral para permitir ao cliente{' '}
                 <span>visualizar</span> qualquer lesão ou possível problema que
                 possa acometer algum dente, projetado{' '}
                 <span>diretamente em uma SmartTV</span> fixada ao teto, TV esta
@@ -147,9 +148,31 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
             </TextContainer>
           </PhotoTextContainer>
 
-          <Subtitle>Raio-X com revelação digital instantânea</Subtitle>
+          <Subtitle>Scanner intraoral em alta resolução</Subtitle>
 
           <PhotoTextContainer isBreakpoint={isBreakpoint} isReverse>
+            <FlippedTextContainer isBreakpoint={isBreakpoint}>
+              <p>
+                Aqui você acompanha todos os detalhes da sua <span>arcada</span>{' '}
+                renderizada digitalmente e <span>projetada em 3D</span> em
+                monitor com tecnologia de ponta. São tiradas{' '}
+                <span>6 mil fotos por segundo</span>, para não perder nenhum
+                detalhe!
+              </p>
+            </FlippedTextContainer>
+
+            <FlippedPhotoContainer isBreakpoint={isBreakpoint}>
+              <Photo
+                src={scanner_intraoral}
+                alt="scanner-intraoral"
+                isBreakpoint={isBreakpoint}
+              />
+            </FlippedPhotoContainer>
+          </PhotoTextContainer>
+
+          <Subtitle>Raio-X com revelação digital instantânea</Subtitle>
+
+          <PhotoTextContainer isBreakpoint={isBreakpoint}>
             <FlippedTextContainer isBreakpoint={isBreakpoint}>
               <p>
                 Contamos com aparelho digital de Raio-X que, conectado por um
@@ -170,7 +193,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
 
           <Subtitle>Estúdio de fotografia</Subtitle>
 
-          <PhotoTextContainer isBreakpoint={isBreakpoint}>
+          <PhotoTextContainer isBreakpoint={isBreakpoint} isReverse>
             <PhotoContainer isBreakpoint={isBreakpoint}>
               <Photo
                 src={estudio_fotografia}
@@ -190,7 +213,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
 
           <Subtitle>Laserterapia</Subtitle>
 
-          <PhotoTextContainer isBreakpoint={isBreakpoint} isReverse>
+          <PhotoTextContainer isBreakpoint={isBreakpoint}>
             <FlippedTextContainer isBreakpoint={isBreakpoint}>
               <p>
                 A Laserterapia é um moderno tratamento utilizado em aceleradores
@@ -211,7 +234,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
 
           <Subtitle>Lupas de magnificação</Subtitle>
 
-          <PhotoTextContainer isBreakpoint={isBreakpoint}>
+          <PhotoTextContainer isBreakpoint={isBreakpoint} isReverse>
             <PhotoContainer isBreakpoint={isBreakpoint}>
               <Photo
                 src={lupas}
@@ -232,7 +255,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
 
           <Subtitle>Recepção</Subtitle>
 
-          <PhotoTextContainer isBreakpoint={isBreakpoint} isReverse>
+          <PhotoTextContainer isBreakpoint={isBreakpoint}>
             <FlippedTextContainer isBreakpoint={isBreakpoint}>
               <p>
                 Em nossa recepção montamos sempre um{' '}
@@ -254,7 +277,7 @@ const Clinic: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
 
           <Subtitle>Clínica completa</Subtitle>
 
-          <PhotoTextContainer isBreakpoint={isBreakpoint}>
+          <PhotoTextContainer isBreakpoint={isBreakpoint} isReverse>
             <PhotoContainer isBreakpoint={isBreakpoint}>
               <div>
                 <Photo

@@ -16,7 +16,7 @@ import dent_guilherme from '../assets/dentists/dent_guilherme.jpeg'
 // import dent4 from '../assets/dentists/dent4.jpg'
 import dent_carina from '../assets/dentists/dent_carina.jpeg'
 // import dent_tere from '../assets/dentists/dent_teresinha.jpg'
-// import dent_anderson from '../assets/dentists/dent_anderson.jpg'
+import dent_anderson from '../assets/dentists/dent_anderson.jpg'
 // import dent_leonardo from '../assets/dentists/dent_leonardo.jpg'
 
 import {
@@ -114,21 +114,21 @@ const listDentists = [
     ],
     photo: dent_carina,
     isPediatric: true
+  },
+  {
+    name: 'Dr. Anderson A. Gomes',
+    cro: 'CRO-RJ 47176',
+    skills: [
+      'Especialidade em Cirurgia e Traumatologia BucoMaxiloFacial',
+      'Professor de Cirurgia Oral'
+    ],
+    treatments: [
+      'Cirurgia de Extrações de Sisos',
+      'Cirurgias Orais gerais (dentes extranumerários, Lesões em mucosa e intraosseas, remoção de dentes impactados)',
+      'Ciriurgias Avançadas'
+    ],
+    photo: dent_anderson
   }
-  // {
-  //   name: 'Dr. Anderson A. Gomes',
-  //   cro: '',
-  //   skills: [
-  //     'Especialidade em Cirurgia e Traumatologia BucoMaxiloFacial',
-  //     'Professor de Cirurgia Oral'
-  //   ],
-  //   treatments: [
-  //     'Cirurgia de Extrações de Sisos',
-  //     'Cirurgias Orais gerais (dentes extranumerários, Lesões em mucosa e intraosseas, remoção de dentes impactados)',
-  //     'Ciriurgias Avançadas'
-  //   ],
-  //   photo: dent_anderson
-  // }
   // {
   //   name: 'Dr. Leonardo Cordeiro',
   //   cro: 'CRO-RJ 33571',
