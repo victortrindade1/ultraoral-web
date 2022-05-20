@@ -29,6 +29,10 @@ export default function MyApp({
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta
+          name="description"
+          content="Clínica odontológica com tratamento humanizado e qualidade no atendimento."
+        />
       </Head>
       <DefaultSeo
         titleTemplate="%s - Gente Odontologia"
