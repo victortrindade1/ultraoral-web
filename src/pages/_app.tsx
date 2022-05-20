@@ -3,7 +3,7 @@ import { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
 import { AnimatePresence } from 'framer-motion'
-// import { DefaultSeo } from 'next-seo'
+import { DefaultSeo } from 'next-seo'
 import { useMediaQuery } from '@mui/material'
 
 // import UnderConstruction from '../components/PageUnderConstruction'
@@ -30,18 +30,18 @@ export default function MyApp({
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      {/* <DefaultSeo
-        titleTemplate="%s - James Wallis"
+      <DefaultSeo
+        titleTemplate="%s - Gente Odontologia"
         openGraph={{
           type: 'website',
-          locale: 'en_IE',
+          locale: 'pt_BR',
           url,
-          description: 'The personal website for James Wallis, developer.',
-          site_name: 'James Wallis | wallis.dev',
+          description: 'Gente Odontologia Humanizada',
+          site_name: 'Gente Odontologia Humanizada',
           images: []
         }}
         canonical={url}
-      /> */}
+      />
       <MuiThemeProvider theme={theme}>
         <ThemeProvider theme={theme}>
           <TopMenu isBreakpoint={isBreakpoint} />
