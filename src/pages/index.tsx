@@ -1,9 +1,13 @@
 import React from 'react'
 import type { NextPage } from 'next'
+import dynamic from 'next/dynamic'
 
 import Layout from '../components/Layout'
-import BodyDesktop from '../components/BodyDesktop'
-import BodyMobile from '../components/BodyMobile'
+
+const BodyDesktop = dynamic(() => import('../components/BodyDesktop')) as any
+const BodyMobile = dynamic(() => import('../components/BodyMobile')) as any
+
+// import  from
 
 import IResponsive from '../interfaces/IResponsive'
 
