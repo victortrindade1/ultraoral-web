@@ -1,14 +1,18 @@
-import React from 'react'
-import { AppProps } from 'next/app'
+import React, { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
 import { AnimatePresence } from 'framer-motion'
 import { DefaultSeo } from 'next-seo'
 import { useMediaQuery } from '@mui/material'
 
+import * as gtag from '../lib/gtag'
+
 // import UnderConstruction from '../components/PageUnderConstruction'
 import TopMenu from '../components/TopMenu'
 import Footer from '../components/Footer'
+import Analytics from '../components/Analytics'
 
 import '../../public/fonts/style.css'
 import GlobalStyle from '../styles/global'
@@ -17,9 +21,21 @@ import Head from 'next/head'
 
 export default function MyApp({
   Component,
-  pageProps,
-  router
-}: AppProps): JSX.Element {
+  pageProps
+}: // router
+AppProps): JSX.Element {
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = url => {
+      gtag.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
+
   const url = `https://genteodontologia.com.br${router.route}`
 
   const isBreakpoint = useMediaQuery('(max-width:768px)')
@@ -60,6 +76,7 @@ export default function MyApp({
               key={url}
               isBreakpoint={isBreakpoint}
             />
+            <Analytics />
           </AnimatePresence>
           <Footer isBreakpoint={isBreakpoint} />
           <GlobalStyle />

@@ -13,12 +13,16 @@ import IResponsive from '../interfaces/IResponsive'
 
 import { Container } from '../styles/pages/Home'
 
-const title = 'Gente Odontologia'
-const subtitle = 'Venha sorrir com a gente!'
+const title = 'Home'
+const subtitle =
+  'Clínica Odontológica com tratamento Humanizado. Agende agora uma consulta com a GENTE, e experimente o melhor tratamento odontológico de Campos!'
 
 const Home: NextPage<IResponsive> = ({ isBreakpoint }: IResponsive) => {
   return (
-    <Layout title="Gente Odontologia" description={`${title} - ${subtitle}`}>
+    <Layout
+      title={`${title} - Gente Odontologia`}
+      description={`${title} - ${subtitle}`}
+    >
       <Container>
         {isBreakpoint ? (
           // Layout Mobile
